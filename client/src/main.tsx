@@ -28,7 +28,7 @@ style.textContent = `
   }
 
   .font-serif {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Alba';
   }
 
   .font-sans {

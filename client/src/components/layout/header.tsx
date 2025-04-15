@@ -35,12 +35,12 @@ const Header = () => {
             <CloverIcon />
             <div>
               <h1 className="font-serif font-bold text-2xl text-[#1a7a3d]">Trevo</h1>
-              <p className="text-[#c66b3e] -mt-1 italic">
-                <span className="inline-block">COOL</span>
+              <p className="text-[#c66b3e] -mt-1">
+                <span className="inline-block font-handwritten">COOL</span>
                 <RotatingText 
                   words={["lectivo", "luke", "louro", "ecoes", "journey", "laborate"]} 
                   interval={2500}
-                  className="inline-block"
+                  className="inline-block font-handwritten"
                 />
               </p>
             </div>
@@ -87,12 +87,12 @@ const Header = () => {
             <div className="flex justify-between items-center mb-8">
               <div>
                 <h2 className="font-serif text-xl font-bold text-[#1a7a3d]">Trevo</h2>
-                <p className="text-[#c66b3e] -mt-1 text-sm italic">
-                  <span className="inline-block">COOL</span>
+                <p className="text-[#c66b3e] -mt-1 text-sm">
+                  <span className="inline-block font-handwritten">COOL</span>
                   <RotatingText 
                     words={["lectivo", "luke", "louro", "ecoes", "journey", "laborate"]} 
                     interval={2500}
-                    className="inline-block"
+                    className="inline-block font-handwritten"
                   />
                 </p>
               </div>
