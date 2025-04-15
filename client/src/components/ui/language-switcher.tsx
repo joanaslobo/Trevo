@@ -4,22 +4,44 @@ import { useLanguage } from '@/lib/language-context';
 const LanguageSwitcher = () => {
   const { language, setLanguage } = useLanguage();
 
-  const toggleLanguage = () => {
-    setLanguage(language === 'en' ? 'pt' : 'en');
-  };
-
   return (
-    <motion.button
-      onClick={toggleLanguage}
-      className="flex items-center justify-center px-3 py-1 bg-[#1a7a3d]/10 text-[#1a7a3d] font-medium rounded-full text-sm transition-all duration-300 hover:bg-[#1a7a3d]/20"
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-      aria-label={`Switch to ${language === 'en' ? 'Portuguese' : 'English'}`}
-    >
-      <span className={`mr-1 ${language === 'en' ? 'opacity-100 font-bold' : 'opacity-50'}`}>EN</span>
-      <span className="mx-1 text-[#c66b3e]">|</span>
-      <span className={`ml-1 ${language === 'pt' ? 'opacity-100 font-bold' : 'opacity-50'}`}>PT</span>
-    </motion.button>
+    <div className="relative flex items-center space-x-1">
+      <button
+        onClick={() => setLanguage('en')}
+        className={`px-2 py-1 rounded-lg font-medium text-sm transition-all duration-300 ${
+          language === 'en'
+            ? 'bg-[#1a7a3d] text-white font-bold'
+            : 'text-[#333333] hover:text-[#1a7a3d]'
+        }`}
+        aria-label="Switch to English"
+      >
+        EN
+        {language === 'en' && (
+          <motion.div
+            className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#f4b942]"
+            layoutId="underline"
+          />
+        )}
+      </button>
+      <span className="text-gray-400">/</span>
+      <button
+        onClick={() => setLanguage('pt')}
+        className={`px-2 py-1 rounded-lg font-medium text-sm transition-all duration-300 ${
+          language === 'pt'
+            ? 'bg-[#c66b3e] text-white font-bold'
+            : 'text-[#333333] hover:text-[#c66b3e]'
+        }`}
+        aria-label="Switch to Portuguese"
+      >
+        PT
+        {language === 'pt' && (
+          <motion.div
+            className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#f4b942]"
+            layoutId="underline"
+          />
+        )}
+      </button>
+    </div>
   );
 };
 

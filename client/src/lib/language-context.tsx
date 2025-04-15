@@ -11,7 +11,7 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 // Translations
-const translations = {
+const translations: Record<Language, Record<string, string>> = {
   en: {
     // Navigation
     'nav.home': 'Home',
@@ -30,10 +30,10 @@ const translations = {
     // About page
     'about.title': 'About Trevo',
     'about.fusion.title': 'A fusion of Irish & Portuguese musical passion',
-    'about.fusion.p1': 'Trevo (Portuguese for shamrock) was born from the unique collaboration between an Irish musician and four Portuguese talents. Our name symbolizes the cultural bridge we've built between these two rich musical traditions.',
+    'about.fusion.p1': 'Trevo (Portuguese for shamrock) was born from the unique collaboration between an Irish musician and four Portuguese talents. Our name symbolizes the cultural bridge we\'ve built between these two rich musical traditions.',
     'about.fusion.p2': 'Located in the vibrant city of Porto, we provide a space where traditional techniques meet contemporary expression, creating a distinctive sound that honors our diverse heritage.',
     'about.collective.title': 'COOLlectivo – More than a school',
-    'about.collective.p1': 'COOLlectivo is our creative community - a playful fusion of "cool," "lectivo" (academic), and "colectivo" (collective). We're not just teaching music; we're building a family of creators who inspire and support each other.',
+    'about.collective.p1': 'COOLlectivo is our creative community - a playful fusion of "cool," "lectivo" (academic), and "colectivo" (collective). We\'re not just teaching music; we\'re building a family of creators who inspire and support each other.',
     'about.collective.p2': 'Through performances, workshops, and collaborative projects, we foster an environment where passion and expertise flow freely between teachers, students, and the wider Porto community.',
     'about.card.irish': 'Irish Roots',
     'about.card.irish.desc': 'Traditional Celtic music meeting contemporary Portuguese styles',
@@ -142,14 +142,24 @@ const translations = {
 
 export const LanguageProvider: React.FC<{children: ReactNode}> = ({ children }) => {
   const [language, setLanguageState] = useState<Language>(() => {
-    // Try to get language from localStorage
-    const savedLanguage = localStorage.getItem('language') as Language;
-    return savedLanguage === 'pt' ? 'pt' : 'en'; // Default to 'en' if not saved or invalid
+    // Try to get language from localStorage with safely check
+    try {
+      const savedLanguage = localStorage.getItem('language');
+      return savedLanguage === 'pt' ? 'pt' : 'en'; // Default to 'en' if not saved or invalid
+    } catch (error) {
+      // In case localStorage is not available (e.g., in SSR or when cookies are disabled)
+      return 'en';
+    }
   });
 
   useEffect(() => {
-    // Save to localStorage whenever language changes
-    localStorage.setItem('language', language);
+    // Save to localStorage whenever language changes with safety check
+    try {
+      localStorage.setItem('language', language);
+    } catch (error) {
+      // Handle case where localStorage is not available
+      console.warn('Could not save language preference to localStorage');
+    }
   }, [language]);
 
   const setLanguage = (lang: Language) => {
@@ -159,7 +169,7 @@ export const LanguageProvider: React.FC<{children: ReactNode}> = ({ children }) 
   const t = (key: string): string => {
     // Get the translation based on the current language
     const translationObj = translations[language];
-    return translationObj[key] || key; // Return the key itself if translation not found
+    return translationObj[key as keyof typeof translationObj] || key; // Return the key itself if translation not found
   };
 
   const contextValue = {

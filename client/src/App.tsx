@@ -7,8 +7,9 @@ import Programs from "@/pages/programs";
 import Fees from "@/pages/fees";
 import Contact from "@/pages/contact";
 import NotFound from "@/pages/not-found";
+import { LanguageProvider } from "@/lib/language-context";
 
-function App() {
+function AppContent() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -24,6 +25,14 @@ function App() {
       </main>
       <Footer />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <LanguageProvider>
+      <AppContent />
+    </LanguageProvider>
   );
 }
 
