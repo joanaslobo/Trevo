@@ -27,14 +27,12 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <Link href="/">
-            <a className="flex items-center gap-2">
-              <CloverIcon />
-              <div>
-                <h1 className="font-serif font-bold text-2xl text-[#1a7a3d]">Trevo</h1>
-                <p className="font-handwritten text-[#c66b3e] -mt-1">COOLlectivo</p>
-              </div>
-            </a>
+          <Link href="/" className="flex items-center gap-2">
+            <CloverIcon />
+            <div>
+              <h1 className="font-serif font-bold text-2xl text-[#1a7a3d]">Trevo</h1>
+              <p className="text-[#c66b3e] -mt-1 italic">COOLlectivo</p>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -48,10 +46,8 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Link href="/contact">
-              <a className="bg-[#1a7a3d] hover:bg-[#156e35] text-white px-5 py-2 rounded-full font-medium transition duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1">
-                Join Us
-              </a>
+            <Link href="/contact" className="bg-[#1a7a3d] hover:bg-[#156e35] text-white px-5 py-2 rounded-full font-medium transition duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1">
+              Join Us
             </Link>
           </div>
 
@@ -88,13 +84,12 @@ const Header = () => {
               <NavLink href="/programs" label="Programs" currentPath={location} onClick={closeMenu} mobile />
               <NavLink href="/fees" label="Fees & Schedule" currentPath={location} onClick={closeMenu} mobile />
               <NavLink href="/contact" label="Contact" currentPath={location} onClick={closeMenu} mobile />
-              <Link href="/contact">
-                <a 
-                  className="bg-[#1a7a3d] hover:bg-[#156e35] text-white px-5 py-3 rounded-full font-medium transition duration-300 shadow-md hover:shadow-lg text-center mt-4"
-                  onClick={closeMenu}
-                >
-                  Join Us
-                </a>
+              <Link 
+                href="/contact" 
+                className="bg-[#1a7a3d] hover:bg-[#156e35] text-white px-5 py-3 rounded-full font-medium transition duration-300 shadow-md hover:shadow-lg text-center mt-4"
+                onClick={closeMenu}
+              >
+                Join Us
               </Link>
             </nav>
           </motion.div>
@@ -116,15 +111,14 @@ const NavLink = ({ href, label, currentPath, onClick, mobile = false }: NavLinkP
   const isActive = currentPath === href;
   
   return (
-    <Link href={href}>
-      <a 
-        className={`nav-link font-medium hover:text-[#1a7a3d] transition duration-300 ${
-          isActive ? 'text-[#1a7a3d]' : 'text-[#333333]'
-        } ${mobile ? 'py-2 border-b border-gray-200' : ''}`}
-        onClick={onClick}
-      >
-        {label}
-      </a>
+    <Link 
+      href={href}
+      className={`nav-link font-medium hover:text-[#1a7a3d] transition duration-300 ${
+        isActive ? 'text-[#1a7a3d]' : 'text-[#333333]'
+      } ${mobile ? 'py-2 border-b border-gray-200' : ''}`}
+      onClick={onClick}
+    >
+      {label}
     </Link>
   );
 };

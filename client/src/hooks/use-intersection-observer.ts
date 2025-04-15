@@ -6,7 +6,7 @@ interface UseIntersectionObserverProps {
 }
 
 interface UseIntersectionObserverReturn {
-  ref: RefObject<HTMLElement>;
+  ref: RefObject<HTMLDivElement>;
   inView: boolean;
 }
 
@@ -15,7 +15,7 @@ export const useIntersectionObserver = ({
   rootMargin = '0px',
 }: UseIntersectionObserverProps = {}): UseIntersectionObserverReturn => {
   const [inView, setInView] = useState(false);
-  const ref = useRef<HTMLElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
