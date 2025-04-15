@@ -2,7 +2,7 @@ export const programsData = [
   {
     icon: 'fa-guitar',
     title: 'Instrument Lessons',
-    description: 'Master a wide range of instruments with our expert instructors. From guitar and piano to traditional Irish and Portuguese instruments.',
+    description: 'Master a wide range of instruments with our expert instructors. Guitar, piano, drums, bass, you name it!',
     features: [
       'One-on-one personalized instruction',
       'Tailored curriculum for all levels',
@@ -13,23 +13,10 @@ export const programsData = [
     linkText: 'View Details',
     linkHref: '/fees'
   },
-  {
-    icon: 'fa-microphone',
-    title: 'Vocal Training',
-    description: 'Develop your unique voice through techniques from Irish folk to Portuguese fado and contemporary styles.',
-    features: [
-      'Breathing and technique fundamentals',
-      'Cultural and stylistic exploration',
-      'Solo and ensemble opportunities'
-    ],
-    colorClass: 'text-[#c66b3e]',
-    borderColorClass: 'bg-[#c66b3e]',
-    linkText: 'View Details',
-    linkHref: '/fees'
-  },
+  
   {
     icon: 'fa-users',
-    title: 'Group Sessions',
+    title: 'Combo/Group Sessions',
     description: 'Experience the joy of making music together in our collaborative group classes and ensemble opportunities.',
     features: [
       'Band and ensemble coaching',
@@ -72,7 +59,7 @@ export const programsData = [
   {
     icon: 'fa-door-open',
     title: 'Open Days',
-    description: 'Join us for our monthly open days to explore our facilities, meet our instructors, and get a taste of the Trevo experience.',
+    description: 'Join us for our Open Days to explore our facilities, meet our instructors, and get a taste of the Trevo experience.',
     features: [
       'Free trial lessons',
       'Instrument demonstrations',
@@ -80,7 +67,7 @@ export const programsData = [
     ],
     colorClass: 'text-[#bf7b0a]',
     borderColorClass: 'bg-[#bf7b0a]',
-    linkText: 'Register Now',
+    linkText: 'Find out when the next one is',
     linkHref: '/contact'
   }
 ];
@@ -88,7 +75,7 @@ export const programsData = [
 export const pricingPlans = [
   {
     title: 'Private Lessons',
-    price: '€35',
+    price: '€20',
     unit: '/hour',
     features: [
       'One-on-one instruction',
@@ -104,7 +91,7 @@ export const pricingPlans = [
   },
   {
     title: 'Group Classes',
-    price: '€20',
+    price: '€10',
     unit: '/session',
     features: [
       '4-8 students per group',
@@ -133,45 +120,5 @@ export const pricingPlans = [
     colorClass: 'text-[#f4b942]',
     bgColorClass: 'bg-[#f4b942]',
     iconColorClass: 'text-[#f4b942]'
-  }
-];
-
-export const scheduleData = [
-  {
-    day: 'Monday',
-    morning: 'Private Lessons',
-    afternoon: 'Private Lessons',
-    evening: 'Group Classes'
-  },
-  {
-    day: 'Tuesday',
-    morning: 'Private Lessons',
-    afternoon: 'Private Lessons',
-    evening: 'Vocal Training'
-  },
-  {
-    day: 'Wednesday',
-    morning: 'Private Lessons',
-    afternoon: 'Workshops',
-    evening: 'Combo Classes'
-  },
-  {
-    day: 'Thursday',
-    morning: 'Private Lessons',
-    afternoon: 'Private Lessons',
-    evening: 'Group Classes'
-  },
-  {
-    day: 'Friday',
-    morning: 'Private Lessons',
-    afternoon: 'Private Lessons',
-    evening: 'Open Jam Sessions'
-  },
-  {
-    day: 'Saturday',
-    morning: 'Workshops',
-    afternoon: 'Youth Program',
-    evening: 'Monthly Performances',
-    note: '(First Saturday)'
   }
 ];

@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import CloverIcon from '@/components/ui/clover-icon';
 import LanguageSwitcher from '@/components/ui/language-switcher';
 import { useLanguage } from '@/lib/language-context';
+import RotatingText from '@/components/ui/rotating-text';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,7 +35,14 @@ const Header = () => {
             <CloverIcon />
             <div>
               <h1 className="font-serif font-bold text-2xl text-[#1a7a3d]">Trevo</h1>
-              <p className="text-[#c66b3e] -mt-1 italic">COOLlectivo</p>
+              <p className="text-[#c66b3e] -mt-1 italic">
+                <span className="inline-block">COOL</span>
+                <RotatingText 
+                  words={["lectivo", "luke", "louro", "ecoes", "journey", "laborate"]} 
+                  interval={2500}
+                  className="inline-block"
+                />
+              </p>
             </div>
           </Link>
 
@@ -77,7 +85,17 @@ const Header = () => {
             transition={{ duration: 0.3 }}
           >
             <div className="flex justify-between items-center mb-8">
-              <h2 className="font-serif text-xl font-bold text-[#1a7a3d]">Menu</h2>
+              <div>
+                <h2 className="font-serif text-xl font-bold text-[#1a7a3d]">Trevo</h2>
+                <p className="text-[#c66b3e] -mt-1 text-sm italic">
+                  <span className="inline-block">COOL</span>
+                  <RotatingText 
+                    words={["lectivo", "luke", "louro", "ecoes", "journey", "laborate"]} 
+                    interval={2500}
+                    className="inline-block"
+                  />
+                </p>
+              </div>
               <button className="text-[#333333] focus:outline-none" onClick={closeMenu}>
                 <i className="fas fa-times text-2xl"></i>
               </button>

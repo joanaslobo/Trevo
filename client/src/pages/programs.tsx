@@ -19,7 +19,7 @@ const Programs = () => {
           </h2>
           <div className="w-20 h-1 bg-[#c66b3e] mx-auto mt-4 mb-6"></div>
           <p className="text-lg max-w-2xl mx-auto text-[#333333]">
-            Discover your musical voice through our diverse range of programs designed for all ages and skill levels.
+            What are you interested in? We have the instument for you!
           </p>
         </motion.div>
         

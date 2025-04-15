@@ -1,13 +1,13 @@
-import { motion } from 'framer-motion';
-import { useIntersectionObserver } from '@/hooks/use-intersection-observer';
+import { motion } from "framer-motion";
+import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 
 const About = () => {
   const { ref, inView } = useIntersectionObserver({ threshold: 0.1 });
-  
+
   return (
     <section id="about" className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
+        <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -19,7 +19,7 @@ const About = () => {
           </h2>
           <div className="w-20 h-1 bg-[#c66b3e] mx-auto mt-4"></div>
         </motion.div>
-        
+
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -28,30 +28,38 @@ const About = () => {
             transition={{ duration: 0.8 }}
           >
             <h3 className="font-serif text-2xl md:text-3xl font-semibold text-[#c66b3e] mb-6">
-              A fusion of Irish & Portuguese musical passion
+              Music School & Community
             </h3>
             <p className="text-[#333333] mb-6">
-              Trevo (Portuguese for shamrock) was born from the unique collaboration between an Irish musician and four Portuguese talents. Our name symbolizes the cultural bridge we've built between these two rich musical traditions.
+              Trevo (Portuguese for shamrock) was born from the unique
+              collaboration between musicians and educators.
             </p>
             <p className="text-[#333333]">
-              Located in the vibrant city of Porto, we provide a space where traditional techniques meet contemporary expression, creating a distinctive sound that honors our diverse heritage.
+              Located in STOP Centro Cultural in the city of Porto, we provide a
+              space in the heart of the city where students can learn, practice,
+              and perform surrounded by a strong community of musicians.
             </p>
-            
+
             <div className="mt-12">
               <h3 className="font-serif text-2xl md:text-3xl font-semibold text-[#f4b942] mb-6">
                 COOLlectivo – More than a school
               </h3>
               <p className="text-[#333333] mb-6">
-                COOLlectivo is our creative community - a playful fusion of "cool," "lectivo" (academic), and "colectivo" (collective). We're not just teaching music; we're building a family of creators who inspire and support each other.
+                COOLlectivo is our creative community - a playful fusion of
+                "cool," "lectivo" (academic), and "colectivo" (collective).
+                We're not just teaching music; we're building a family of
+                creators who inspire and support each other.
               </p>
               <p className="text-[#333333]">
-                Through performances, workshops, and collaborative projects, we foster an environment where passion and expertise flow freely between teachers, students, and the wider Porto community.
+                Through performances, workshops, and collaborative projects, we
+                foster an environment where passion and expertise flow freely
+                between teachers, students, and the wider Porto community.
               </p>
             </div>
           </motion.div>
-          
+
           <div className="grid grid-cols-2 gap-6">
-            <motion.div 
+            <motion.div
               className="bg-[#e6f5ec] rounded-xl p-6 shadow-md"
               initial={{ opacity: 0, rotate: 0 }}
               whileInView={{ opacity: 1 }}
@@ -62,11 +70,17 @@ const About = () => {
               <div className="text-[#1a7a3d] text-3xl mb-4">
                 <i className="fas fa-guitar"></i>
               </div>
-              <h4 className="font-serif text-xl font-medium text-[#156e35] mb-2">Irish Roots</h4>
-              <p className="text-sm">Traditional Celtic music meeting contemporary Portuguese styles</p>
+              <h4 className="font-serif text-xl font-medium text-[#156e35] mb-2">
+                Student Guided
+              </h4>
+              <p className="text-sm">
+                {" "}
+                Wanna learn [some song]? Great! Want to master [other cool
+                song]? Fantastic! We're interested in what you want to learn.
+              </p>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               className="bg-[#f2dcd3] rounded-xl p-6 shadow-md"
               initial={{ opacity: 0, rotate: 0 }}
               whileInView={{ opacity: 1 }}
@@ -77,11 +91,16 @@ const About = () => {
               <div className="text-[#c66b3e] text-3xl mb-4">
                 <i className="fas fa-drum"></i>
               </div>
-              <h4 className="font-serif text-xl font-medium text-[#b35c35] mb-2">Portuguese Flair</h4>
-              <p className="text-sm">Bringing the soul of fado and Portuguese rhythms to our teaching</p>
+              <h4 className="font-serif text-xl font-medium text-[#b35c35] mb-2">
+                Fully Equiped Rooms
+              </h4>
+              <p className="text-sm">
+                Our studios are filled with plenty of different instruments for
+                you to try!
+              </p>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               className="bg-[#fcf4d3] rounded-xl p-6 shadow-md"
               initial={{ opacity: 0, rotate: 0 }}
               whileInView={{ opacity: 1 }}
@@ -92,11 +111,15 @@ const About = () => {
               <div className="text-[#f4b942] text-3xl mb-4">
                 <i className="fas fa-users"></i>
               </div>
-              <h4 className="font-serif text-xl font-medium text-[#e79c0d] mb-2">Our Team</h4>
-              <p className="text-sm">5 passionate musicians with international performance experience</p>
+              <h4 className="font-serif text-xl font-medium text-[#e79c0d] mb-2">
+                Our Team
+              </h4>
+              <p className="text-sm">
+                5 passionate musicians with international performance experience
+              </p>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               className="bg-[#1a7a3d] text-white rounded-xl p-6 shadow-md"
               initial={{ opacity: 0, rotate: 0 }}
               whileInView={{ opacity: 1 }}
@@ -108,7 +131,9 @@ const About = () => {
                 <i className="fas fa-music"></i>
               </div>
               <h4 className="font-serif text-xl font-medium mb-2">Community</h4>
-              <p className="text-sm">Join our ever-growing family of musicians in Porto</p>
+              <p className="text-sm">
+                Join our ever-growing family of musicians in Porto
+              </p>
             </motion.div>
           </div>
         </div>
