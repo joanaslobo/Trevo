@@ -8,6 +8,7 @@ import Fees from "@/pages/fees";
 import Contact from "@/pages/contact";
 import NotFound from "@/pages/not-found";
 import { LanguageProvider } from "@/lib/language-context";
+import { ThemeProvider } from "@/lib/theme-context";
 
 function AppContent() {
   return (
@@ -31,7 +32,9 @@ function AppContent() {
 function App() {
   return (
     <LanguageProvider>
-      <AppContent />
+      <ThemeProvider>
+        <AppContent />
+      </ThemeProvider>
     </LanguageProvider>
   );
 }

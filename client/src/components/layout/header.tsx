@@ -3,7 +3,9 @@ import { Link, useLocation } from 'wouter';
 import { motion, AnimatePresence } from 'framer-motion';
 import CloverIcon from '@/components/ui/clover-icon';
 import LanguageSwitcher from '@/components/ui/language-switcher';
+import ThemeToggle from '@/components/ui/theme-toggle';
 import { useLanguage } from '@/lib/language-context';
+import { useTheme } from '@/lib/theme-context';
 import RotatingText from '@/components/ui/rotating-text';
 
 const Header = () => {
@@ -11,6 +13,7 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [location] = useLocation();
   const { t } = useLanguage();
+  const { isRockMode } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,7 +27,12 @@ const Header = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
-  const headerClasses = `fixed w-full ${isScrolled ? 'bg-[#F7F3E3] bg-opacity-95 shadow-md' : 'bg-transparent'} transition-all duration-300 z-50`;
+  // Theme-aware header background
+  const headerBgColor = isRockMode 
+    ? isScrolled ? 'bg-[#1a1a1a] bg-opacity-95 shadow-md' : 'bg-transparent' 
+    : isScrolled ? 'bg-[#F7F3E3] bg-opacity-95 shadow-md' : 'bg-transparent';
+  
+  const headerClasses = `fixed w-full ${headerBgColor} theme-header transition-all duration-300 z-50`;
 
   return (
     <header className={headerClasses}>
@@ -32,10 +40,10 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <CloverIcon />
+            <CloverIcon white={isRockMode} />
             <div>
-              <h1 className="font-serif font-bold text-2xl text-[#1a7a3d]">Trevo</h1>
-              <p className="text-[#c66b3e] -mt-1">
+              <h1 className={`font-serif font-bold text-2xl ${isRockMode ? 'text-white' : 'text-[#1a7a3d]'} theme-text-primary`}>Trevo</h1>
+              <p className={`${isRockMode ? 'text-[#ff5722]' : 'text-[#c66b3e]'} -mt-1 theme-text-secondary`}>
                 <span className="inline-block font-handwritten">COOL</span>
                 <RotatingText 
                   words={["lectivo", "luke", "louro", "ecoes", "journey", "laborate"]} 
@@ -55,10 +63,17 @@ const Header = () => {
             <NavLink href="/contact" label={t('nav.contact')} currentPath={location} onClick={closeMenu} />
           </nav>
 
-          {/* Language Switcher and CTA Button */}
+          {/* Language Switcher, Theme Toggle and CTA Button */}
           <div className="hidden md:flex items-center gap-4">
             <LanguageSwitcher />
-            <Link href="/contact" className="bg-[#1a7a3d] hover:bg-[#156e35] text-white px-5 py-2 rounded-full font-medium transition duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1">
+            <ThemeToggle />
+            <Link 
+              href="/contact" 
+              className={`theme-button-primary ${isRockMode 
+                ? 'bg-[#ff5722] hover:bg-[#ff4500]' 
+                : 'bg-[#1a7a3d] hover:bg-[#156e35]'} 
+                text-white px-5 py-2 rounded-full font-medium transition duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1`}
+            >
               {t('nav.joinUs')}
             </Link>
           </div>

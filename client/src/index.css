@@ -8,6 +8,96 @@
   }
 
   body {
-    @apply font-sans antialiased bg-background text-foreground;
+    @apply font-sans antialiased bg-background text-foreground transition-colors duration-300;
+  }
+
+  /* Light & Fun mode - default */
+  :root,
+  .light-mode {
+    --background-color: #F7F3E3;
+    --primary-color: #1a7a3d;
+    --secondary-color: #c66b3e;
+    --accent-color: #f4b942;
+    --text-color: #333333;
+    --text-light: #666666;
+    --card-bg: rgba(255, 255, 255, 0.8);
+    --gradient-from: #F7F3E3;
+    --gradient-to: #e6f5ec;
+    --button-hover: #156e35;
+  }
+
+  /* Rock & Roll mode */
+  .rock-mode {
+    --background-color: #121212;
+    --primary-color: #ff5722;
+    --secondary-color: #9c27b0;
+    --accent-color: #f0e100;
+    --text-color: #ffffff;
+    --text-light: #aaaaaa;
+    --card-bg: rgba(30, 30, 30, 0.9);
+    --gradient-from: #1a1a1a;
+    --gradient-to: #2d1a36;
+    --button-hover: #ff4500;
+  }
+}
+
+@layer components {
+  /* Light mode component styles */
+  .light-mode .nav-link {
+    @apply text-[#333333] hover:text-[#1a7a3d];
+  }
+  
+  .light-mode .nav-link.active {
+    @apply text-[#1a7a3d];
+  }
+  
+  .light-mode .cta-button {
+    @apply bg-[#1a7a3d] hover:bg-[#156e35] text-white;
+  }
+
+  /* Rock mode component styles */
+  .rock-mode .nav-link {
+    @apply text-white hover:text-[#ff5722];
+  }
+  
+  .rock-mode .nav-link.active {
+    @apply text-[#ff5722];
+  }
+  
+  .rock-mode .cta-button {
+    @apply bg-[#ff5722] hover:bg-[#ff4500] text-white;
+  }
+  
+  /* Shared component styling with theme-dependent colors */
+  .theme-header {
+    @apply transition-colors duration-300;
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  .theme-text-primary {
+    color: var(--primary-color);
+  }
+  
+  .theme-text-secondary {
+    color: var(--secondary-color);
+  }
+  
+  .theme-bg-gradient {
+    background-image: linear-gradient(to bottom, var(--gradient-from), var(--gradient-to));
+  }
+  
+  .theme-card {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+  }
+  
+  .theme-button-primary {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .theme-button-primary:hover {
+    background-color: var(--button-hover);
   }
 }

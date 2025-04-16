@@ -28,7 +28,7 @@ style.textContent = `
   }
 
   .font-serif {
-    font-family: 'Alba';
+    font-family: 'Coiny';
   }
 
   .font-sans {
