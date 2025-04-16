@@ -8,13 +8,15 @@ import Fees from "@/pages/fees";
 import Contact from "@/pages/contact";
 import NotFound from "@/pages/not-found";
 import { LanguageProvider } from "@/lib/language-context";
-import { ThemeProvider } from "@/lib/theme-context";
+import { ThemeProvider, useTheme } from "@/lib/theme-context";
 
 function AppContent() {
+  const { isRockMode } = useTheme();
+
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className={`min-h-screen flex flex-col theme-bg ${isRockMode ? 'rock-mode' : 'light-mode'}`}>
       <Header />
-      <main className="flex-grow">
+      <main className="flex-grow theme-text">
         <Switch>
           <Route path="/" component={Home} />
           <Route path="/about" component={About} />
