@@ -80,7 +80,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden text-[#333333] focus:outline-none" 
+            className={`md:hidden ${isRockMode ? 'text-white' : 'text-[#333333]'} focus:outline-none`} 
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >
@@ -93,7 +93,11 @@ const Header = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div 
-            className="fixed top-0 right-0 h-full w-3/4 bg-gradient-to-b from-[#F7F3E3] to-[#e6f5ec] shadow-lg z-50 p-6 md:hidden"
+            className={`fixed top-0 right-0 h-full w-3/4 theme-bg-gradient shadow-lg z-50 p-6 md:hidden ${
+              isRockMode 
+                ? 'bg-gradient-to-b from-[#1a1a1a] to-[#2d1a36]' 
+                : 'bg-gradient-to-b from-[#F7F3E3] to-[#e6f5ec]'
+            }`}
             initial={{ x: '100%' }}
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
@@ -101,8 +105,8 @@ const Header = () => {
           >
             <div className="flex justify-between items-center mb-8">
               <div>
-                <h2 className="font-serif text-xl font-bold text-[#1a7a3d]">Trevo</h2>
-                <p className="text-[#c66b3e] -mt-1 text-sm">
+                <h2 className={`font-serif text-xl font-bold ${isRockMode ? 'text-white' : 'text-[#1a7a3d]'} theme-text-primary`}>Trevo</h2>
+                <p className={`${isRockMode ? 'text-[#ff5722]' : 'text-[#c66b3e]'} -mt-1 text-sm theme-text-secondary`}>
                   <span className="inline-block font-handwritten">COOL</span>
                   <RotatingText 
                     words={["lectivo", "luke", "louro", "ecoes", "journey", "laborate"]} 
@@ -111,7 +115,7 @@ const Header = () => {
                   />
                 </p>
               </div>
-              <button className="text-[#333333] focus:outline-none" onClick={closeMenu}>
+              <button className={`${isRockMode ? 'text-white' : 'text-[#333333]'} focus:outline-none`} onClick={closeMenu}>
                 <i className="fas fa-times text-2xl"></i>
               </button>
             </div>
@@ -122,13 +126,17 @@ const Header = () => {
               <NavLink href="/fees" label={t('nav.fees')} currentPath={location} onClick={closeMenu} mobile />
               <NavLink href="/contact" label={t('nav.contact')} currentPath={location} onClick={closeMenu} mobile />
               
-              <div className="mt-4 mb-4">
+              <div className="mt-4 flex gap-3 items-center">
                 <LanguageSwitcher />
+                <ThemeToggle />
               </div>
               
               <Link 
                 href="/contact" 
-                className="bg-[#1a7a3d] hover:bg-[#156e35] text-white px-5 py-3 rounded-full font-medium transition duration-300 shadow-md hover:shadow-lg text-center mt-2"
+                className={`theme-button-primary ${isRockMode 
+                  ? 'bg-[#ff5722] hover:bg-[#ff4500]' 
+                  : 'bg-[#1a7a3d] hover:bg-[#156e35]'} 
+                  text-white px-5 py-3 rounded-full font-medium transition duration-300 shadow-md hover:shadow-lg text-center mt-4`}
                 onClick={closeMenu}
               >
                 {t('nav.joinUs')}
@@ -138,20 +146,20 @@ const Header = () => {
             {/* Decorative elements */}
             <div className="absolute bottom-8 left-6">
               <motion.div 
-                className="text-5xl text-[#c66b3e] opacity-30"
+                className={`text-5xl ${isRockMode ? 'text-[#ff5722]' : 'text-[#c66b3e]'} opacity-30 theme-text-secondary`}
                 animate={{ rotate: [0, 10, 0], scale: [1, 1.1, 1] }}
                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
               >
-                ♫
+                {isRockMode ? '🤘' : '♫'}
               </motion.div>
             </div>
             <div className="absolute top-12 right-8">
               <motion.div 
-                className="text-4xl text-[#f4b942] opacity-30"
+                className={`text-4xl ${isRockMode ? 'text-[#9c27b0]' : 'text-[#f4b942]'} opacity-30`}
                 animate={{ rotate: [0, -10, 0], scale: [1, 1.1, 1] }}
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
               >
-                ♪
+                {isRockMode ? '🔥' : '♪'}
               </motion.div>
             </div>
           </motion.div>
@@ -171,13 +179,20 @@ interface NavLinkProps {
 
 const NavLink = ({ href, label, currentPath, onClick, mobile = false }: NavLinkProps) => {
   const isActive = currentPath === href;
+  const { isRockMode } = useTheme();
+  
+  // Theme-based active and inactive colors
+  const activeColor = isRockMode ? 'text-[#ff5722]' : 'text-[#1a7a3d]';
+  const inactiveColor = isRockMode ? 'text-white' : 'text-[#333333]';
+  const hoverColor = isRockMode ? 'hover:text-[#ff5722]' : 'hover:text-[#1a7a3d]';
+  const borderColor = isRockMode ? 'border-[#333]' : 'border-gray-200';
   
   return (
     <Link 
       href={href}
-      className={`nav-link font-medium hover:text-[#1a7a3d] transition duration-300 ${
-        isActive ? 'text-[#1a7a3d]' : 'text-[#333333]'
-      } ${mobile ? 'py-2 border-b border-gray-200' : ''}`}
+      className={`nav-link font-medium ${hoverColor} transition duration-300 ${
+        isActive ? activeColor : inactiveColor
+      } ${mobile ? `py-2 border-b ${borderColor}` : ''}`}
       onClick={onClick}
     >
       {label}
