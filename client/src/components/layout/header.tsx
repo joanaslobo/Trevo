@@ -29,8 +29,8 @@ const Header = () => {
 
   // Theme-aware header background
   const headerBgColor = isRockMode 
-    ? isScrolled ? 'bg-[#1a1a1a] bg-opacity-95 shadow-md' : 'bg-transparent' 
-    : isScrolled ? 'bg-[#F7F3E3] bg-opacity-95 shadow-md' : 'bg-transparent';
+    ? isScrolled ? 'bg-[#1a1a1a] bg-opacity-95 shadow-md' : 'bg-[#1a1a1a] bg-opacity-95 shadow-md' 
+    : isScrolled ? 'bg-[#F7F3E3] bg-opacity-95 shadow-md' : 'bg-[#F7F3E3] bg-opacity-95 shadow-md';
   
   const headerClasses = `fixed w-full ${headerBgColor} theme-header transition-all duration-300 z-50`;
 
