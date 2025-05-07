@@ -58,6 +58,7 @@ const Header = () => {
           <nav className="hidden md:flex gap-6">
             <NavLink href="/" label={t('nav.home')} currentPath={location} onClick={closeMenu} />
             <NavLink href="/about" label={t('nav.about')} currentPath={location} onClick={closeMenu} />
+            <NavLink href="/teachers" label={t('nav.teachers')} currentPath={location} onClick={closeMenu} />
             <NavLink href="/programs" label={t('nav.programs')} currentPath={location} onClick={closeMenu} />
             <NavLink href="/fees" label={t('nav.fees')} currentPath={location} onClick={closeMenu} />
             <NavLink href="/contact" label={t('nav.contact')} currentPath={location} onClick={closeMenu} />

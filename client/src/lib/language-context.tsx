@@ -13,9 +13,21 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 // Translations
 const translations: Record<Language, Record<string, string>> = {
   en: {
+    // Teachers page
+    'teachers.title': 'Meet Our Teachers',
+    'teachers.instrument.strings': 'Strings',
+    'teachers.instrument.guitar': 'Guitar',
+    'teachers.instrument.voice': 'Voice',
+    'teachers.instrument.percussion': 'Percussion',
+    'teachers.bio.sarah': 'Specializing in violin and viola, Sarah brings 15 years of classical training and performance experience.',
+    'teachers.bio.miguel': 'Classical and contemporary guitar expert with a passion for Portuguese music.',
+    'teachers.bio.clara': 'Professional singer and vocal coach with expertise in both fado and contemporary styles.',
+    'teachers.bio.john': 'Versatile percussionist specializing in both traditional Irish and Portuguese rhythms.',
+    
     // Navigation
     'nav.home': 'Home',
     'nav.about': 'About',
+    'nav.teachers': 'Teachers',
     'nav.programs': 'Programs',
     'nav.fees': 'Fees',
     'nav.contact': 'Contacts',
@@ -76,9 +88,21 @@ const translations: Record<Language, Record<string, string>> = {
     'contact.connect.title': 'Connect With Us',
   },
   pt: {
+    // Teachers page
+    'teachers.title': 'Conheça Nossos Professores',
+    'teachers.instrument.strings': 'Cordas',
+    'teachers.instrument.guitar': 'Guitarra',
+    'teachers.instrument.voice': 'Voz',
+    'teachers.instrument.percussion': 'Percussão',
+    'teachers.bio.sarah': 'Especialista em violino e viola, Sarah traz 15 anos de formação e experiência em performance clássica.',
+    'teachers.bio.miguel': 'Especialista em guitarra clássica e contemporânea com paixão pela música portuguesa.',
+    'teachers.bio.clara': 'Cantora profissional e professora de voz com experiência em fado e estilos contemporâneos.',
+    'teachers.bio.john': 'Percussionista versátil especializado em ritmos tradicionais irlandeses e portugueses.',
+    
     // Navigation
     'nav.home': 'Início',
     'nav.about': 'Sobre',
+    'nav.teachers': 'Professores',
     'nav.programs': 'Programas',
     'nav.fees': 'Preços & Horários',
     'nav.contact': 'Contacto',
