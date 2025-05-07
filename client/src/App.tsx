@@ -7,6 +7,7 @@ import Programs from "@/pages/programs";
 import Fees from "@/pages/fees";
 import Contact from "@/pages/contact";
 import NotFound from "@/pages/not-found";
+import TeachersPage from "@/pages/teachers";
 import { LanguageProvider } from "@/lib/language-context";
 import { ThemeProvider, useTheme } from "@/lib/theme-context";
 
@@ -20,6 +21,7 @@ function AppContent() {
         <Switch>
           <Route path="/" component={Home} />
           <Route path="/about" component={About} />
+          <Route path="/teachers" component={TeachersPage} />
           <Route path="/programs" component={Programs} />
           <Route path="/fees" component={Fees} />
           <Route path="/contact" component={Contact} />
