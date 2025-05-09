@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Input } from "./input";
 import { Textarea } from "./textarea";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./select";
 import { useLanguage } from "@/lib/language-context";
 
 export const ContactForm = () => {
@@ -15,11 +16,8 @@ export const ContactForm = () => {
     const formData = new FormData(e.target as HTMLFormElement);
     const data = Object.fromEntries(formData.entries());
     
-    // Replace FORM_ID with your Google Form ID
-    const formUrl = `https://docs.google.com/forms/d/e/1FAIpQLSfO0yLMfP1fU8wjLywi27VRs0ppPBbOTAV0irIvzmXbcziNRg/viewform?usp=dialog`;
-    
     try {
-      // Map your form fields to Google Form field names
+      const formUrl = `https://docs.google.com/forms/d/e/1FAIpQLSfO0yLMfP1fU8wjLywi27VRs0ppPBbOTAV0irIvzmXbcziNRg/viewform`;
       const params = new URLSearchParams({
         'entry.123': data.name as string,
         'entry.456': data.age as string,
@@ -30,7 +28,6 @@ export const ContactForm = () => {
         'entry.901': data.comments as string,
       });
 
-      // Using no-cors mode as Google Forms doesn't support CORS
       await fetch(`${formUrl}?${params.toString()}`, {
         method: 'GET',
         mode: 'no-cors',
@@ -48,41 +45,65 @@ export const ContactForm = () => {
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
-        <label className="block mb-2">Name</label>
-        <Input name="name" required />
+        <label className="block mb-2 font-medium">Name</label>
+        <Input name="name" required className="w-full" />
       </div>
+      
       <div>
-        <label className="block mb-2">Age</label>
-        <Input name="age" type="number" required />
+        <label className="block mb-2 font-medium">Age</label>
+        <Input name="age" type="number" required className="w-full" />
       </div>
+      
       <div>
-        <label className="block mb-2">Type of Class</label>
-        <select name="classType" className="w-full p-2 border rounded" required>
-          <option value="">Select a class type</option>
-          <option value="individual">Individual</option>
-          <option value="group">Group</option>
-        </select>
+        <label className="block mb-2 font-medium">Type of Class</label>
+        <Select name="classType">
+          <SelectTrigger className="w-full">
+            <SelectValue placeholder="Select class type" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="individual">Individual</SelectItem>
+            <SelectItem value="group">Group</SelectItem>
+            <SelectItem value="workshop">Workshop</SelectItem>
+          </SelectContent>
+        </Select>
       </div>
+      
       <div>
-        <label className="block mb-2">Instrument</label>
-        <Input name="instrument" required />
+        <label className="block mb-2 font-medium">Instrument</label>
+        <Select name="instrument">
+          <SelectTrigger className="w-full">
+            <SelectValue placeholder="Select instrument" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="guitar">Guitar</SelectItem>
+            <SelectItem value="violin">Violin</SelectItem>
+            <SelectItem value="piano">Piano</SelectItem>
+            <SelectItem value="drums">Drums</SelectItem>
+            <SelectItem value="voice">Voice</SelectItem>
+            <SelectItem value="other">Other</SelectItem>
+          </SelectContent>
+        </Select>
       </div>
+      
       <div>
-        <label className="block mb-2">Phone</label>
-        <Input name="phone" type="tel" required />
+        <label className="block mb-2 font-medium">Phone Number</label>
+        <Input name="phone" type="tel" required className="w-full" />
       </div>
+      
       <div>
-        <label className="block mb-2">Email</label>
-        <Input name="email" type="email" required />
+        <label className="block mb-2 font-medium">Email</label>
+        <Input name="email" type="email" required className="w-full" />
       </div>
+      
       <div>
-        <label className="block mb-2">Comments</label>
-        <Textarea name="comments" />
+        <label className="block mb-2 font-medium">Comments</label>
+        <Textarea name="comments" className="w-full" rows={4} />
       </div>
+      
       <button
         type="submit"
         disabled={submitting}
-        className="w-full py-3 px-4 bg-[#1a7a3d] text-white rounded hover:bg-[#156e35] disabled:opacity-50"
+        className="w-full py-3 px-4 bg-[#1a7a3d] text-white rounded hover:bg-[#156e35] disabled:opacity-50 transition-colors"
       >
         {submitting ? 'Submitting...' : 'Submit'}
       </button>
