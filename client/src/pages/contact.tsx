@@ -24,7 +24,7 @@ type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 const Contact = () => {
   const { toast } = useToast();
-  
+
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
@@ -34,7 +34,7 @@ const Contact = () => {
       message: '',
     },
   });
-  
+
   const contactMutation = useMutation({
     mutationFn: async (values: ContactFormValues) => {
       const response = await apiRequest('POST', '/api/contact', values);
@@ -55,11 +55,136 @@ const Contact = () => {
       });
     }
   });
-  
+
   function onSubmit(values: ContactFormValues) {
     contactMutation.mutate(values);
   }
-  
+
+    const ContactForm = () => {
+        const { toast } = useToast();
+
+        const form = useForm<ContactFormValues>({
+            resolver: zodResolver(contactFormSchema),
+            defaultValues: {
+                name: '',
+                email: '',
+                subject: '',
+                message: '',
+            },
+        });
+
+        const contactMutation = useMutation({
+            mutationFn: async (values: ContactFormValues) => {
+                const response = await apiRequest('POST', '/api/contact', values);
+                return response.json();
+            },
+            onSuccess: () => {
+                toast({
+                    title: "Message sent!",
+                    description: "We'll get back to you as soon as possible.",
+                });
+                form.reset();
+            },
+            onError: (error: any) => {
+                toast({
+                    title: "Message failed to send",
+                    description: error?.message || "Please try again later.",
+                    variant: "destructive",
+                });
+            }
+        });
+
+        function onSubmit(values: ContactFormValues) {
+            contactMutation.mutate(values);
+        }
+
+        return (
+            <Form {...form}>
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                    <FormField
+                        control={form.control}
+                        name="name"
+                        render={({ field }) => (
+                            <FormItem>
+                                <FormLabel>Your Name</FormLabel>
+                                <FormControl>
+                                    <Input placeholder="Enter your name" {...field} />
+                                </FormControl>
+                                <FormMessage />
+                            </FormItem>
+                        )}
+                    />
+
+                    <FormField
+                        control={form.control}
+                        name="email"
+                        render={({ field }) => (
+                            <FormItem>
+                                <FormLabel>Email Address</FormLabel>
+                                <FormControl>
+                                    <Input placeholder="Enter your email" type="email" {...field} />
+                                </FormControl>
+                                <FormMessage />
+                            </FormItem>
+                        )}
+                    />
+
+                    <FormField
+                        control={form.control}
+                        name="subject"
+                        render={({ field }) => (
+                            <FormItem>
+                                <FormLabel>Subject</FormLabel>
+                                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                                    <FormControl>
+                                        <SelectTrigger>
+                                            <SelectValue placeholder="Select a subject" />
+                                        </SelectTrigger>
+                                    </FormControl>
+                                    <SelectContent>
+                                        <SelectItem value="private-lessons">Private Lessons</SelectItem>
+                                        <SelectItem value="group-classes">Group Classes</SelectItem>
+                                        <SelectItem value="workshops">Workshops</SelectItem>
+                                        <SelectItem value="open-days">Open Days</SelectItem>
+                                        <SelectItem value="other">Other Inquiry</SelectItem>
+                                    </SelectContent>
+                                </Select>
+                                <FormMessage />
+                            </FormItem>
+                        )}
+                    />
+
+                    <FormField
+                        control={form.control}
+                        name="message"
+                        render={({ field }) => (
+                            <FormItem>
+                                <FormLabel>Your Message</FormLabel>
+                                <FormControl>
+                                    <Textarea placeholder="Enter your message" rows={4} {...field} />
+                                </FormControl>
+                                <FormMessage />
+                            </FormItem>
+                        )}
+                    />
+
+                    <Button
+                        type="submit"
+                        className="w-full bg-[#1a7a3d] hover:bg-[#156e35]"
+                        disabled={contactMutation.isPending}
+                    >
+                        {contactMutation.isPending ? (
+                            <>
+                                <i className="fas fa-spinner fa-spin mr-2"></i>
+                                Sending...
+                            </>
+                        ) : "Send Message"}
+                    </Button>
+                </form>
+            </Form>
+        );
+    };
+
   return (
     <section id="contact" className="py-16 md:py-24 bg-gradient-to-b from-white to-[#e6f5ec]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -78,7 +203,7 @@ const Contact = () => {
             Reach out to join our COOLlectivo or get more information about our programs.
           </p>
         </motion.div>
-        
+
         <div className="grid md:grid-cols-2 gap-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -91,93 +216,11 @@ const Contact = () => {
                 <h3 className="font-serif text-2xl font-semibold text-[#1a7a3d] mb-6">
                   Send Us a Message
                 </h3>
-                <Form {...form}>
-                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                    <FormField
-                      control={form.control}
-                      name="name"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Your Name</FormLabel>
-                          <FormControl>
-                            <Input placeholder="Enter your name" {...field} />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    
-                    <FormField
-                      control={form.control}
-                      name="email"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Email Address</FormLabel>
-                          <FormControl>
-                            <Input placeholder="Enter your email" type="email" {...field} />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    
-                    <FormField
-                      control={form.control}
-                      name="subject"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Subject</FormLabel>
-                          <Select onValueChange={field.onChange} defaultValue={field.value}>
-                            <FormControl>
-                              <SelectTrigger>
-                                <SelectValue placeholder="Select a subject" />
-                              </SelectTrigger>
-                            </FormControl>
-                            <SelectContent>
-                              <SelectItem value="private-lessons">Private Lessons</SelectItem>
-                              <SelectItem value="group-classes">Group Classes</SelectItem>
-                              <SelectItem value="workshops">Workshops</SelectItem>
-                              <SelectItem value="open-days">Open Days</SelectItem>
-                              <SelectItem value="other">Other Inquiry</SelectItem>
-                            </SelectContent>
-                          </Select>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    
-                    <FormField
-                      control={form.control}
-                      name="message"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Your Message</FormLabel>
-                          <FormControl>
-                            <Textarea placeholder="Enter your message" rows={4} {...field} />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    
-                    <Button 
-                      type="submit" 
-                      className="w-full bg-[#1a7a3d] hover:bg-[#156e35]"
-                      disabled={contactMutation.isPending}
-                    >
-                      {contactMutation.isPending ? (
-                        <>
-                          <i className="fas fa-spinner fa-spin mr-2"></i>
-                          Sending...
-                        </>
-                      ) : "Send Message"}
-                    </Button>
-                  </form>
-                </Form>
+                <ContactForm />
               </div>
             </div>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -229,7 +272,7 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
               <div className="p-8">
                 <h3 className="font-serif text-2xl font-semibold text-[#f4b942] mb-6">
