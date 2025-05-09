@@ -16,7 +16,7 @@ export const ContactForm = () => {
     const data = Object.fromEntries(formData.entries());
     
     // Replace FORM_ID with your Google Form ID
-    const formUrl = `https://docs.google.com/forms/d/e/FORM_ID/formResponse`;
+    const formUrl = `https://docs.google.com/forms/d/e/1FAIpQLSfO0yLMfP1fU8wjLywi27VRs0ppPBbOTAV0irIvzmXbcziNRg/viewform?usp=dialog`;
     
     try {
       // Map your form fields to Google Form field names
