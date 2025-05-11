@@ -5,6 +5,7 @@ import { fadeIn } from "@/lib/animations";
 
 const TeachersPage = () => {
   const { t } = useLanguage();
+  const colors = useThemeColors();
 
   const teachers = [
     {
@@ -35,11 +36,11 @@ const TeachersPage = () => {
 
   const TeacherInfo = ({ teacher }: { teacher: typeof teachers[0] }) => (
     <div className="p-6 flex flex-col justify-center">
-      <h3 className="text-2xl font-serif font-semibold mb-2">
+      <h3 className="text-2xl font-serif font-semibold mb-2" style={{ color: colors.primary }}>
         {teacher.name}
       </h3>
-      <p className="text-[#c66b3e] mb-3">{teacher.instrument}</p>
-      <p className="text-[#333333]">{teacher.bio}</p>
+      <p className="mb-3" style={{ color: colors.secondary }}>{teacher.instrument}</p>
+      <p style={{ color: colors.text }}>{teacher.bio}</p>
     </div>
   );
 

@@ -25,6 +25,7 @@ type FormValues = z.infer<typeof formSchema>;
 
 const Contact = () => {
   const { toast } = useToast();
+  const colors = useThemeColors();
 
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -79,7 +80,7 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="py-16 md:py-24 bg-gradient-to-b from-white to-[#e6f5ec]">
+    <section id="contact" className="py-16 md:py-24" style={{ background: `linear-gradient(to bottom, ${colors.bgGradientFrom}, ${colors.bgGradientTo})` }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           className="text-center mb-16"

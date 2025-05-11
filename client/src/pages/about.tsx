@@ -4,10 +4,11 @@ import { useLanguage } from "@/lib/language-context";
 
 const About = () => {
   const { t } = useLanguage();
+  const colors = useThemeColors();
   const { ref, inView } = useIntersectionObserver({ threshold: 0.1 });
 
   return (
-    <section id="about" className="py-16 md:py-24 bg-white">
+    <section id="about" className="py-16 md:py-24" style={{ backgroundColor: colors.cardBg }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-12"

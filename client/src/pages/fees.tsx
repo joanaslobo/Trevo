@@ -3,8 +3,9 @@ import PricingCard from '@/components/ui/pricing-card';
 import { pricingPlans } from '@/lib/constants';
 
 const Fees = () => {
+  const colors = useThemeColors();
   return (
-    <section id="fees" className="py-16 md:py-24 bg-white">
+    <section id="fees" className="py-16 md:py-24" style={{ backgroundColor: colors.cardBg }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           className="text-center mb-16"
