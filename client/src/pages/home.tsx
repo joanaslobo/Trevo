@@ -320,7 +320,6 @@ const Home = () => {
 
 
     {/* About Section */}
-
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-12"
@@ -329,15 +328,13 @@ const Home = () => {
           transition={{ duration: 0.8 }}
           ref={ref}
         >
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#1a7a3d]">
+          <h2 className="font-serif text-3xl md:text-4xl font-bold" style={{ color: colors.primary }}>
             {t("about.title")}
           </h2>
-          <div className="w-20 h-1 bg-[#c66b3e] mx-auto mt-4"></div>
+          <div className="w-20 h-1 mx-auto mt-4" style={{ backgroundColor: colors.secondary }}></div>
         </motion.div>
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <p>    </p>
-
-          
         </div>
         
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -347,24 +344,24 @@ const Home = () => {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
           >
-            <h3 className="font-serif text-2xl md:text-3xl font-semibold text-[#c66b3e] mb-6">
+            <h3 className="font-serif text-2xl md:text-3xl font-semibold mb-6" style={{ color: colors.secondary }}>
               {t("about.fusion.title")}
             </h3>
-            <p className="text-[#333333] mb-6">
+            <p className="mb-6" style={{ color: colors.text }}>
               {t("about.fusion.p1")}
             </p>
-            <p className="text-[#333333]">
+            <p style={{ color: colors.text }}>
               {t("about.fusion.p2")}
             </p>
 
             <div className="mt-12">
-              <h3 className="font-serif text-2xl md:text-3xl font-semibold text-[#f4b942] mb-6">
+              <h3 className="font-serif text-2xl md:text-3xl font-semibold mb-6" style={{ color: colors.accent }}>
                 {t("about.collective.title")}
               </h3>
-              <p className="text-[#333333] mb-6">
+              <p className="mb-6" style={{ color: colors.text }}>
                 {t("about.collective.p1")}
               </p>
-              <p className="text-[#333333]">
+              <p style={{ color: colors.text }}>
                 {t("about.collective.p2")}          
               </p>
             </div>
