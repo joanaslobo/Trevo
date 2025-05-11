@@ -317,10 +317,10 @@ const Home = () => {
       <div className="absolute bottom-0 left-0 right-0">
         <WaveDivider fillColor={isRockMode ? "#121212" : "#FFFFFF"} />
       </div>
-    </section>
+
 
     {/* About Section */}
-    <section id="about" className="py-16 md:py-24 bg-white">
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-12"
@@ -334,7 +334,12 @@ const Home = () => {
           </h2>
           <div className="w-20 h-1 bg-[#c66b3e] mx-auto mt-4"></div>
         </motion.div>
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <p>    </p>
 
+          
+        </div>
+        
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
