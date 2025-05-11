@@ -166,7 +166,6 @@ function AppContent() {
       <main className="flex-grow theme-text">
         <Switch>
           <Route path="/" component={Home} />
-          <Route path="/about" component={About} />
           <Route path="/teachers" component={TeachersPage} />
           <Route path="/programs" component={Programs} />
           <Route path="/fees" component={Fees} />
