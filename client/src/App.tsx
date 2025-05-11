@@ -69,7 +69,7 @@ const LandingOverlay = ({ onComplete }: { onComplete: () => void }) => {
           fontSize: shrinking ? '0.5em' : '2em',
         }}
       >
-        My Awesome Website
+       Trevo
       </h1>
     </div>
   );

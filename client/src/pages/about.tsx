@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
+import { useLanguage } from "@/lib/language-context";
 
 const About = () => {
+  const { t } = useLanguage();
   const { ref, inView } = useIntersectionObserver({ threshold: 0.1 });
 
   return (
@@ -28,37 +30,33 @@ const About = () => {
             transition={{ duration: 0.8 }}
           >
             <h3 className="font-serif text-2xl md:text-3xl font-semibold text-[#c66b3e] mb-6">
-              Music School & Community
+              {t("about.fusion.title")}
+
             </h3>
             <p className="text-[#333333] mb-6">
-              Trevo (Portuguese for shamrock) was born from the unique
-              collaboration between musicians and educators.
+              {t("about.fusion.p1")}
             </p>
             <p className="text-[#333333]">
-              Located in STOP Centro Cultural in the city of Porto, we provide a
-              space in the heart of the city where students can learn, practice,
-              and perform surrounded by a strong community of musicians.
+              {t("about.fusion.p2")}
+
             </p>
 
             <div className="mt-12">
               <h3 className="font-serif text-2xl md:text-3xl font-semibold text-[#f4b942] mb-6">
-                COOLlectivo – More than a school
+                {t("about.collective.title")}
+
               </h3>
               <p className="text-[#333333] mb-6">
-                COOLlectivo is our creative community - a playful fusion of
-                "cool," "lectivo" (academic), and "colectivo" (collective).
-                We're not just teaching music; we're building a family of
-                creators who inspire and support each other.
+                {t("about.collective.p1")}
+
               </p>
               <p className="text-[#333333]">
-                Through performances, workshops, and collaborative projects, we
-                foster an environment where passion and expertise flow freely
-                between teachers, students, and the wider Porto community.
+                {t("about.collective.p2")}          
               </p>
             </div>
           </motion.div>
 
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <motion.div
               className="bg-[#e6f5ec] rounded-xl p-6 shadow-md"
               initial={{ opacity: 0, rotate: 0 }}
@@ -71,13 +69,9 @@ const About = () => {
                 <i className="fas fa-guitar"></i>
               </div>
               <h4 className="font-serif text-xl font-medium text-[#156e35] mb-2">
-                Student Guided
+                {t("about.card.instrument")}
               </h4>
-              <p className="text-sm">
-                {" "}
-                Wanna learn [some song]? Great! Want to master [other cool
-                song]? Fantastic! We're interested in what you want to learn.
-              </p>
+              <p className="text-sm">{t("about.card.instrument.desc")}</p>
             </motion.div>
 
             <motion.div
@@ -89,15 +83,12 @@ const About = () => {
               whileHover={{ rotate: 2 }}
             >
               <div className="text-[#c66b3e] text-3xl mb-4">
-                <i className="fas fa-drum"></i>
+                <i className="fas fa-people-arrows"></i>
               </div>
               <h4 className="font-serif text-xl font-medium text-[#b35c35] mb-2">
-                Fully Equiped Rooms
+                {t("about.card.sharing")}
               </h4>
-              <p className="text-sm">
-                Our studios are filled with plenty of different instruments for
-                you to try!
-              </p>
+              <p className="text-sm">{t("about.card.sharing.desc")}</p>
             </motion.div>
 
             <motion.div
@@ -109,33 +100,49 @@ const About = () => {
               whileHover={{ rotate: 2 }}
             >
               <div className="text-[#f4b942] text-3xl mb-4">
-                <i className="fas fa-users"></i>
+                <i className="fas fa-handshake"></i>
               </div>
               <h4 className="font-serif text-xl font-medium text-[#e79c0d] mb-2">
-                Our Team
+                {t("about.card.collective")}
               </h4>
-              <p className="text-sm">
-                5 passionate musicians with international performance experience
-              </p>
+              <p className="text-sm">{t("about.card.collective.desc")}</p>
             </motion.div>
 
             <motion.div
-              className="bg-[#1a7a3d] text-white rounded-xl p-6 shadow-md"
+              className="bg-[#d8eafd] rounded-xl p-6 shadow-md"
               initial={{ opacity: 0, rotate: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5, delay: 0.3 }}
               whileHover={{ rotate: 2 }}
             >
-              <div className="text-white text-3xl mb-4">
-                <i className="fas fa-music"></i>
+              <div className="text-[#4a90e2] text-3xl mb-4">
+                <i className="fas fa-brain"></i>
               </div>
-              <h4 className="font-serif text-xl font-medium mb-2">Community</h4>
-              <p className="text-sm">
-                Join our ever-growing family of musicians in Porto
-              </p>
+              <h4 className="font-serif text-xl font-medium text-[#357ab8] mb-2">
+                {t("about.card.creativity")}
+              </h4>
+              <p className="text-sm">{t("about.card.creativity.desc")}</p>
+            </motion.div>
+
+            <motion.div
+              className="bg-[#fbe3e8] rounded-xl p-6 shadow-md"
+              initial={{ opacity: 0, rotate: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              whileHover={{ rotate: 2 }}
+            >
+              <div className="text-[#e03e6f] text-3xl mb-4">
+                <i className="fas fa-heart"></i>
+              </div>
+              <h4 className="font-serif text-xl font-medium text-[#c92f5d] mb-2">
+                {t("about.card.passion")}
+              </h4>
+              <p className="text-sm">{t("about.card.passion.desc")}</p>
             </motion.div>
           </div>
+
         </div>
       </div>
     </section>

@@ -17,7 +17,7 @@ export const ContactForm = () => {
     const data = Object.fromEntries(formData.entries());
     
     try {
-      const formUrl = `https://docs.google.com/forms/d/e/1FAIpQLSfO0yLMfP1fU8wjLywi27VRs0ppPBbOTAV0irIvzmXbcziNRg/viewform`;
+      const formUrl = `https://docs.google.com/forms/d/e/1FAIpQLSfO0yLMfP1fU8wjLywi27VRs0ppPBbOTAV0irIvzmXbcziNRg/`;
       const params = new URLSearchParams({
         'entry.123': data.name as string,
         'entry.456': data.age as string,

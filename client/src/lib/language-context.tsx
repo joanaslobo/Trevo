@@ -46,41 +46,44 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.joinUs": "Join Us",
 
     // Home page
-    "home.title": "Trevo – Where Music Grows",
+    "home.title": "Trevo Colectivo",
     "home.subtitle":
-      "A music school & collective in the heart of Porto, bringing together Irish and Portuguese musical traditions.",
-    "home.cta.join": "Join the COOLlectivo",
-    "home.cta.explore": "Explore Programs",
+      "Trevo Coolectivo is a collaborative music teaching network connecting students and teachers across Porto, Ovar, and Ílhavo through shared learning, creativity, and a passion for all things music.",
+    "home.cta.join": "Join the COOLlectivo!",
+    "home.cta.explore": "About us",
 
     // About page
     "about.title": "About Trevo",
-    "about.fusion.title": "A fusion of Irish & Portuguese musical passion",
+    "about.fusion.title": "Music and Community",
     "about.fusion.p1":
-      "Trevo (Portuguese for shamrock) was born from the unique collaboration between an Irish musician and four Portuguese talents. Our name symbolizes the cultural bridge we've built between these two rich musical traditions.",
+      "Trevo Coolectivo was born from the combined efforts of four musicians who, although they had played and worked together in bands, had been teaching individually. They felt that together they could offer more - and that's how this cooperative teaching network between Porto, Ovar and Ílhavo came about.",
     "about.fusion.p2":
-      "Located in the vibrant city of Porto, we provide a space where traditional techniques meet contemporary expression, creating a distinctive sound that honors our diverse heritage.",
+      "We combine years of experience in music with a common methodology, offering students more than just lessons: we promote connections between students of various instruments, creativity, sharing and a true collective spirit.",
     "about.collective.title": "COOLlectivo – More than a school",
     "about.collective.p1":
-      'COOLlectivo is our creative community - a playful fusion of "cool," "lectivo" (academic), and "colectivo" (collective). We\'re not just teaching music; we\'re building a family of creators who inspire and support each other.',
+      'We believe that music teaching should be accessible and inspiring. That is why we offer the first lesson at half price - so that anyone can experience the energy of our collective',
     "about.collective.p2":
-      "Through performances, workshops, and collaborative projects, we foster an environment where passion and expertise flow freely between teachers, students, and the wider Porto community.",
-    "about.card.irish": "Irish Roots",
-    "about.card.irish.desc":
-      "Traditional Celtic music meeting contemporary Portuguese styles",
-    "about.card.portuguese": "Portuguese Flair",
-    "about.card.portuguese.desc":
-      "Bringing the soul of fado and Portuguese rhythms to our teaching",
-    "about.card.team": "Our Team",
-    "about.card.team.desc":
-      "5 passionate musicians with international performance experience",
-    "about.card.community": "Community",
-    "about.card.community.desc":
-      "Join our ever-growing family of musicians in Porto",
+      "We set out to grow enthusiasm for music in all its forms in our students, not only by learning an instrument in individual or group lessons, but also by encouraging a taste for collecting music in physical format, books about artists and bands, posters, merchandise and other items for music lovers.",
+    "about.card.instrument": "Learning an Instrument",
+    "about.card.instrument.desc": "To enable students to master an instrument in its technical and timbral aspects, understanding its functions in groups and ensembles of different musical styles.",
+
+    "about.card.sharing": "Bringing Students Together",
+    "about.card.sharing.desc": "Promoting the sharing of skills, combating the isolation of individual study and helping to overcome fears and doubts in the learning process.",
+
+    "about.card.collective": "Strengthening Group Work",
+    "about.card.collective.desc": "Making students believe in the strength of the collective, where each person's virtues are enhanced and shortcomings are filled by the group.",
+
+    "about.card.creativity": "Stimulating Creativity and Autonomy",
+    "about.card.creativity.desc": "Encouraging exploration, mixing and experimentation, ensuring that students acquire the tools to develop their musical path independently.",
+
+    "about.card.passion": "Nurturing Passion",
+    "about.card.passion.desc": "Awakening a love of music through practice, theory and the discovery of artists and musical works.",
+
 
     // Programs page
-    "programs.title": "Our Programs",
+    "programs.title": "About the Music",
     "programs.subtitle":
-      "Discover your musical voice through our diverse range of programs designed for all ages and skill levels.",
+      "Trevo Coolectivo was born from the combined efforts of four musicians who, although they had played and worked together in bands, had been teaching individually. Each felt limited in their ability to fully reach their potential — until they decided to join forces.  Backed by years of experience in the Portuguese music scene, both on stage and in the studio, we believe that students benefit most from a cooperative philosophy and a shared teaching methodology — connecting the dots between Porto, Ovar, and Ílhavo. Our goal is to integrate students into a teaching network made up of diverse teachers, each with unique backgrounds, experiences, and paths. We foster connections between students of different instruments, encourage creativity, promote collective learning processes, and help make music education more accessible.  To make getting started easier, we offer the first lesson at half price for any instrument — giving new students a chance to experience the energy of our collective.    More than just lessons, we nurture a love for music in all its forms — from records, books, and posters to shared moments between music lovers.",
 
     // Fees page
     "fees.title": "Fees & Schedule",
