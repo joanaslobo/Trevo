@@ -17,7 +17,9 @@ const Programs = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-white to-[#e6f5ec]">
+    <section className="py-16 md:py-24" style={{
+      background: `linear-gradient(to bottom, ${colors.bgGradientFrom}, ${colors.bgGradientTo})`
+    }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           className="text-center mb-16"
@@ -26,10 +28,10 @@ const Programs = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#1a7a3d] mb-4">
+          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4" style={{ color: colors.primary }}>
             {t("programs.title")}
           </h2>
-          <p className="text-lg max-w-2xl mx-auto text-[#333333]">
+          <p className="text-lg max-w-2xl mx-auto" style={{ color: colors.text }}>
             {t("programs.subtitle")}
           </p>
         </motion.div>
@@ -38,19 +40,20 @@ const Programs = () => {
           {methodologyPillars.map((pillar, index) => (
             <motion.div
               key={pillar.key}
-              className="bg-white rounded-lg p-6 shadow-lg"
+              style={{ backgroundColor: colors.cardBg }}
+              className="rounded-lg p-6 shadow-lg"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <div className="text-[#1a7a3d] text-3xl mb-4">
+              <div style={{ color: colors.primary }} className="text-3xl mb-4">
                 <i className={`fas ${pillar.icon}`}></i>
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-[#1a7a3d]">
+              <h3 className="text-xl font-semibold mb-3" style={{ color: colors.primary }}>
                 {t(`programs.methodology.${pillar.key}`)}
               </h3>
-              <p className="text-[#666666]">
+              <p style={{ color: colors.textLight }}>
                 {t(`programs.methodology.${pillar.key}.desc`)}
               </p>
             </motion.div>
@@ -58,38 +61,42 @@ const Programs = () => {
         </div>
 
         <motion.div
-          className="bg-white rounded-lg p-8 shadow-lg mb-20"
+          style={{ backgroundColor: colors.cardBg }}
+          className="rounded-lg p-8 shadow-lg mb-20"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-2xl font-semibold mb-6 text-[#1a7a3d]">
+          <h3 className="text-2xl font-semibold mb-6" style={{ color: colors.primary }}>
             {t("programs.locations.title")}
           </h3>
-          <p className="mb-6 text-[#666666]">{t("programs.locations.desc")}</p>
+          <p className="mb-6" style={{ color: colors.textLight }}>{t("programs.locations.desc")}</p>
           <div className="grid sm:grid-cols-3 gap-4">
             {['porto', 'ilhavo', 'ovar'].map((location) => (
-              <div key={location} className="p-4 bg-[#f8f9fa] rounded-lg">
-                <p className="font-medium">{t(`programs.locations.${location}`)}</p>
+              <div key={location} style={{ backgroundColor: colors.bgColor }} className="p-4 rounded-lg">
+                <p className="font-medium" style={{ color: colors.text }}>
+                  {t(`programs.locations.${location}`)}
+                </p>
               </div>
             ))}
           </div>
         </motion.div>
 
         <motion.div
-          className="bg-white rounded-lg p-8 shadow-lg mb-20"
+          style={{ backgroundColor: colors.cardBg }}
+          className="rounded-lg p-8 shadow-lg mb-20"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-2xl font-semibold mb-6 text-[#1a7a3d]">
+          <h3 className="text-2xl font-semibold mb-6" style={{ color: colors.primary }}>
             {t("programs.benefits.title")}
           </h3>
           <ul className="space-y-4">
             {['individual', 'materials', 'club'].map((benefit) => (
               <li key={benefit} className="flex items-start">
-                <i className="fas fa-check-circle text-[#1a7a3d] mt-1 mr-3"></i>
-                <p className="text-[#666666]">{t(`programs.benefits.${benefit}`)}</p>
+                <i className="fas fa-check-circle mt-1 mr-3" style={{ color: colors.primary }}></i>
+                <p style={{ color: colors.textLight }}>{t(`programs.benefits.${benefit}`)}</p>
               </li>
             ))}
           </ul>
@@ -101,10 +108,10 @@ const Programs = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-2xl font-semibold mb-6 text-[#1a7a3d]">
+          <h3 className="text-2xl font-semibold mb-6" style={{ color: colors.primary }}>
             {t("programs.vision.title")}
           </h3>
-          <p className="text-[#666666] max-w-2xl mx-auto">
+          <p style={{ color: colors.textLight }} className="max-w-2xl mx-auto">
             {t("programs.vision.desc")}
           </p>
         </motion.div>
