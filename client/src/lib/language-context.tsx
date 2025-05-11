@@ -81,9 +81,38 @@ const translations: Record<Language, Record<string, string>> = {
 
 
     // Programs page
-    "programs.title": "About the Music",
-    "programs.subtitle":
-      "Trevo Coolectivo was born from the combined efforts of four musicians who, although they had played and worked together in bands, had been teaching individually. Each felt limited in their ability to fully reach their potential — until they decided to join forces.  Backed by years of experience in the Portuguese music scene, both on stage and in the studio, we believe that students benefit most from a cooperative philosophy and a shared teaching methodology — connecting the dots between Porto, Ovar, and Ílhavo. Our goal is to integrate students into a teaching network made up of diverse teachers, each with unique backgrounds, experiences, and paths. We foster connections between students of different instruments, encourage creativity, promote collective learning processes, and help make music education more accessible.  To make getting started easier, we offer the first lesson at half price for any instrument — giving new students a chance to experience the energy of our collective.    More than just lessons, we nurture a love for music in all its forms — from records, books, and posters to shared moments between music lovers.",
+    "programs.title": "Our Methodology",
+    "programs.subtitle": "At Trevo Coolectivo, our methodology centers on fun, collaboration, and personalization, ensuring each student learns in an engaging way tailored to their needs.",
+    "programs.methodology.title": "Our Pillars",
+    "programs.methodology.customPlan": "Customized Plan",
+    "programs.methodology.customPlan.desc": "Each student co-creates their study plan with the teacher, defining goals that may include playing for pleasure, performing on stage, pursuing a career, or preparing for music curriculum exams like Rockschool.",
+    "programs.methodology.exploration": "Instrument Exploration",
+    "programs.methodology.exploration.desc": "All students participate in two annual lessons with a different instrument (e.g., a guitarist tries drums) to broaden horizons and gain versatility.",
+    "programs.methodology.collaborative": "Collaborative Practice",
+    "programs.methodology.collaborative.desc": "Combo classes bring together students of various instruments to form bands, with recordings of original songs or covers at the end of the year, shared with the community. We also hold regular events like public jam sessions where students and local musicians play together.",
+    "programs.methodology.discovery": "Musical Discovery",
+    "programs.methodology.discovery.desc": "We recommend musical works and artists weekly, plus books on theory, music history, and biographies, encouraging physical format music collection.",
+    "programs.methodology.production": "Production Basics",
+    "programs.methodology.production.desc": "We teach basic recording and editing using tools like GarageBand and Reaper, integrated into combo classes and music production course.",
+    "programs.methodology.monitoring": "Regular Monitoring",
+    "programs.methodology.monitoring.desc": "We provide quarterly reports with student progress, clear goals, and personalized tips.",
+    
+    "programs.disciplines.title": "Disciplines and Faculty",
+    "programs.disciplines.desc": "Our team consists of experienced musicians with diverse backgrounds, bringing energy and inspiration to classes.",
+    
+    "programs.locations.title": "Locations",
+    "programs.locations.desc": "Classes take place in welcoming spaces along the Porto - Ovar - Ílhavo axis, with plans for expansion.",
+    "programs.locations.porto": "Porto: CC Stop",
+    "programs.locations.ilhavo": "Ílhavo: Coming soon",
+    "programs.locations.ovar": "Ovar: Coming soon",
+    
+    "programs.benefits.title": "Benefits",
+    "programs.benefits.individual": "1-hour individual lessons with make-up classes for justified absences",
+    "programs.benefits.materials": "Free materials including sheet music, theory guides, and personalized playlists",
+    "programs.benefits.club": "Participation in the collectors' club with regular meetings to exchange and discuss physical music, books, and memorabilia",
+    
+    "programs.vision.title": "Future Vision",
+    "programs.vision.desc": "Trevo Coolectivo aspires to be a meeting point for music lovers, uniting creativity, community, and energy.",
 
     // Fees page
     "fees.title": "Fees & Schedule",
