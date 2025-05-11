@@ -10,16 +10,54 @@ const Home = () => {
   const { ref, inView } = useIntersectionObserver({ threshold: 0.1 });
   const { t } = useLanguage();
   const { isRockMode } = useTheme();
-  
+
   // Use the centralized theme colors
   const colors = useThemeColors();
 
+  const cards = [
+    {
+      icon: "fas fa-guitar",
+      titleKey: "about.card.instrument",
+      descKey: "about.card.instrument.desc",
+      iconColor: colors.primary,
+      textColor: colors.primaryBtnHover,
+    },
+    {
+      icon: "fas fa-people-arrows",
+      titleKey: "about.card.sharing",
+      descKey: "about.card.sharing.desc",
+      iconColor: colors.secondary,
+      textColor: colors.secondaryBtnHover,
+    },
+    {
+      icon: "fas fa-handshake",
+      titleKey: "about.card.collective",
+      descKey: "about.card.collective.desc",
+      iconColor: colors.accent,
+      textColor: colors.accentBtnHover,
+    },
+    {
+      icon: "fas fa-brain",
+      titleKey: "about.card.creativity",
+      descKey: "about.card.creativity.desc",
+      iconColor: colors.accent,
+      textColor: colors.accentBtnHover,
+    },
+    {
+      icon: "fas fa-heart",
+      titleKey: "about.card.passion",
+      descKey: "about.card.passion.desc",
+      iconColor: colors.secondary,
+      textColor: colors.secondaryBtnHover,
+    },
+
+  ];
   return (
     <section
       id="home"
       className="relative pt-24 pb-20 md:pt-32 md:pb-40 overflow-hidden"
       style={{
-        background: `linear-gradient(to bottom, ${colors.bgGradientFrom}, ${colors.bgGradientTo})`
+        background: `linear-gradient(to bottom, ${colors.bgGradientFrom}, ${colors.bgGradientTo})`,
       }}
     >
       {/* Background decorative elements */}
@@ -318,8 +356,8 @@ const Home = () => {
         <WaveDivider fillColor={isRockMode ? "#121212" : "#FFFFFF"} />
       </div>
 
-
-    {/* About Section */}
+      <div className="h-32"></div>
+      {/* About Section */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-12"
@@ -328,15 +366,18 @@ const Home = () => {
           transition={{ duration: 0.8 }}
           ref={ref}
         >
-          <h2 className="font-serif text-3xl md:text-4xl font-bold" style={{ color: colors.primary }}>
+          <h2
+            className="font-serif text-3xl md:text-4xl font-bold"
+            style={{ color: colors.primary }}
+          >
             {t("about.title")}
           </h2>
-          <div className="w-20 h-1 mx-auto mt-4" style={{ backgroundColor: colors.secondary }}></div>
+          <div
+            className="w-20 h-1 mx-auto mt-4"
+            style={{ backgroundColor: colors.secondary }}
+          ></div>
         </motion.div>
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <p>    </p>
-        </div>
-        
+
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -344,115 +385,56 @@ const Home = () => {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
           >
-            <h3 className="font-serif text-2xl md:text-3xl font-semibold mb-6" style={{ color: colors.secondary }}>
+            <h3
+              className="font-serif text-2xl md:text-3xl font-semibold mb-6"
+              style={{ color: colors.secondary }}
+            >
               {t("about.fusion.title")}
             </h3>
             <p className="mb-6" style={{ color: colors.text }}>
               {t("about.fusion.p1")}
             </p>
-            <p style={{ color: colors.text }}>
-              {t("about.fusion.p2")}
-            </p>
+            <p style={{ color: colors.text }}>{t("about.fusion.p2")}</p>
 
             <div className="mt-12">
-              <h3 className="font-serif text-2xl md:text-3xl font-semibold mb-6" style={{ color: colors.accent }}>
+              <h3
+                className="font-serif text-2xl md:text-3xl font-semibold mb-6"
+                style={{ color: colors.accent }}
+              >
                 {t("about.collective.title")}
               </h3>
               <p className="mb-6" style={{ color: colors.text }}>
                 {t("about.collective.p1")}
               </p>
-              <p style={{ color: colors.text }}>
-                {t("about.collective.p2")}          
-              </p>
+              <p style={{ color: colors.text }}>{t("about.collective.p2")}</p>
             </div>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <motion.div
-              className="bg-[#e6f5ec] rounded-xl p-6 shadow-md"
-              initial={{ opacity: 0, rotate: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.5 }}
-              whileHover={{ rotate: 2 }}
-            >
-              <div className="text-[#1a7a3d] text-3xl mb-4">
-                <i className="fas fa-guitar"></i>
-              </div>
-              <h4 className="font-serif text-xl font-medium text-[#156e35] mb-2">
-                {t("about.card.instrument")}
-              </h4>
-              <p className="text-sm">{t("about.card.instrument.desc")}</p>
-            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pb-24">
+              {cards.map((card, index) => (
+                <motion.div
+                  key={card.titleKey}
+                  className="rounded-xl p-6 shadow-md"
+                  style={{ backgroundColor: colors.bgGradientFrom }}
+                  initial={{ opacity: 0, rotate: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  whileHover={{ rotate: 2 }}
+                >
+                  <div className="text-3xl mb-4" style={{ color: card.iconColor }}>
+                    <i className={card.icon}></i>
+                  </div>
+                  <h4 className="font-serif text-xl font-medium mb-2" style={{ color: card.textColor }}>
+                    {t(card.titleKey)}
+                  </h4>
+                  <p className="text-sm" style={{ color: colors.textLight }}>
+                    {t(card.descKey)}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
 
-            <motion.div
-              className="bg-[#f2dcd3] rounded-xl p-6 shadow-md"
-              initial={{ opacity: 0, rotate: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              whileHover={{ rotate: 2 }}
-            >
-              <div className="text-[#c66b3e] text-3xl mb-4">
-                <i className="fas fa-people-arrows"></i>
-              </div>
-              <h4 className="font-serif text-xl font-medium text-[#b35c35] mb-2">
-                {t("about.card.sharing")}
-              </h4>
-              <p className="text-sm">{t("about.card.sharing.desc")}</p>
-            </motion.div>
-
-            <motion.div
-              className="bg-[#fcf4d3] rounded-xl p-6 shadow-md"
-              initial={{ opacity: 0, rotate: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              whileHover={{ rotate: 2 }}
-            >
-              <div className="text-[#f4b942] text-3xl mb-4">
-                <i className="fas fa-handshake"></i>
-              </div>
-              <h4 className="font-serif text-xl font-medium text-[#e79c0d] mb-2">
-                {t("about.card.collective")}
-              </h4>
-              <p className="text-sm">{t("about.card.collective.desc")}</p>
-            </motion.div>
-
-            <motion.div
-              className="bg-[#d8eafd] rounded-xl p-6 shadow-md"
-              initial={{ opacity: 0, rotate: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              whileHover={{ rotate: 2 }}
-            >
-              <div className="text-[#4a90e2] text-3xl mb-4">
-                <i className="fas fa-brain"></i>
-              </div>
-              <h4 className="font-serif text-xl font-medium text-[#357ab8] mb-2">
-                {t("about.card.creativity")}
-              </h4>
-              <p className="text-sm">{t("about.card.creativity.desc")}</p>
-            </motion.div>
-
-            <motion.div
-              className="bg-[#fbe3e8] rounded-xl p-6 shadow-md"
-              initial={{ opacity: 0, rotate: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              whileHover={{ rotate: 2 }}
-            >
-              <div className="text-[#e03e6f] text-3xl mb-4">
-                <i className="fas fa-heart"></i>
-              </div>
-              <h4 className="font-serif text-xl font-medium text-[#c92f5d] mb-2">
-                {t("about.card.passion")}
-              </h4>
-              <p className="text-sm">{t("about.card.passion.desc")}</p>
-            </motion.div>
-          </div>
         </div>
       </div>
     </section>

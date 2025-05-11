@@ -79,12 +79,7 @@ const Header = () => {
               currentPath={location}
               onClick={closeMenu}
             />
-            <NavLink
-              href="/about"
-              label={t("nav.about")}
-              currentPath={location}
-              onClick={closeMenu}
-            />
+
             <NavLink
               href="/teachers"
               label={t("nav.teachers")}
@@ -193,13 +188,7 @@ const Header = () => {
                 onClick={closeMenu}
                 mobile
               />
-              <NavLink
-                href="/about"
-                label={t("nav.about")}
-                currentPath={location}
-                onClick={closeMenu}
-                mobile
-              />
+
               <NavLink
                 href="/teachers"
                 label={t("nav.teachers")}
