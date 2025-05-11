@@ -22,7 +22,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
 const translations: Record<Language, Record<string, string>> = {
   en: {
     // Teachers page
-    "teachers.title": "Meet Our Teachers",
+    "teachers.title": "Subjects and Teaching Staff",
     "teachers.instrument.strings": "Strings",
     "teachers.instrument.guitar": "Guitar",
     "teachers.instrument.voice": "Voice",
