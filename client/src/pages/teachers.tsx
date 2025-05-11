@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { useLanguage } from "@/lib/language-context";
 import { fadeIn } from "@/lib/animations";
@@ -32,6 +33,24 @@ const TeachersPage = () => {
     },
   ];
 
+  const TeacherInfo = ({ teacher }: { teacher: typeof teachers[0] }) => (
+    <div className="p-6 flex flex-col justify-center">
+      <h3 className="text-2xl font-serif font-semibold mb-2">
+        {teacher.name}
+      </h3>
+      <p className="text-[#c66b3e] mb-3">{teacher.instrument}</p>
+      <p className="text-[#333333]">{teacher.bio}</p>
+    </div>
+  );
+
+  const TeacherImage = ({ teacher }: { teacher: typeof teachers[0] }) => (
+    <img
+      src={teacher.image}
+      alt={teacher.name}
+      className="w-full h-[400px] object-cover"
+    />
+  );
+
   return (
     <div className="container mx-auto px-4 py-12">
       <motion.h1
@@ -43,7 +62,7 @@ const TeachersPage = () => {
         {t("teachers.title")}
       </motion.h1>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="space-y-8">
         {teachers.map((teacher, index) => (
           <motion.div
             key={teacher.name}
@@ -52,17 +71,18 @@ const TeachersPage = () => {
             animate="visible"
             className="bg-white rounded-lg shadow-lg overflow-hidden"
           >
-            <img
-              src={teacher.image}
-              alt={teacher.name}
-              className="w-full h-64 object-cover"
-            />
-            <div className="p-6">
-              <h3 className="text-xl font-serif font-semibold mb-2">
-                {teacher.name}
-              </h3>
-              <p className="text-[#c66b3e] mb-3">{teacher.instrument}</p>
-              <p className="text-[#333333]">{teacher.bio}</p>
+            <div className="grid md:grid-cols-2 gap-6">
+              {index % 2 === 0 ? (
+                <>
+                  <TeacherInfo teacher={teacher} />
+                  <TeacherImage teacher={teacher} />
+                </>
+              ) : (
+                <>
+                  <TeacherImage teacher={teacher} />
+                  <TeacherInfo teacher={teacher} />
+                </>
+              )}
             </div>
           </motion.div>
         ))}
