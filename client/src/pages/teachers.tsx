@@ -124,11 +124,53 @@ const TeachersPage = () => {
               {index % 2 === 0 ? (
                 <>
                   <SubjectInfo subject={subject} />
-                  <div className="w-full h-[400px] object-cover bg-gray-200"></div> {/* Placeholder for images */}
+                  <div className="w-full h-[400px] flex items-center justify-center bg-gray-100">
+                    {(() => {
+                      const iconMap: { [key: string]: string } = {
+                        'Bass': 'fa-guitar',
+                        'Drums': 'fa-drum',
+                        'Guitar': 'fa-guitar',
+                        'Piano': 'fa-piano',
+                        'Saxophone': 'fa-saxophone',
+                        'Ukulele': 'fa-guitar',
+                        'Vocals': 'fa-microphone',
+                        'Combo': 'fa-users',
+                        'Musical Entertainment': 'fa-music',
+                        'Music Production': 'fa-sliders',
+                        'Exam preparation (e.g. Rockschool)': 'fa-graduation-cap'
+                      };
+
+                      const icon = iconMap[subject.name] || 'fa-music';
+                      return (
+                        <i className={`fas ${icon} text-9xl opacity-50`} style={{ color: colors.primary }}></i>
+                      );
+                    })()}
+                  </div>
                 </>
               ) : (
                 <>
-                  <div className="w-full h-[400px] object-cover bg-gray-200"></div> {/* Placeholder for images */}
+                  <div className="w-full h-[400px] flex items-center justify-center bg-gray-100">
+                    {(() => {
+                      const iconMap: { [key: string]: string } = {
+                        'Bass': 'fa-guitar',
+                        'Drums': 'fa-drum',
+                        'Guitar': 'fa-guitar',
+                        'Piano': 'fa-piano',
+                        'Saxophone': 'fa-saxophone',
+                        'Ukulele': 'fa-guitar',
+                        'Vocals': 'fa-microphone',
+                        'Combo': 'fa-users',
+                        'Musical Entertainment': 'fa-music',
+                        'Music Production': 'fa-sliders',
+                        'Exam preparation (e.g. Rockschool)': 'fa-graduation-cap'
+                      };
+
+                      const icon = iconMap[subject.name] || 'fa-music';
+                      return (
+                        <i className={`fas ${icon} text-9xl opacity-50`} style={{ color: colors.primary }}></i>
+                      );
+                    })()}
+                  </div>
                   <SubjectInfo subject={subject} />
                 </>
               )}
