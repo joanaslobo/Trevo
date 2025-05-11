@@ -1,8 +1,7 @@
-
 import { motion } from "framer-motion";
 import { useLanguage } from "@/lib/language-context";
 import { fadeIn } from "@/lib/animations";
-
+import { useThemeColors } from "@/lib/theme-colors";
 const TeachersPage = () => {
   const { t } = useLanguage();
   const colors = useThemeColors();
@@ -34,17 +33,22 @@ const TeachersPage = () => {
     },
   ];
 
-  const TeacherInfo = ({ teacher }: { teacher: typeof teachers[0] }) => (
+  const TeacherInfo = ({ teacher }: { teacher: (typeof teachers)[0] }) => (
     <div className="p-6 flex flex-col justify-center">
-      <h3 className="text-2xl font-serif font-semibold mb-2" style={{ color: colors.primary }}>
+      <h3
+        className="text-2xl font-serif font-semibold mb-2"
+        style={{ color: colors.primary }}
+      >
         {teacher.name}
       </h3>
-      <p className="mb-3" style={{ color: colors.secondary }}>{teacher.instrument}</p>
+      <p className="mb-3" style={{ color: colors.secondary }}>
+        {teacher.instrument}
+      </p>
       <p style={{ color: colors.text }}>{teacher.bio}</p>
     </div>
   );
 
-  const TeacherImage = ({ teacher }: { teacher: typeof teachers[0] }) => (
+  const TeacherImage = ({ teacher }: { teacher: (typeof teachers)[0] }) => (
     <img
       src={teacher.image}
       alt={teacher.name}
