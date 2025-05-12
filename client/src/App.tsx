@@ -37,7 +37,7 @@ const LandingOverlay = ({ onComplete }: { onComplete: () => void }) => {
         left: 0,
         width: '100%',
         height: '100%',
-        backgroundColor: 'white',
+        backgroundColor: '#000000',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
@@ -49,18 +49,22 @@ const LandingOverlay = ({ onComplete }: { onComplete: () => void }) => {
       }}
       onClick={handleClick}
     >
-      <img
-        src="/logo.png" // Replace with your logo path
-        alt="Logo"
-        style={{
-          width: '200px',
-          height: 'auto',
-          transition: 'transform 1s, width 1s, height 1s',
-          transform: spinning ? 'rotate(360deg)' : 'rotate(0deg)',
-          width: shrinking ? '50px' : '200px',
-          height: shrinking ? 'auto' : 'auto',
-        }}
-      />
+      <div className="scale-[3]">
+        <div
+          className="relative inline-block w-[45px] h-[45px]"
+          style={{
+            transition: 'transform 1s',
+            transform: spinning ? 'rotate(360deg)' : 'rotate(0deg)',
+            scale: shrinking ? '0.5' : '1',
+          }}
+        >
+          <div className="absolute w-[20px] h-[20px] bg-[#1a7a3d] rounded-full top-0 left-[12.5px]" />
+          <div className="absolute w-[20px] h-[20px] bg-[#1a7a3d] rounded-full top-[12.5px] left-0" />
+          <div className="absolute w-[20px] h-[20px] bg-[#1a7a3d] rounded-full top-[12.5px] right-0" />
+          <div className="absolute w-[20px] h-[20px] bg-[#1a7a3d] rounded-full bottom-0 left-[12.5px]" />
+          <div className="absolute w-[4px] h-[15px] bg-[#1a7a3d] bottom-[-10px] left-[50%] transform translate-x-[-50%] rotate-[10deg]" />
+        </div>
+      </div>
       <h1
         style={{
           fontSize: '2em',
