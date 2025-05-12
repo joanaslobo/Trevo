@@ -7,6 +7,7 @@ import ThemeToggle from "@/components/ui/theme-toggle";
 import { useLanguage } from "@/lib/language-context";
 import { useTheme } from "@/lib/theme-context";
 import RotatingText from "@/components/ui/rotating-text";
+import { useThemeColors } from "@/lib/theme-colors"
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,12 +44,14 @@ const Header = () => {
             <CloverIcon white={isRockMode} />
             <div>
               <h1
-                className={`font-serif font-bold text-2xl ${isRockMode ? "text-white" : "text-[#1a7a3d]"} theme-text-primary`}
+                className={`font-serif font-bold text-2xl theme-text-primary`}
+                style={{ color: colors.secondary }}
               >
                 Trevo
               </h1>
               <p
-                className={`${isRockMode ? "text-[#ff5722]" : "text-[#c66b3e]"} -mt-1 theme-text-secondary`}
+                className={`-mt-1 theme-text-secondary`}
+                style={{ color: colors.primary }}
               >
                 <span className="inline-block font-handwritten">COOL</span>
                 <RotatingText
@@ -104,12 +107,9 @@ const Header = () => {
             <ThemeToggle />
             <Link
               href="/contact"
-              className={`theme-button-primary ${
-                isRockMode
-                  ? "bg-[#ff5722] hover:bg-[#ff4500]"
-                  : "bg-[#1a7a3d] hover:bg-[#156e35]"
-              } 
+              className={`theme-button-primary
                 text-white px-5 py-2 rounded-full font-medium transition duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1`}
+              style={{color: colors.primaryBtnBg}}
             >
               {t("nav.joinUs")}
             </Link>
@@ -117,7 +117,8 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className={`md:hidden ${isRockMode ? "text-white" : "text-[#333333]"} focus:outline-none`}
+            className={`md:hidden focus:outline-none`}
+            style={{ color: colors.primary }}
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >
@@ -130,11 +131,8 @@ const Header = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className={`fixed top-0 right-0 h-full w-3/4 theme-bg-gradient shadow-lg z-50 p-6 md:hidden ${
-              isRockMode
-                ? "bg-gradient-to-b from-[#1a1a1a] to-[#2d1a36]"
-                : "bg-gradient-to-b from-[#F7F3E3] to-[#e6f5ec]"
-            }`}
+            className={`fixed top-0 right-0 h-full w-3/4 theme-bg-gradient shadow-lg z-50 p-6 md:hidden`}
+            style={{color: colors.primary}}
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
@@ -143,12 +141,14 @@ const Header = () => {
             <div className="flex justify-between items-center mb-8">
               <div>
                 <h2
-                  className={`font-serif text-xl font-bold ${isRockMode ? "text-white" : "text-[#1a7a3d]"} theme-text-primary`}
+                  className={`font-serif text-xl font-bold theme-text-primary`}
+                  style={{ color: colors.secondary }}
                 >
                   Trevo
                 </h2>
                 <p
-                  className={`${isRockMode ? "text-[#ff5722]" : "text-[#c66b3e]"} -mt-1 text-sm theme-text-secondary`}
+                  className={` -mt-1 text-sm theme-text-secondary`}
+                  style={{ color: colors.primary }}
                 >
                   <span className="inline-block font-handwritten">COOL</span>
                   <RotatingText
@@ -166,7 +166,8 @@ const Header = () => {
                 </p>
               </div>
               <button
-                className={`${isRockMode ? "text-white" : "text-[#333333]"} focus:outline-none`}
+                className={`focus:outline-none`}
+                style={{ color: colors.primary }}
                 onClick={closeMenu}
               >
                 <i className="fas fa-times text-2xl"></i>
@@ -209,12 +210,9 @@ const Header = () => {
 
               <Link
                 href="/contact"
-                className={`theme-button-primary ${
-                  isRockMode
-                    ? "bg-[#ff5722] hover:bg-[#ff4500]"
-                    : "bg-[#1a7a3d] hover:bg-[#156e35]"
-                } 
+                className={`theme-button-primary
                   text-white px-5 py-3 rounded-full font-medium transition duration-300 shadow-md hover:shadow-lg text-center mt-4`}
+                style={{color: colors.primaryBtnBg}}
                 onClick={closeMenu}
               >
                 {t("nav.joinUs")}
@@ -224,7 +222,8 @@ const Header = () => {
             {/* Decorative elements */}
             <div className="absolute bottom-8 left-6">
               <motion.div
-                className={`text-5xl ${isRockMode ? "text-[#ff5722]" : "text-[#c66b3e]"} opacity-30 theme-text-secondary`}
+                className={`text-5xl opacity-30 theme-text-secondary`}
+                style={{ color: colors.primary }}
                 animate={{ rotate: [0, 10, 0], scale: [1, 1.1, 1] }}
                 transition={{
                   duration: 6,
@@ -237,7 +236,8 @@ const Header = () => {
             </div>
             <div className="absolute top-12 right-8">
               <motion.div
-                className={`text-4xl ${isRockMode ? "text-[#9c27b0]" : "text-[#f4b942]"} opacity-30`}
+                className={`text-4xl opacity-30`}
+                style={{ color: colors.secondary }}
                 animate={{ rotate: [0, -10, 0], scale: [1, 1.1, 1] }}
                 transition={{
                   duration: 5,
@@ -272,15 +272,13 @@ const NavLink = ({
   mobile = false,
 }: NavLinkProps) => {
   const isActive = currentPath === href;
-  const { isRockMode } = useTheme();
-
+  const colors = useThemeColors();
+  
   // Theme-based active and inactive colors
-  const activeColor = isRockMode ? "text-[#ff5722]" : "text-[#1a7a3d]";
-  const inactiveColor = isRockMode ? "text-white" : "text-[#333333]";
-  const hoverColor = isRockMode
-    ? "hover:text-[#ff5722]"
-    : "hover:text-[#1a7a3d]";
-  const borderColor = isRockMode ? "border-[#333]" : "border-gray-200";
+  const activeColor = colors.accent;
+  const inactiveColor = colors.bgColor;
+  const hoverColor = colors.secondary;
+  const borderColor = colors.primary;
 
   return (
     <Link
