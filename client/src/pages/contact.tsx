@@ -19,6 +19,7 @@ const formSchema = z.object({
   age: z.string().min(1, { message: "Age is required" }),
   classType: z.string().min(1, { message: "Please select a class type" }),
   instrument: z.string().min(1, { message: "Please select an instrument" }),
+  location: z.string().min(1, { message: "Please select a location" }),
   phone: z.string().min(1, { message: "Phone number is required" }),
   email: z.string().email({ message: "Please enter a valid email address" }),
   comments: z.string().optional(),
@@ -38,6 +39,7 @@ const Contact = () => {
       age: '',
       classType: '',
       instrument: '',
+      location: '',
       phone: '',
       email: '',
       comments: '',
@@ -183,6 +185,29 @@ const Contact = () => {
                               <SelectItem value="drums">Drums</SelectItem>
                               <SelectItem value="voice">Voice</SelectItem>
                               <SelectItem value="other">Other</SelectItem>
+                            </SelectContent>
+                          </Select>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <FormField
+                      control={form.control}
+                      name="location"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel style={{ color: colors.text }}>Location</FormLabel>
+                          <Select onValueChange={field.onChange} defaultValue={field.value}>
+                            <FormControl>
+                              <SelectTrigger style={{ backgroundColor: colors.inputBg, color: colors.inputText, borderColor: colors.inputBorder }}>
+                                <SelectValue placeholder="Select location" />
+                              </SelectTrigger>
+                            </FormControl>
+                            <SelectContent>
+                              <SelectItem value="porto">Porto</SelectItem>
+                              <SelectItem value="ovar">Ovar</SelectItem>
+                              <SelectItem value="ilhavo">Ílhavo</SelectItem>
                             </SelectContent>
                           </Select>
                           <FormMessage />
