@@ -1,3 +1,4 @@
+
 import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -11,6 +12,7 @@ import { useMutation } from '@tanstack/react-query';
 import { apiRequest } from '@/lib/queryClient';
 import { useToast } from '@/hooks/use-toast';
 import { useThemeColors } from '@/lib/theme-colors';
+import { useLanguage } from '@/lib/language-context';
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -27,6 +29,7 @@ type FormValues = z.infer<typeof formSchema>;
 const Contact = () => {
   const { toast } = useToast();
   const colors = useThemeColors();
+  const { t } = useLanguage();
 
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -90,12 +93,12 @@ const Contact = () => {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#1a7a3d]">
-            Contact Us
+          <h2 className="font-serif text-3xl md:text-4xl font-bold" style={{ color: colors.primary }}>
+            {t("contact.title")}
           </h2>
-          <div className="w-20 h-1 bg-[#c66b3e] mx-auto mt-4 mb-6"></div>
-          <p className="text-lg max-w-2xl mx-auto text-[#333333]">
-            Reach out to join our COOLlectivo or get more information about our programs.
+          <div className="w-20 h-1 mx-auto mt-4 mb-6" style={{ backgroundColor: colors.secondary }}></div>
+          <p className="text-lg max-w-2xl mx-auto" style={{ color: colors.text }}>
+            {t("contact.subtitle")}
           </p>
         </motion.div>
 
@@ -106,7 +109,7 @@ const Contact = () => {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
           >
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div style={{ backgroundColor: colors.cardBg }} className="rounded-xl shadow-lg overflow-hidden">
               <div className="p-8">
                 <Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -115,9 +118,9 @@ const Contact = () => {
                       name="name"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Name</FormLabel>
+                          <FormLabel style={{ color: colors.text }}>{t("contact.form.name")}</FormLabel>
                           <FormControl>
-                            <Input placeholder="Enter your name" {...field} />
+                            <Input placeholder={t("contact.form.name")} {...field} style={{ backgroundColor: colors.inputBg, color: colors.inputText, borderColor: colors.inputBorder }} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -129,9 +132,9 @@ const Contact = () => {
                       name="age"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Age</FormLabel>
+                          <FormLabel style={{ color: colors.text }}>Age</FormLabel>
                           <FormControl>
-                            <Input type="number" placeholder="Enter your age" {...field} />
+                            <Input type="number" placeholder="Enter your age" {...field} style={{ backgroundColor: colors.inputBg, color: colors.inputText, borderColor: colors.inputBorder }} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -143,10 +146,10 @@ const Contact = () => {
                       name="classType"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Type of Class</FormLabel>
+                          <FormLabel style={{ color: colors.text }}>Type of Class</FormLabel>
                           <Select onValueChange={field.onChange} defaultValue={field.value}>
                             <FormControl>
-                              <SelectTrigger>
+                              <SelectTrigger style={{ backgroundColor: colors.inputBg, color: colors.inputText, borderColor: colors.inputBorder }}>
                                 <SelectValue placeholder="Select class type" />
                               </SelectTrigger>
                             </FormControl>
@@ -166,10 +169,10 @@ const Contact = () => {
                       name="instrument"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Instrument</FormLabel>
+                          <FormLabel style={{ color: colors.text }}>Instrument</FormLabel>
                           <Select onValueChange={field.onChange} defaultValue={field.value}>
                             <FormControl>
-                              <SelectTrigger>
+                              <SelectTrigger style={{ backgroundColor: colors.inputBg, color: colors.inputText, borderColor: colors.inputBorder }}>
                                 <SelectValue placeholder="Select instrument" />
                               </SelectTrigger>
                             </FormControl>
@@ -192,9 +195,9 @@ const Contact = () => {
                       name="phone"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Phone Number</FormLabel>
+                          <FormLabel style={{ color: colors.text }}>{t("contact.form.phone")}</FormLabel>
                           <FormControl>
-                            <Input type="tel" placeholder="Enter your phone number" {...field} />
+                            <Input type="tel" placeholder={t("contact.form.phone")} {...field} style={{ backgroundColor: colors.inputBg, color: colors.inputText, borderColor: colors.inputBorder }} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -206,9 +209,9 @@ const Contact = () => {
                       name="email"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Email</FormLabel>
+                          <FormLabel style={{ color: colors.text }}>{t("contact.form.email")}</FormLabel>
                           <FormControl>
-                            <Input type="email" placeholder="Enter your email" {...field} />
+                            <Input type="email" placeholder={t("contact.form.email")} {...field} style={{ backgroundColor: colors.inputBg, color: colors.inputText, borderColor: colors.inputBorder }} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -220,12 +223,13 @@ const Contact = () => {
                       name="comments"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Comments</FormLabel>
+                          <FormLabel style={{ color: colors.text }}>{t("contact.form.message")}</FormLabel>
                           <FormControl>
                             <Textarea 
-                              placeholder="Any additional comments or questions?" 
-                              className="min-h-[100px]" 
-                              {...field} 
+                              placeholder={t("contact.form.message")}
+                              className="min-h-[100px]"
+                              {...field}
+                              style={{ backgroundColor: colors.inputBg, color: colors.inputText, borderColor: colors.inputBorder }}
                             />
                           </FormControl>
                           <FormMessage />
@@ -235,10 +239,11 @@ const Contact = () => {
 
                     <Button
                       type="submit"
-                      className="w-full bg-[#1a7a3d] hover:bg-[#156e35] text-white"
+                      className="w-full"
+                      style={{ backgroundColor: colors.primaryBtnBg, color: colors.btnText }}
                       disabled={contactMutation.isPending}
                     >
-                      {contactMutation.isPending ? "Submitting..." : "Submit"}
+                      {contactMutation.isPending ? t("contact.form.sending") : t("contact.form.send")}
                     </Button>
                   </form>
                 </Form>
