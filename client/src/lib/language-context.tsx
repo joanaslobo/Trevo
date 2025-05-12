@@ -141,6 +141,7 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.form.name": "Your Name",
     "contact.form.email": "Email Address",
     "contact.form.subject": "Subject",
+    "contact.form.phone": "Phone Number",
     "contact.form.message": "Your Message",
     "contact.form.send": "Send Message",
     "contact.form.sending": "Sending...",
