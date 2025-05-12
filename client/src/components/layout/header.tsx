@@ -191,13 +191,13 @@ const Header = () => {
 
               <NavLink
                 href="/teachers"
-                label={t("nav.teachers")}
+                label={t("nav.programs")}
                 currentPath={location}
                 onClick={closeMenu}
               />
               <NavLink
                 href="/programs"
-                label={t("nav.programs")}
+                label={t("nav.methodology")}
                 currentPath={location}
                 onClick={closeMenu}
                 mobile

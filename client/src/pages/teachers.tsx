@@ -124,14 +124,14 @@ const TeachersPage = () => {
               {index % 2 === 0 ? (
                 <>
                   <SubjectInfo subject={subject} />
-                  <div className="w-full h-[400px] flex items-center justify-center bg-gray-100">
+                  <div className="w-full h-[400px] flex items-center justify-center">
                     {(() => {
                       const iconMap: { [key: string]: string } = {
                         'Bass': 'fa-guitar',
                         'Drums': 'fa-drum',
                         'Guitar': 'fa-guitar',
-                        'Piano': 'fa-piano',
-                        'Saxophone': 'fa-saxophone',
+                        'Piano': 'fa-music',
+                        'Saxophone': 'fa-music',
                         'Ukulele': 'fa-guitar',
                         'Vocals': 'fa-microphone',
                         'Combo': 'fa-users',
@@ -149,14 +149,14 @@ const TeachersPage = () => {
                 </>
               ) : (
                 <>
-                  <div className="w-full h-[400px] flex items-center justify-center bg-gray-100">
+                  <div className="w-full h-[400px] flex items-center justify-center">
                     {(() => {
                       const iconMap: { [key: string]: string } = {
                         'Bass': 'fa-guitar',
                         'Drums': 'fa-drum',
                         'Guitar': 'fa-guitar',
-                        'Piano': 'fa-piano',
-                        'Saxophone': 'fa-saxophone',
+                        'Piano': 'fa-music',
+                        'Saxophone': 'fa-music',
                         'Ukulele': 'fa-guitar',
                         'Vocals': 'fa-microphone',
                         'Combo': 'fa-users',

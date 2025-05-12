@@ -366,12 +366,7 @@ const Home = () => {
           transition={{ duration: 0.8 }}
           ref={ref}
         >
-          <h2
-            className="font-serif text-3xl md:text-4xl font-bold"
-            style={{ color: colors.primary }}
-          >
-            {t("about.title")}
-          </h2>
+
           <div
             className="w-20 h-1 mx-auto mt-4"
             style={{ backgroundColor: colors.secondary }}
