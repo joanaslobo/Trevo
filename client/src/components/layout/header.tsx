@@ -273,20 +273,35 @@ const NavLink = ({
 }: NavLinkProps) => {
   const isActive = currentPath === href;
   const colors = useThemeColors();
-  
-  // Theme-based active and inactive colors
+
   const activeColor = colors.accent;
-  const inactiveColor = colors.bgColor;
+  const inactiveColor = colors.text;
   const hoverColor = colors.secondary;
   const borderColor = colors.primary;
+
+  // Track hover state
+  const [isHovered, setIsHovered] = useState(false);
+
+  const getLinkColor = () => {
+    if (isHovered) return hoverColor;
+    if (isActive) return activeColor;
+    return inactiveColor;
+  };
 
   return (
     <Link
       href={href}
-      className={`nav-link font-medium ${hoverColor} transition duration-300 ${
-        isActive ? activeColor : inactiveColor
-      } ${mobile ? `py-2 border-b ${borderColor}` : ""}`}
       onClick={onClick}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      className={`nav-link font-medium transition duration-300 ${
+        mobile ? "py-2 border-b" : ""
+      }`}
+      style={{
+        color: getLinkColor(),
+        borderColor: mobile ? borderColor : undefined,
+        textDecoration: "none",
+      }}
     >
       {label}
     </Link>
