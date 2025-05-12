@@ -88,16 +88,12 @@ const Header = () => {
             />
             <NavLink
               href="/programs"
-              label={t("nav.programs")}
+              label={t("nav.methodology")}
               currentPath={location}
               onClick={closeMenu}
             />
-            <NavLink
-              href="/fees"
-              label={t("nav.fees")}
-              currentPath={location}
-              onClick={closeMenu}
-            />
+
+      
             <NavLink
               href="/contact"
               label={t("nav.contact")}
@@ -191,20 +187,13 @@ const Header = () => {
 
               <NavLink
                 href="/teachers"
-                label={t("nav.programs")}
+                label={t("nav.teachers")}
                 currentPath={location}
                 onClick={closeMenu}
               />
               <NavLink
                 href="/programs"
                 label={t("nav.methodology")}
-                currentPath={location}
-                onClick={closeMenu}
-                mobile
-              />
-              <NavLink
-                href="/fees"
-                label={t("nav.fees")}
                 currentPath={location}
                 onClick={closeMenu}
                 mobile
