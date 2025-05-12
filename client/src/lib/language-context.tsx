@@ -22,19 +22,25 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
 const translations: Record<Language, Record<string, string>> = {
   en: {
     // Teachers page
-    "teachers.title": "Subjects and Teaching Staff",
-    "teachers.instrument.strings": "Strings",
-    "teachers.instrument.guitar": "Guitar",
-    "teachers.instrument.voice": "Voice",
-    "teachers.instrument.percussion": "Percussion",
-    "teachers.bio.laura":
-      "Bla bla bla bla. Bla bla. Bla bla bla bla. Bla bla. Bla bla bla bla. Bla bla. Bla bla bla bla. Bla bla.",
-    "teachers.bio.joao":
-      "Bla bla bla bla. Bla bla. Bla bla bla bla. Bla bla. Bla bla bla bla. Bla bla. Bla bla bla bla. Bla bla.",
-    "teachers.bio.chico":
-      "Bla bla bla bla. Bla bla. Bla bla bla bla. Bla bla. Bla bla bla bla. Bla bla. Bla bla bla bla. Bla bla.",
-    "teachers.bio.luke":
-      "Bla bla bla bla. Bla bla. Bla bla bla bla. Bla bla. Bla bla bla bla. Bla bla. Bla bla bla bla. Bla bla.",
+    "teachers.title": "Our Teachers",
+    "teachers.instruments": "Instruments",
+    "teachers.location": "Location",
+    "teachers.luke.name": "Luke Carey",
+    "teachers.luke.instruments": "Piano, Guitar, Ukulele, Music Production",
+    "teachers.luke.bio": "Luke is a multi-instrumentalist with extensive experience in music production and performance.",
+    "teachers.luke.location": "Porto",
+    "teachers.joao.name": "João Guimarães",
+    "teachers.joao.instruments": "Saxophone",
+    "teachers.joao.bio": "João specializes in saxophone, bringing years of experience in both classical and jazz.",
+    "teachers.joao.location": "Porto",
+    "teachers.francisco.name": "Francisco Beirão",
+    "teachers.francisco.instruments": "Drums",
+    "teachers.francisco.bio": "Francisco is our percussion expert, specializing in various drumming styles.",
+    "teachers.francisco.location": "Ovar",
+    "teachers.jorge.name": "Jorge Loura",
+    "teachers.jorge.instruments": "Guitar",
+    "teachers.jorge.bio": "Jorge brings expertise in guitar across multiple genres.",
+    "teachers.jorge.location": "Ílhavo",
 
     // Navigation
     "nav.home": "Home",
