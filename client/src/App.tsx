@@ -58,10 +58,34 @@ const LandingOverlay = ({ onComplete }: { onComplete: () => void }) => {
             scale: shrinking ? '0.5' : '1',
           }}
         >
-          <div className="absolute w-[20px] h-[20px] bg-[#1a7a3d] rounded-full top-0 left-[12.5px]" />
-          <div className="absolute w-[20px] h-[20px] bg-[#1a7a3d] rounded-full top-[12.5px] left-0" />
-          <div className="absolute w-[20px] h-[20px] bg-[#1a7a3d] rounded-full top-[12.5px] right-0" />
-          <div className="absolute w-[20px] h-[20px] bg-[#1a7a3d] rounded-full bottom-0 left-[12.5px]" />
+          <div 
+            className="absolute w-[20px] h-[20px] bg-[#1a7a3d] rounded-full top-0 left-[12.5px]"
+            style={{
+              animation: 'pulse 4s infinite ease-in-out',
+              animationDelay: '0s'
+            }}
+          />
+          <div 
+            className="absolute w-[20px] h-[20px] bg-[#1a7a3d] rounded-full top-[12.5px] left-0"
+            style={{
+              animation: 'pulse 4s infinite ease-in-out',
+              animationDelay: '0.2s'
+            }}
+          />
+          <div 
+            className="absolute w-[20px] h-[20px] bg-[#1a7a3d] rounded-full top-[12.5px] right-0"
+            style={{
+              animation: 'pulse 4s infinite ease-in-out',
+              animationDelay: '0.4s'
+            }}
+          />
+          <div 
+            className="absolute w-[20px] h-[20px] bg-[#1a7a3d] rounded-full bottom-0 left-[12.5px]"
+            style={{
+              animation: 'pulse 4s infinite ease-in-out',
+              animationDelay: '0.6s'
+            }}
+          />
           <div className="absolute w-[4px] h-[15px] bg-[#1a7a3d] bottom-[-10px] left-[50%] transform translate-x-[-50%] rotate-[10deg]" />
         </div>
       </div>
