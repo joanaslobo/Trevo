@@ -40,7 +40,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className={`${isRockMode ? 'bg-[#121212]' : 'bg-[#1a7a3d]'} text-white pt-16 pb-6 transition-colors duration-300 shadow-lg`}>
+    <footer style={{ backgroundColor: colors.footerBg }} className="text-white pt-16 pb-6 transition-colors duration-300 shadow-lg">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           <div>

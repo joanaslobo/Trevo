@@ -27,19 +27,15 @@ const Header = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
-  // Theme-aware header background
-  const headerBgColor = isRockMode
-    ? isScrolled
-      ? "bg-[#121212] bg-opacity-95 shadow-md"
-      : "bg-[#121212] bg-opacity-95 shadow-md"
-    : isScrolled
-      ? "bg-white bg-opacity-95 shadow-md"
-      : "bg-white bg-opacity-95 shadow-md";
-
-  const headerClasses = `fixed w-full ${headerBgColor} theme-header transition-all duration-300 z-50`;
+  const colors = useThemeColors();
+  
+  const headerClasses = `fixed w-full bg-opacity-95 shadow-md theme-header transition-all duration-300 z-50`;
+  const headerStyle = {
+    backgroundColor: colors.cardBg
+  };
 
   return (
-    <header className={headerClasses}>
+    <header className={headerClasses} style={headerStyle}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
