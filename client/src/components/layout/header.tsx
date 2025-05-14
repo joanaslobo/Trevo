@@ -99,6 +99,12 @@ const Header = () => {
               currentPath={location}
               onClick={closeMenu}
             />
+            <NavLink
+              href="/events"
+              label={t("nav.contact")}
+              currentPath={location}
+              onClick={closeMenu}
+            />
           </nav>
 
           {/* Language Switcher, Theme Toggle and CTA Button */}
@@ -201,7 +207,13 @@ const Header = () => {
                 onClick={closeMenu}
                 mobile
               />
-
+              <NavLink
+                href="/events"
+                label={t("nav.contact")}
+                currentPath={location}
+                onClick={closeMenu}
+                mobile
+              />
               <div className="mt-4 flex gap-3 items-center">
                 <LanguageSwitcher />
                 <ThemeToggle />
