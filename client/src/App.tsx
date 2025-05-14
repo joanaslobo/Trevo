@@ -8,6 +8,7 @@ import Fees from "@/pages/fees";
 import Contact from "@/pages/contact";
 import NotFound from "@/pages/not-found";
 import TeachersPage from "@/pages/teachers";
+import Events from "@/pages/events";
 import { LanguageProvider } from "@/lib/language-context";
 import { ThemeProvider, useTheme } from "@/lib/theme-context";
 import React, { useState, useEffect } from 'react';
@@ -198,7 +199,8 @@ function AppContent() {
           <Route path="/programs" component={Programs} />
           <Route path="/fees" component={Fees} />
           <Route path="/contact" component={Contact} />
-          <Route path="/contact-form" component={ContactForm} /> // Added route for ContactForm
+          <Route path="/contact-form" component={ContactForm} />
+          <Route path="/events" component={Events} />
           <Route component={NotFound} />
         </Switch>
       </main>
