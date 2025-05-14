@@ -107,9 +107,8 @@ const Header = () => {
             <ThemeToggle />
             <Link
               href="/contact"
-              className={`theme-button-primary
-                text-white px-5 py-2 rounded-full font-medium transition duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1`}
-              style={{color: colors.primaryBtnBg}}
+              className={`px-5 py-2 rounded-full font-medium transition duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1`}
+              style={{color: colors.primary, backgroundColor: colors.primaryBtnBg}}
             >
               {t("nav.joinUs")}
             </Link>

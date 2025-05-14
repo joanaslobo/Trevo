@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { useState } from "react";
 
@@ -19,7 +18,7 @@ export const LandingOverlay = ({ onComplete }: Props) => {
       initial={{ opacity: 1 }}
       animate={clicked ? { opacity: 0 } : {}}
       onClick={handleClick}
-      className="fixed inset-0 z-50 flex items-center justify-center bg-white cursor-pointer"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black cursor-pointer"
     >
       <motion.div
         animate={clicked ? { scale: 0, rotate: 360 } : {}}
@@ -27,8 +26,12 @@ export const LandingOverlay = ({ onComplete }: Props) => {
         className="text-center"
       >
         <img src="/logo.png" alt="Logo" className="w-32 h-32 mx-auto mb-4" />
-        <h1 className="text-4xl font-serif">Trevo</h1>
-        <p className="mt-4 text-gray-600">Click anywhere to enter</p>
+        <h1 className="text-4xl font-serif font-extrabold text-white !text-white !font-extrabold">
+          Trevo
+        </h1>
+        <p className="mt-4 text-white font-bold !text-white !font-bold">
+          Click anywhere to enter
+        </p>
       </motion.div>
     </motion.div>
   );
