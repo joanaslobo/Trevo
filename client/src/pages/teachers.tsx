@@ -2,6 +2,12 @@ import { motion } from "framer-motion";
 import { useLanguage } from "@/lib/language-context";
 import { fadeIn } from "@/lib/animations";
 import { useThemeColors } from "@/lib/theme-colors";
+// Import teacher images
+import franciscoImg from '@/assets/images/teachers/francisco.jpg';
+import lukeImg from '@/assets/images/teachers/luke.jpg';
+import jorgeImg from '@/assets/images/teachers/jorge.jpg';
+import euricoImg from '@/assets/images/teachers/eurico.jpg';
+import joaoImg from '@/assets/images/teachers/joao.jpg';
 
 const TeachersPage = () => {
   const { t } = useLanguage();
@@ -10,23 +16,23 @@ const TeachersPage = () => {
   const teachers = [
     {
       key: 'francisco',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face'
+      image: franciscoImg
     },
     {
       key: 'luke',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face'
+      image: lukeImg
     },
     {
       key: 'jorge',
-      image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face'
+      image: jorgeImg
     },
     {
       key: 'eurico',
-      image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&crop=face'
+      image: euricoImg
     },
     {
       key: 'joao',
-      image: 'https://images.unsplash.com/photo-1566492031773-4f4e44671d66?w=400&h=400&fit=crop&crop=face'
+      image: joaoImg
     }
   ];
 
