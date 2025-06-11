@@ -20,14 +20,16 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
 
 // Translations
 const translations: Record<Language, Record<string, string>> = {
-  en: {
+  pt: {
     // Teachers page
-    "teachers.title": "Our Teachers",
-    "teachers.instruments": "Instruments",
-    "teachers.location": "Location",
+    "teachers.title": "A Equipa",
+    "teachers.instruments": "Instrumentos",
+    "teachers.location": "Local",
     "teachers.luke.name": "Luke Carey",
     "teachers.luke.instruments": "Piano, Guitar, Ukulele, Music Production",
-    "teachers.luke.bio": "Luke is a multi-instrumentalist with extensive experience in music production and performance.",
+    "teachers.luke.bio": "Luke Carey é um multi-instrumentista, que toca principalmente piano,  guitarra,  ukulele, baixo, e bateria.",
+    "teachers.luke.bio2": "Originalmente de Dublin, Irlanda, estudou Música e Literatura Inglesa na Trinity College Dublin, explorando teoria, composição, e tecnologia de música. Para além do seu percurso académico, desenvolveu  experiência na prática de música fora da sala de aula, participando em varias bandas e projectos, festivais de música, e até escreveu um musical.",
+    "teachers.luke.bio3": "Chegou a Portugal em 2021, onde tem dado aulas particulares a alunos de qualquer idade, nacionalidade e cultura. É fluente em Português e Inglês",
     "teachers.luke.location": "Porto",
     "teachers.joao.name": "João Guimarães",
     "teachers.joao.instruments": "Saxophone",
@@ -35,22 +37,30 @@ const translations: Record<Language, Record<string, string>> = {
     "teachers.joao.location": "Porto",
     "teachers.francisco.name": "Francisco Beirão",
     "teachers.francisco.instruments": "Drums",
-    "teachers.francisco.bio": "Francisco is our percussion expert, specializing in various drumming styles.",
-    "teachers.francisco.location": "Ovar",
+    "teachers.francisco.bio": "Francisco Beirão (\"El Killo\", 1981, Aveiro, Portugal), professor de Música desde 2004 em diversas escolas e instituições de intervenção social, em particular com um longo trabalho realizado no projecto educativo da Qualificar para Incluir.",
+    "teachers.francisco.bio2": "A viver no Porto desde 1999, onde já cheguei de baquetas na mão, dividi o meu tempo entre a conclusão de uma licenciatura em Sociologia, muitas garagens e escolas de música em diferentes países, onde aprofundei uma relação umbilical com a bateria e aprendi outros idiomas.",
+    "teachers.francisco.bio3":"Adepto fervoroso de Música em geral e de Rock em particular, iniciei o meu percurso profissional em 2005 com Funkyard, tendo comandado nos anos seguintes as secções rítmicas de TOURO, Mi Ku Bô, Teia e integrado projectos como Retimbrar e Papercutz, assim como outros de inclusão social no serviço educativo da Casa da Música, em várias orquestras comunitárias, etc.  Membro fundador, baterista e vocalista de 47 de Fevereiro, toco também com Ghosts of Port Royal e sou membro da equipa de We Tum Tum em diferentes espectáculos.",
+  
+    "teachers.francisco.location": "Porto",
     "teachers.jorge.name": "Jorge Loura",
     "teachers.jorge.instruments": "Guitar",
     "teachers.jorge.bio": "Jorge brings expertise in guitar across multiple genres.",
-    "teachers.jorge.location": "Ílhavo",
-
+    "teachers.jorge.location": "Porto e Aveiro",
+    "teachers.eurico.name": "Eurico",
+    "teachers.eurico.instruments": "Guitar",
+    "teachers.eurico.bio": "Eurico is a passionate guitarist with a strong background in both traditional and contemporary styles.",
+    "teachers.eurico.location": "Porto",
+      
     // Navigation
     "nav.home": "Home",
-    "nav.about": "About",
-    "nav.teachers": "Teachers",
-    "nav.programs": "Programs",
-    "nav.methodology": "Methodology",
+    "nav.about": "Sobre Nós",
+    "nav.teachers": "Equipa",
+    "nav.programs": "Programas",
+    "nav.methodology": "Métodos",
     "nav.fees": "Fees",
-    "nav.contact": "Contacts",
-    "nav.joinUs": "Join Us",
+    "nav.contact": "Contactos",
+    "nav.events": "Eventos",
+    "nav.joinUs": "Junta-te",
 
     // Home page
     "home.title": "Trevo Colectivo",
@@ -88,7 +98,7 @@ const translations: Record<Language, Record<string, string>> = {
 
 
     // Programs page
-    "programs.title": "Our Methodology",
+    "programs.title": "Metodologia",
     "programs.subtitle": "At Trevo Coolectivo, our methodology centers on fun, collaboration, and personalization, ensuring each student learns in an engaging way tailored to their needs.",
     "programs.methodology.title": "Our Pillars",
     "programs.methodology.customPlan": "Customized Plan",
@@ -152,17 +162,17 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.find.hours": "Hours",
     "contact.connect.title": "Connect With Us",
   },
-  pt: {
+  en: {
     // Teachers page
     "teachers.title": "Conhece os Nossos Professores",
     "teachers.instrument.strings": "Cordas",
     "teachers.instrument.guitar": "Guitarra",
     "teachers.instrument.voice": "Voz",
     "teachers.instrument.percussion": "Percussão",
-    "teachers.bio.laura":
-      "Bla bla bla bla. Bla bla. Bla bla bla bla. Bla bla. Bla bla bla bla. Bla bla. Bla bla bla bla. Bla bla.",
+    "teachers.bio.luke":
+      "Luke Carey é um multi-instrumentista, que toca principalmente o piano, a guitarra, o ukulele, o baixo, e a bateria. \nOriginalmente de Dublin, Irlanda, ele estudou Música e Literatura Inglesa na Trinity College Dublin, explorando a teoria, composição, e tecnologia de música. Para além do seu percurso académico, também desenvolveu bastante experiência na prática de música fora da sala de aula, participando em varias bandas e projectos, festivais de música, e até escreveu um musical. \n Chegou a Portugal em 2021, onde tem dado aulas particulares a alunos de qualquer idade, nacionalidade e cultura.",
     "teachers.bio.chico":
-      "Bla bla bla bla. Bla bla. Bla bla bla bla. Bla bla. Bla bla bla bla. Bla bla. Bla bla bla bla. Bla bla.",
+      "Francisco Beirão (\"El Killo\", 1981, Aveiro, Portugal), professor de Música desde 2004 em diversas escolas e instituições de intervenção social, em particular com um longo trabalho realizado no projecto educativo da Qualificar para Incluir. \n A viver no Porto desde 1999, onde já cheguei de baquetas na mão, dividi o meu tempo entre a conclusão de uma licenciatura em Sociologia, muitas garagens e escolas de música em diferentes países, onde aprofundei uma relação umbilical com a bateria e aprendi outros idiomas. \n Adepto fervoroso de Música em geral e de Rock em particular, iniciei o meu percurso profissional em 2005 com Funkyard, tendo comandado nos anos seguintes as secções rítmicas de TOURO, Mi Ku Bô, Teia e integrado projectos como Retimbrar e Papercutz, assim como outros de inclusão social no serviço educativo da Casa da Música, em várias orquestras comunitárias, etc \n Membro fundador, baterista e vocalista de 47 de Fevereiro, toco também com Ghosts of Port Royal e sou membro da equipa de We Tum Tum em diferentes espectáculos.",
     "teachers.bio.joao":
       "Bla bla bla bla. Bla bla. Bla bla bla bla. Bla bla. Bla bla bla bla. Bla bla. Bla bla bla bla. Bla bla.",
     "teachers.bio.luke":

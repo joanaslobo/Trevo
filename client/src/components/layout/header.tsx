@@ -101,7 +101,7 @@ const Header = () => {
             />
             <NavLink
               href="/events"
-              label={t("nav.contact")}
+              label={t("nav.events")}
               currentPath={location}
               onClick={closeMenu}
             />

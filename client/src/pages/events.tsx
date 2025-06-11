@@ -76,13 +76,13 @@ const Events = () => {
           className="text-4xl md:text-5xl font-serif text-center mb-12"
           style={{ color: colors.primary }}
         >
-          Events at Trevo
+          Eventos
         </motion.h1>
 
         {/* Upcoming Events */}
         <section className="mb-20">
           <h2 className="text-3xl font-serif mb-8" style={{ color: colors.secondary }}>
-            Upcoming Events
+            Próximos Eventos
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {upcomingEvents.map((event, index) => (
@@ -110,7 +110,8 @@ const Events = () => {
                     size="sm"
                     style={{ 
                       borderColor: colors.primary,
-                      color: colors.primary
+                      color: colors.secondary,
+                      backgroundColor: colors.cardBg
                     }}
                     onClick={() => window.location.href = `/events/${event.title.toLowerCase().replace(/\s+/g, '-')}`}
                   >
@@ -125,7 +126,7 @@ const Events = () => {
         {/* Past Events Gallery */}
         <section>
           <h2 className="text-3xl font-serif mb-8" style={{ color: colors.secondary }}>
-            Past Events Gallery
+            Galeria
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {pastEvents.map((event, index) => (

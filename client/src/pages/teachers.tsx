@@ -8,10 +8,11 @@ const TeachersPage = () => {
   const colors = useThemeColors();
 
   const teachers = [
-    'luke',
-    'joao',
     'francisco',
-    'jorge'
+    'luke',
+    'jorge',
+    'eurico',
+    'joao'
   ];
 
   return (
@@ -47,6 +48,12 @@ const TeachersPage = () => {
                     </p>
                     <p className="mb-4" style={{ color: colors.text }}>
                       {t(`teachers.${teacher}.bio`)}
+                    </p>
+                    <p className="mb-4" style={{ color: colors.text }}>
+                      {t(`teachers.${teacher}.bio2`)}
+                    </p>
+                    <p className="mb-4" style={{ color: colors.text }}>
+                      {t(`teachers.${teacher}.bio3`)}
                     </p>
                     <p style={{ color: colors.text }}>
                       <strong>{t("teachers.location")}:</strong> {t(`teachers.${teacher}.location`)}
