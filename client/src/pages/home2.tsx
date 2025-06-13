@@ -89,7 +89,7 @@ const Home2 = () => {
         <Carousel
           plugins={[
             Autoplay({
-              delay: 2000,
+              delay: 5000,
             }),
           ]}
           opts={{
@@ -98,7 +98,7 @@ const Home2 = () => {
           }}
           className="w-full h-full"
         >
-          <CarouselContent className="h-full">
+          <CarouselContent className=" h-[800px]">
             {studioImages.map((image, index) => (
               <CarouselItem key={index} className="h-full">
                 <div className="relative w-full h-full">
@@ -126,30 +126,12 @@ const Home2 = () => {
             ref={ref}
             className="relative z-10"
           >
-            <motion.div
-              className="absolute -top-12 -left-8 text-8xl opacity-30 rotate-12 font-handwritten text-white"
-              animate={{ rotate: [12, 15, 12], scale: [1, 1.05, 1] }}
-              transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-            >
-              Peace
-            </motion.div>
-            <motion.div
-              className="absolute top-20 -right-10 text-7xl opacity-30 -rotate-6 font-handwritten text-white"
-              animate={{ rotate: [-6, -8, -6], scale: [1, 1.05, 1] }}
-              transition={{
-                duration: 8,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: 0.5,
-              }}
-            >
-              Groove
-            </motion.div>
-
+            
+            
             <h1
               className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight relative text-white drop-shadow-lg"
             >
-              <span className="text-yellow-400">&ndash;</span>{" "}
+              {" "}
               {t("home.title")}
             </h1>
             <p
@@ -274,6 +256,7 @@ const Home2 = () => {
       <div className="h-32"></div>
       
       {/* About Section */}
+      
       <div className="container mx-auto px-4 sm:px-6 lg:px-8" style={{ backgroundColor: isRockMode ? "#121212" : "#FFFFFF" }}>
         <motion.div
           className="text-center mb-12"
@@ -289,14 +272,15 @@ const Home2 = () => {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
+          
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true}}
             transition={{ duration: 0.8 }}
           >
             <h3
-              className="font-serif text-2xl md:text-3xl font-semibold mb-6"
+              className="text-2xl md:text-3xl font-semibold mb-6"
               style={{ color: colors.secondary }}
             >
               {t("about.fusion.title")}
@@ -307,12 +291,6 @@ const Home2 = () => {
             <p style={{ color: colors.text }}>{t("about.fusion.p2")}</p>
 
             <div className="mt-12">
-              <h3
-                className="font-serif text-2xl md:text-3xl font-semibold mb-6"
-                style={{ color: colors.accent }}
-              >
-                {t("about.collective.title")}
-              </h3>
               <p className="mb-6" style={{ color: colors.text }}>
                 {t("about.collective.p1")}
               </p>
@@ -335,10 +313,10 @@ const Home2 = () => {
                 <div className="text-3xl mb-4" style={{ color: card.iconColor }}>
                   <i className={card.icon}></i>
                 </div>
-                <h4 className="font-serif text-xl font-medium mb-2" style={{ color: card.textColor }}>
+                <h4 className="text-xl font-medium mb-2" style={{ color: card.textColor }}>
                   {t(card.titleKey)}
                 </h4>
-                <p className="text-sm" style={{ color: colors.textLight }}>
+                <p className="text-m" style={{ color: colors.text }}>
                   {t(card.descKey)}
                 </p>
               </motion.div>

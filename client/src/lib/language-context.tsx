@@ -71,14 +71,14 @@ const translations: Record<Language, Record<string, string>> = {
 
     // About page
     "about.title": "Sobre o Trevo",
-    "about.fusion.title": "Musica e Comunidade",
+    "about.fusion.title": "Sobre o COOLlectivo",
     "about.fusion.p1":
       "O Trevo Coletivo nasceu da união de esforços de quatro músicos que, apesar de terem tocado e trabalhado juntos em bandas, davam aulas individualmente. Sentiram que juntos poderiam oferecer mais - e foi assim que surgiu esta rede de ensino cooperativo entre Porto, Ovar e Ílhavo.",
     "about.fusion.p2":
       "Combinamos anos de experiência na música com uma metodologia comum, oferecendo aos alunos mais do que apenas aulas: promovemos a ligação entre alunos de vários instrumentos, a criatividade, a partilha e um verdadeiro espírito coletivo.",
-    "about.collective.title": "COOLlectivo – Mais que uma escola",
+    "about.collective.title": "COOLlectivo",
     "about.collective.p1":
-      'Acreditamos que o ensino da música deve ser acessível e inspirador. É por isso que oferecemos a primeira aula a metade do preço - para que qualquer pessoa possa experimentar a energia do nosso coletivo',
+      'Acreditamos que o ensino da música deve ser acessível e inspirador. É por isso que oferecemos a primeira aula a metade do preço - para que qualquer pessoa possa experimentar a energia do nosso coletivo.',
     "about.collective.p2":
       "Pretendemos fazer crescer nos nossos alunos o entusiasmo pela música em todas as suas formas, não só através da aprendizagem de um instrumento em aulas individuais ou em grupo, mas também incentivando o gosto pela coleção de música em formato físico, livros sobre artistas e bandas, posters, merchandise e outros artigos para os amantes da música.",
     "about.card.instrument": "Instrumentos",
