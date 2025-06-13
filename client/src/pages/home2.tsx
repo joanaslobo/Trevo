@@ -82,7 +82,7 @@ const Home2 = () => {
   return (
     <section
       id="home"
-      className="relative pt-24 pb-20 md:pt-32 md:pb-40 overflow-hidden"
+      className="relative overflow-hidden"
     >
       {/* Carousel Background */}
       <div className="absolute inset-0">
@@ -253,25 +253,10 @@ const Home2 = () => {
         <WaveDivider fillColor={isRockMode ? "#121212" : "#FFFFFF"} />
       </div>
 
-      <div className="h-32"></div>
-      
       {/* About Section */}
-      
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8" style={{ backgroundColor: isRockMode ? "#121212" : "#FFFFFF" }}>
-        <motion.div
-          className="text-center mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          ref={ref}
-        >
-          <div
-            className="w-20 h-1 mx-auto mt-4"
-            style={{ backgroundColor: colors.secondary }}
-          ></div>
-        </motion.div>
-
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+      <div className="py-16" style={{ backgroundColor: isRockMode ? "#121212" : "#FFFFFF" }}>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12 items-start">
           
           <motion.div
             initial={{ opacity: 0, x: -30 }}
