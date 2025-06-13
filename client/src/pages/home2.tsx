@@ -8,6 +8,9 @@ import { fadeIn, wiggleAnimation } from "@/lib/animations";
 import { useTheme } from "@/lib/theme-context";
 import { useThemeColors } from "@/lib/theme-colors";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import { useEffect } from "react";
+import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
 
 const Home2 = () => {
   const { ref, inView } = useIntersectionObserver({ threshold: 0 });
@@ -84,6 +87,11 @@ const Home2 = () => {
       {/* Carousel Background */}
       <div className="absolute inset-0">
         <Carousel
+          plugins={[
+            Autoplay({
+              delay: 2000,
+            }),
+          ]}
           opts={{
             align: "start",
             loop: true,
