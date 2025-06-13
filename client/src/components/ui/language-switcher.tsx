@@ -10,15 +10,15 @@ const LanguageSwitcher = () => {
         onClick={() => setLanguage('pt')}
         className={`px-2 py-1 rounded-lg font-medium text-sm transition-all duration-300 ${
           language === 'pt'
-            ? 'bg-[#1a7a3d] text-white font-bold'
-            : 'text-[#333333] hover:text-[#1a7a3d]'
+            ? 'bg-[#ff005c] text-white font-bold'
+            : 'text-[#333333] hover:text-[#ff005c]'
         }`}
         aria-label="Switch to Portuguese"
       >
         PT
         {language === 'pt' && (
           <motion.div
-            className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#f4b942]"
+            className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#00c3ff]"
             layoutId="underline"
           />
         )}
@@ -28,15 +28,15 @@ const LanguageSwitcher = () => {
         onClick={() => setLanguage('en')}
         className={`px-2 py-1 rounded-lg font-medium text-sm transition-all duration-300 ${
           language === 'en'
-            ? 'bg-[#c66b3e] text-white font-bold'
-            : 'text-[#333333] hover:text-[#c66b3e]'
+            ? 'bg-[#ff005c] text-white font-bold'
+            : 'text-[#333333] hover:text-[#ff005c]'
         }`}
         aria-label="Switch to English"
       >
         EN
         {language === 'en' && (
           <motion.div
-            className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#f4b942]"
+            className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#ff005c]"
             layoutId="underline"
           />
         )}

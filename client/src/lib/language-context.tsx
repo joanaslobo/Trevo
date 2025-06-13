@@ -26,7 +26,7 @@ const translations: Record<Language, Record<string, string>> = {
     "teachers.instruments": "Instrumentos",
     "teachers.location": "Local",
     "teachers.luke.name": "Luke Carey",
-    "teachers.luke.instruments": "Piano, Guitar, Ukulele, Music Production",
+    "teachers.luke.instruments": "Piano, Guitarra, Ukulele, Produção Musical",
     "teachers.luke.bio": "Luke Carey é um multi-instrumentista, que toca principalmente piano,  guitarra,  ukulele, baixo, e bateria.",
     "teachers.luke.bio2": "Originalmente de Dublin, Irlanda, estudou Música e Literatura Inglesa na Trinity College Dublin, explorando teoria, composição, e tecnologia de música. Para além do seu percurso académico, desenvolveu  experiência na prática de música fora da sala de aula, participando em varias bandas e projectos, festivais de música, e até escreveu um musical.",
     "teachers.luke.bio3": "Chegou a Portugal em 2021, onde tem dado aulas particulares a alunos de qualquer idade, nacionalidade e cultura. É fluente em Português e Inglês",
@@ -36,14 +36,14 @@ const translations: Record<Language, Record<string, string>> = {
     "teachers.joao.bio": "João specializes in saxophone, bringing years of experience in both classical and jazz.",
     "teachers.joao.location": "Porto",
     "teachers.francisco.name": "Francisco Beirão",
-    "teachers.francisco.instruments": "Drums",
+    "teachers.francisco.instruments": "Bateria",
     "teachers.francisco.bio": "Francisco Beirão (\"El Killo\", 1981, Aveiro, Portugal), professor de Música desde 2004 em diversas escolas e instituições de intervenção social, em particular com um longo trabalho realizado no projecto educativo da Qualificar para Incluir.",
     "teachers.francisco.bio2": "A viver no Porto desde 1999, onde já cheguei de baquetas na mão, dividi o meu tempo entre a conclusão de uma licenciatura em Sociologia, muitas garagens e escolas de música em diferentes países, onde aprofundei uma relação umbilical com a bateria e aprendi outros idiomas.",
     "teachers.francisco.bio3":"Adepto fervoroso de Música em geral e de Rock em particular, iniciei o meu percurso profissional em 2005 com Funkyard, tendo comandado nos anos seguintes as secções rítmicas de TOURO, Mi Ku Bô, Teia e integrado projectos como Retimbrar e Papercutz, assim como outros de inclusão social no serviço educativo da Casa da Música, em várias orquestras comunitárias, etc.  Membro fundador, baterista e vocalista de 47 de Fevereiro, toco também com Ghosts of Port Royal e sou membro da equipa de We Tum Tum em diferentes espectáculos.",
   
     "teachers.francisco.location": "Porto",
     "teachers.jorge.name": "Jorge Loura",
-    "teachers.jorge.instruments": "Guitar",
+    "teachers.jorge.instruments": "Guitarra",
     "teachers.jorge.bio": "Jorge brings expertise in guitar across multiple genres.",
     "teachers.jorge.location": "Porto e Aveiro",
     "teachers.eurico.name": "Eurico",
@@ -65,71 +65,71 @@ const translations: Record<Language, Record<string, string>> = {
     // Home page
     "home.title": "Trevo Colectivo",
     "home.subtitle":
-      "Trevo Coolectivo is a collaborative music teaching network connecting students and teachers across Porto, Ovar, and Ílhavo through shared learning, creativity, and a passion for all things music.",
-    "home.cta.join": "Join the COOLlectivo!",
-    "home.cta.explore": "About us",
+      "O Trevo Coolectivo é uma rede colaborativa de ensino de música que liga alunos e professores do Porto, Ovar e Ílhavo através da partilha de aprendizagem, criatividade e paixão pela música.",
+    "home.cta.join": "Junta-te ao COOLlectivo!",
+    "home.cta.explore": "Sobre nós",
 
     // About page
-    "about.title": "About Trevo",
-    "about.fusion.title": "Music and Community",
+    "about.title": "Sobre o Trevo",
+    "about.fusion.title": "Musica e Comunidade",
     "about.fusion.p1":
-      "Trevo Coolectivo was born from the combined efforts of four musicians who, although they had played and worked together in bands, had been teaching individually. They felt that together they could offer more - and that's how this cooperative teaching network between Porto, Ovar and Ílhavo came about.",
+      "O Trevo Coletivo nasceu da união de esforços de quatro músicos que, apesar de terem tocado e trabalhado juntos em bandas, davam aulas individualmente. Sentiram que juntos poderiam oferecer mais - e foi assim que surgiu esta rede de ensino cooperativo entre Porto, Ovar e Ílhavo.",
     "about.fusion.p2":
-      "We combine years of experience in music with a common methodology, offering students more than just lessons: we promote connections between students of various instruments, creativity, sharing and a true collective spirit.",
-    "about.collective.title": "COOLlectivo – More than a school",
+      "Combinamos anos de experiência na música com uma metodologia comum, oferecendo aos alunos mais do que apenas aulas: promovemos a ligação entre alunos de vários instrumentos, a criatividade, a partilha e um verdadeiro espírito coletivo.",
+    "about.collective.title": "COOLlectivo – Mais que uma escola",
     "about.collective.p1":
-      'We believe that music teaching should be accessible and inspiring. That is why we offer the first lesson at half price - so that anyone can experience the energy of our collective',
+      'Acreditamos que o ensino da música deve ser acessível e inspirador. É por isso que oferecemos a primeira aula a metade do preço - para que qualquer pessoa possa experimentar a energia do nosso coletivo',
     "about.collective.p2":
-      "We set out to grow enthusiasm for music in all its forms in our students, not only by learning an instrument in individual or group lessons, but also by encouraging a taste for collecting music in physical format, books about artists and bands, posters, merchandise and other items for music lovers.",
-    "about.card.instrument": "Learning an Instrument",
-    "about.card.instrument.desc": "To enable students to master an instrument in its technical and timbral aspects, understanding its functions in groups and ensembles of different musical styles.",
+      "Pretendemos fazer crescer nos nossos alunos o entusiasmo pela música em todas as suas formas, não só através da aprendizagem de um instrumento em aulas individuais ou em grupo, mas também incentivando o gosto pela coleção de música em formato físico, livros sobre artistas e bandas, posters, merchandise e outros artigos para os amantes da música.",
+    "about.card.instrument": "Instrumentos",
+    "about.card.instrument.desc": "Ajudar os alunos a dominar um instrumento, tanto na parte técnica como no som, compreendendo como funciona em grupo e conjuntos de diferentes estilos musicais.",
 
-    "about.card.sharing": "Bringing Students Together",
-    "about.card.sharing.desc": "Promoting the sharing of skills, combating the isolation of individual study and helping to overcome fears and doubts in the learning process.",
+    "about.card.sharing": "Aproximar Alunos",
+    "about.card.sharing.desc":"Promover a partilha de competências, combater o isolamento do estudo individual e ajudar a ultrapassar medos e dúvidas no processo de aprendizagem.",
 
-    "about.card.collective": "Strengthening Group Work",
-    "about.card.collective.desc": "Making students believe in the strength of the collective, where each person's virtues are enhanced and shortcomings are filled by the group.",
+    "about.card.collective": "Fortalecer Colaborações",
+    "about.card.collective.desc": "Fazer com que os alunos acreditem na força do coletivo, onde as virtudes de cada um são potenciadas e as falhas são colmatadas pelo grupo.",
 
-    "about.card.creativity": "Stimulating Creativity and Autonomy",
-    "about.card.creativity.desc": "Encouraging exploration, mixing and experimentation, ensuring that students acquire the tools to develop their musical path independently.",
+    "about.card.creativity": "Estimular a Criatividade e a Autonomia",
+    "about.card.creativity.desc": "Incentivar a exploração, a mistura e a experimentação, garantindo que os alunos adquirem as ferramentas para desenvolver o seu percurso musical de forma independente.",
 
-    "about.card.passion": "Nurturing Passion",
-    "about.card.passion.desc": "Awakening a love of music through practice, theory and the discovery of artists and musical works.",
+    "about.card.passion": "Alimentar a paixão",
+    "about.card.passion.desc": "Despertar o amor pela música através da prática, da teoria e da descoberta de artistas e obras musicais",
 
 
     // Programs page
     "programs.title": "Metodologia",
-    "programs.subtitle": "At Trevo Coolectivo, our methodology centers on fun, collaboration, and personalization, ensuring each student learns in an engaging way tailored to their needs.",
-    "programs.methodology.title": "Our Pillars",
-    "programs.methodology.customPlan": "Customized Plan",
-    "programs.methodology.customPlan.desc": "Each student co-creates their study plan with the teacher, defining goals that may include playing for pleasure, performing on stage, pursuing a career, or preparing for music curriculum exams like Rockschool.",
-    "programs.methodology.exploration": "Instrument Exploration",
-    "programs.methodology.exploration.desc": "All students participate in two annual lessons with a different instrument (e.g., a guitarist tries drums) to broaden horizons and gain versatility.",
-    "programs.methodology.collaborative": "Collaborative Practice",
-    "programs.methodology.collaborative.desc": "Combo classes bring together students of various instruments to form bands, with recordings of original songs or covers at the end of the year, shared with the community. We also hold regular events like public jam sessions where students and local musicians play together.",
-    "programs.methodology.discovery": "Musical Discovery",
-    "programs.methodology.discovery.desc": "We recommend musical works and artists weekly, plus books on theory, music history, and biographies, encouraging physical format music collection.",
-    "programs.methodology.production": "Production Basics",
-    "programs.methodology.production.desc": "We teach basic recording and editing using tools like GarageBand and Reaper, integrated into combo classes and music production course.",
-    "programs.methodology.monitoring": "Regular Monitoring",
-    "programs.methodology.monitoring.desc": "We provide quarterly reports with student progress, clear goals, and personalized tips.",
-    
-    "programs.disciplines.title": "Disciplines and Faculty",
-    "programs.disciplines.desc": "Our team consists of experienced musicians with diverse backgrounds, bringing energy and inspiration to classes.",
-    
-    "programs.locations.title": "Locations",
-    "programs.locations.desc": "Classes take place in welcoming spaces along the Porto - Ovar - Ílhavo axis, with plans for expansion.",
+    "programs.subtitle": "No Trevo Coolectivo, a nossa metodologia centra-se na diversão, colaboração e personalização, garantindo que cada aluno aprende de forma envolvente e adaptada às suas necessidades.",
+    "programs.methodology.title": "Os Nossos Pilares",
+    "programs.methodology.customPlan": "Plano Personalizado",
+    "programs.methodology.customPlan.desc": "Cada aluno co-cria o seu plano de estudos com o professor, definindo objectivos que podem incluir tocar por prazer, atuar em palco, seguir uma carreira ou preparar-se para exames curriculares de música (ex.: Rockschool)",
+    "programs.methodology.exploration": "Exploração de Instrumentos",
+    "programs.methodology.exploration.desc": "Todos os alunos participam em duas aulas anuais com um instrumento diferente (ex.: um guitarrista experimenta bateria) para alargar horizontes e ganhar versatilidade.",
+    "programs.methodology.collaborative": "Prática Colaborativa",
+    "programs.methodology.collaborative.desc": "As aulas de combo juntam alunos de vários instrumentos para formar bandas, com gravações de músicas originais ou covers no final do ano, partilhadas com a comunidade. Também realizamos eventos regulares como jam sessions abertas onde alunos e músicos locais tocam juntos.",
+    "programs.methodology.discovery": "Descoberta Musical",
+    "programs.methodology.discovery.desc": "Recomendamos semanalmente obras e artistas musicais, bem como livros de teoria, história da música e biografias, incentivando a colecção de música em formato físico.",
+    "programs.methodology.production": "Noções de Produção",
+    "programs.methodology.production.desc": "Ensinamos os princípios básicos de gravação e edição com ferramentas como o GarageBand e o Reaper, integrados nas aulas de combo e no curso de produção musical.",
+    "programs.methodology.monitoring": "Acompanhamento Regular",
+    "programs.methodology.monitoring.desc": "Fornecemos relatórios trimestrais com a evolução do aluno, objectivos claros e dicas personalizadas.",
+
+    "programs.disciplines.title": "Disciplinas e Corpo Docente",
+    "programs.disciplines.desc": "A nossa equipa é composta por músicos experientes e com percursos diversos, trazendo energia e inspiração às aulas.",
+
+    "programs.locations.title": "Locais",
+    "programs.locations.desc": "As aulas decorrem em espaços acolhedores ao longo do eixo Porto - Ovar - Ílhavo, com planos de expansão.",
     "programs.locations.porto": "Porto: CC Stop",
-    "programs.locations.ilhavo": "Ílhavo: Coming soon",
-    "programs.locations.ovar": "Ovar: Coming soon",
-    
-    "programs.benefits.title": "Benefits",
-    "programs.benefits.individual": "1-hour individual lessons with make-up classes for justified absences",
-    "programs.benefits.materials": "Free materials including sheet music, theory guides, and personalized playlists",
-    "programs.benefits.club": "Participation in the collectors' club with regular meetings to exchange and discuss physical music, books, and memorabilia",
-    
-    "programs.vision.title": "Future Vision",
-    "programs.vision.desc": "Trevo Coolectivo aspires to be a meeting point for music lovers, uniting creativity, community, and energy.",
+    "programs.locations.ilhavo": "Ílhavo: Brevemente",
+    "programs.locations.ovar": "Ovar: Brevemente",
+
+    "programs.benefits.title": "Vantagens",
+    "programs.benefits.individual": "Aulas individuais de 1 hora com reposição em caso de faltas justificadas",
+    "programs.benefits.materials": "Materiais gratuitos, incluindo partituras, guias teóricos e playlists personalizadas",
+    "programs.benefits.club": "Participação no clube de colecionadores com encontros regulares para trocar e discutir música física, livros e memorabilia",
+
+    "programs.vision.title": "Visão de Futuro",
+    "programs.vision.desc": "O Trevo Coolectivo aspira a ser um ponto de encontro para amantes de música, unindo criatividade, comunidade e energia.",
 
     // Fees page
     "fees.title": "Fees & Schedule",
@@ -185,7 +185,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.programs": "Programas",
     "nav.fees": "Preços",
     "nav.contact": "Contacto",
-    "nav.joinUs": "Junte-se",
+    "nav.joinUs": "Junta-te!",
 
     // Home page
     "home.title": "Trevo – Onde a Música Cresce",

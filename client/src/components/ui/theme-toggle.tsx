@@ -16,7 +16,7 @@ const ThemeToggle = () => {
     >
       <motion.div
         className={`absolute top-0.5 left-0.5 w-5 h-5 rounded-full flex items-center justify-center ${
-          isRockMode ? 'bg-[#ff5722]' : 'bg-[#ffd54f]'
+          isRockMode ? 'bg-[#ff005c]' : 'bg-[#ffd54f]'
         }`}
         animate={{
           x: isRockMode ? 24 : 0,

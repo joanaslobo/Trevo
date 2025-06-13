@@ -7,7 +7,7 @@ import { fadeIn, slideFromLeft, wiggleAnimation } from "@/lib/animations";
 import { useTheme } from "@/lib/theme-context";
 import { useThemeColors } from "@/lib/theme-colors";
 const Home = () => {
-  const { ref, inView } = useIntersectionObserver({ threshold: 0.1 });
+  const { ref, inView } = useIntersectionObserver({ threshold: 0});
   const { t } = useLanguage();
   const { isRockMode } = useTheme();
 
@@ -61,7 +61,7 @@ const Home = () => {
       }}
     >
       {/* Background decorative elements */}
-      <div className="absolute inset-0 overflow-hidden opacity-30">
+      <div className=" inset-0 overflow-hidden opacity-30">
         {["-top-5 -rotate-6", "bottom-20 rotate-6"].map((position, index) => (
           <div
             key={index}
@@ -95,7 +95,7 @@ const Home = () => {
           <motion.div
             variants={fadeIn(0)}
             initial="hidden"
-            animate={inView ? "visible" : "hidden"}
+            animate={inView ? "visible" : "visible"}
             ref={ref}
             className="relative z-10"
           >
@@ -405,7 +405,8 @@ const Home = () => {
             </div>
           </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pb-24">
+            <div className="grid md:grid-cols-2 gap-6 pb-24 [grid-auto-flow:row dense]">
+
               {cards.map((card, index) => (
                 <motion.div
                   key={card.titleKey}

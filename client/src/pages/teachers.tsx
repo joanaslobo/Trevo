@@ -3,8 +3,8 @@ import { useLanguage } from "@/lib/language-context";
 import { fadeIn } from "@/lib/animations";
 import { useThemeColors } from "@/lib/theme-colors";
 // Import teacher images
-import franciscoImg from '@/assets/images/teachers/francisco.jpg';
-import lukeImg from '@/assets/images/teachers/luke.jpg';
+import franciscoImg from '@/assets/images/teachers/francisco.jpeg';
+import lukeImg from '@/assets/images/teachers/luke.jpeg';
 import jorgeImg from '@/assets/images/teachers/jorge.jpg';
 import euricoImg from '@/assets/images/teachers/eurico.jpg';
 import joaoImg from '@/assets/images/teachers/joao.jpg';
@@ -81,17 +81,19 @@ const TeachersPage = () => {
                       <strong>{t("teachers.location")}:</strong> {t(`teachers.${teacher.key}.location`)}
                     </p>
                   </div>
-                  <div className="w-full h-[400px] overflow-hidden">
+                 
+                  <div className="w-full h-[600px] overflow-hidden flex justify-center items-center">
                     <img
                       src={teacher.image}
                       alt={t(`teachers.${teacher.key}.name`)}
-                      className="w-full h-full object-cover"
+                      className="object-cover h-full"
                     />
                   </div>
+
                 </>
               ) : (
                 <>
-                  <div className="w-full h-[400px] overflow-hidden">
+                  <div className="w-full h-[600px] overflow-hidden center">
                     <img
                       src={teacher.image}
                       alt={t(`teachers.${teacher.key}.name`)}
