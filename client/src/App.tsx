@@ -2,13 +2,14 @@ import { Route, Switch } from "wouter";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import Home from "@/pages/home";
+import Home2 from "@/pages/home2";
 import About from "@/pages/about";
 import Programs from "@/pages/programs";
-import Fees from "@/pages/fees";
-import Contact from "@/pages/contact";
-import NotFound from "@/pages/not-found";
 import TeachersPage from "@/pages/teachers";
+import Contact from "@/pages/contact";
+import Fees from "@/pages/fees";
 import Events from "@/pages/events";
+import NotFound from "@/pages/not-found";
 import { LanguageProvider } from "@/lib/language-context";
 import { ThemeProvider, useTheme } from "@/lib/theme-context";
 import React, { useState, useEffect } from 'react';
@@ -195,6 +196,7 @@ function AppContent() {
       <main className="flex-grow theme-text">
         <Switch>
           <Route path="/" component={Home} />
+          <Route path="/home2" component={Home2} />
           <Route path="/teachers" component={TeachersPage} />
           <Route path="/programs" component={Programs} />
           <Route path="/fees" component={Fees} />
