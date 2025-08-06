@@ -87,7 +87,7 @@ const Events = () => {
         {/* Upcoming Events */}
         <section className="mb-20">
           <h2 className="text-3xl font-serif mb-8" style={{ color: colors.secondary }}>
-            {t("events.upcomingTitle")}
+            {t("events.upcoming")}
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {upcomingEvents.map((event, index) => (
@@ -131,7 +131,7 @@ const Events = () => {
         {/* Past Events Gallery */}
         <section>
           <h2 className="text-3xl font-serif mb-8" style={{ color: colors.secondary }}>
-            {t("events.galleryTitle")}
+            {t("events.gallery")}
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {pastEvents.map((event, index) => (

@@ -274,6 +274,7 @@ const translations: Record<Language, Record<string, string>> = {
       "events.spring.title": "Spring Concert 2024",
       "events.guitar.title": "Guitar Workshop",
       "events.winter.title": "Winter Recital",
+      
 
       // Home page
       "home.title": "Trevo Colectivo",
