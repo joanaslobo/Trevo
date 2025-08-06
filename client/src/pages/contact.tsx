@@ -48,20 +48,12 @@ const Contact = () => {
 
   const contactMutation = useMutation({
     mutationFn: async (values: FormValues) => {
-      const formUrl = `https://docs.google.com/forms/d/e/1FAIpQLSfO0yLMfP1fU8wjLywi27VRs0ppPBbOTAV0irIvzmXbcziNRg/viewform`;
-      const params = new URLSearchParams({
-        'entry.123': values.name,
-        'entry.456': values.age,
-        'entry.789': values.classType,
-        'entry.012': values.instrument,
-        'entry.345': values.phone,
-        'entry.678': values.email,
-        'entry.901': values.comments || '',
-      });
-
-      const response = await fetch(`${formUrl}?${params.toString()}`, {
-        method: 'GET',
-        mode: 'no-cors',
+      const response = await apiRequest('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
       });
       return response;
     },
