@@ -37,7 +37,7 @@ const translations: Record<Language, Record<string, string>> = {
     "teachers.francisco.bio": "Francisco Beirão (\"El Killo\", 1981, Aveiro, Portugal), professor de Música desde 2004 em diversas escolas e instituições de intervenção social, em particular com um longo trabalho realizado no projecto educativo da Qualificar para Incluir.",
     "teachers.francisco.bio2": "A viver no Porto desde 1999, onde já cheguei de baquetas na mão, dividi o meu tempo entre a conclusão de uma licenciatura em Sociologia, muitas garagens e escolas de música em diferentes países, onde aprofundei uma relação umbilical com a bateria e aprendi outros idiomas.",
     "teachers.francisco.bio3":"Adepto fervoroso de Música em geral e de Rock em particular, iniciei o meu percurso profissional em 2005 com Funkyard, tendo comandado nos anos seguintes as secções rítmicas de TOURO, Mi Ku Bô, Teia e integrado projectos como Retimbrar e Papercutz, assim como outros de inclusão social no serviço educativo da Casa da Música, em várias orquestras comunitárias, etc.  Membro fundador, baterista e vocalista de 47 de Fevereiro, toco também com Ghosts of Port Royal e sou membro da equipa de We Tum Tum em diferentes espectáculos.",
-  
+
     "teachers.francisco.location": "Porto",
     "teachers.jorge.name": "Jorge Loura",
     "teachers.jorge.instruments": "Guitarra",
@@ -49,7 +49,7 @@ const translations: Record<Language, Record<string, string>> = {
     "teachers.eurico.bio2": "Membro ou participação em vários projetos musicais (como Turn Off, Fadomorse, Souq,      Moonshiners, Paul da Silva, Le Bruit, Victor Hugo, Delta Blues, Só Vicente, Coro Etnográfico das Barrocas, entre outros) com sessões em estúdio e performances ao vivo passando por alguns sítios emblemáticos como Casa da Música, Coliseu do Porto, Aula Magna e pelos mais diversos festivais nacionais e internacionais.",
     "teachers.eurico.bio3": "Professor nas escolas de música de São Bernardo, musica.com e enxame de letras.",
     "teachers.eurico.location": "Porto",
-    
+
     "teachers.gabriel.name": "Gabriel Simões",
       "teachers.gabriel.instruments": "Saxofone",
       "teachers.gabriel.bio": "Gabriel Simões Neves nasceu a 01 de janeiro de 1990 em Amora, concelho do Seixal.         Em 2010 ingressou no Curso Profissional de Instrumentista de Jazz, com o instrumento saxofone. Neste período teve aulas com os professores Carl Minnemann, Demian Cabaud (Combo), João Martins, José Pedro Coelho e Rui Teixeira (saxofone). Frequentou várias formações em contexto de trabalho na área do Jazz com músicos como Voro Garcia, Jesus Santandreu, Toni Belenguer, entre outros. ",
@@ -72,8 +72,8 @@ const translations: Record<Language, Record<string, string>> = {
       "teachers.loura.bio2": "Colaborou com Zen, Mesa, Black Company e Mikkel Solnado, entre muitos outros. Em 2018, a Arte Sonora destacou-o como um dos 10 guitarristas portugueses mais influentes da década.",
       "teachers.loura.bio3":"Finaliza o Mestrado em Performance em Jazz na Universidade de Aveiro.",
       "teachers.loura.location": "Aveiro",
-    
-    
+
+
     // Navigation
     "nav.home": "Home",
     "nav.about": "Sobre Nós",
@@ -89,6 +89,17 @@ const translations: Record<Language, Record<string, string>> = {
     "events.title": "Eventos",
     "events.upcoming": "Próximos Eventos",
     "events.gallery": "Galeria",
+    "events.past": "Eventos Passados",
+    "events.moreInfo": "Mais Info",
+    "events.summer.title": "Sessão de Verão",
+    "events.summer.desc": "Junta-te a nós para uma noite de improvisação e exploração musical.",
+    "events.showcase.title": "Showcase de Alunos",
+    "events.showcase.desc": "Os nossos alunos apresentam o seu progresso numa performance pública.",
+    "events.workshop.title": "Workshop: Música Tradicional Irlandesa",
+    "events.workshop.desc": "Aprende sobre as tradições e instrumentos da música irlandesa.",
+    "events.spring.title": "Concerto de Primavera 2024",
+    "events.guitar.title": "Workshop de Guitarra",
+    "events.winter.title": "Recital de Inverno",
 
     // Home page
     "home.title": "Trevo Colectivo",
@@ -252,6 +263,17 @@ const translations: Record<Language, Record<string, string>> = {
       "events.title": "Events",
       "events.upcoming": "Upcoming Events",
       "events.gallery": "Gallery",
+      "events.past": "Past Events",
+      "events.moreInfo": "More Info",
+      "events.summer.title": "Summer Session",
+      "events.summer.desc": "Join us for a night of improvisation and musical exploration.",
+      "events.showcase.title": "Student Showcase",
+      "events.showcase.desc": "Our students present their progress in a public performance.",
+      "events.workshop.title": "Workshop: Traditional Irish Music",
+      "events.workshop.desc": "Learn about the traditions and instruments of Irish music.",
+      "events.spring.title": "Spring Concert 2024",
+      "events.guitar.title": "Guitar Workshop",
+      "events.winter.title": "Winter Recital",
 
       // Home page
       "home.title": "Trevo Colectivo",

@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { useThemeColors } from "@/lib/theme-colors";
 import { useLanguage } from "@/lib/language-context";
@@ -12,24 +11,24 @@ const Events = () => {
 
   const upcomingEvents = [
     {
-      title: "Summer Jam Session",
+      titleKey: "events.upcoming.session.title",
       date: "2024-07-15",
       time: "18:00",
-      description: "Join us for an evening of improvisation and musical exploration.",
+      descKey: "events.upcoming.session.description",
       location: "Trevo Studio - Porto"
     },
     {
-      title: "Student Showcase",
+      titleKey: "events.upcoming.showcase.title",
       date: "2024-08-20",
       time: "19:30",
-      description: "Our students present their progress in a public performance.",
+      descKey: "events.upcoming.showcase.description",
       location: "Cultural Center - Ovar"
     },
     {
-      title: "Workshop: Irish Traditional Music",
+      titleKey: "events.upcoming.workshop.title",
       date: "2024-09-10",
       time: "15:00",
-      description: "Learn about Irish music traditions and instruments.",
+      descKey: "events.upcoming.workshop.description",
       location: "Trevo Studio - Ílhavo"
     }
   ];
@@ -88,7 +87,7 @@ const Events = () => {
         {/* Upcoming Events */}
         <section className="mb-20">
           <h2 className="text-3xl font-serif mb-8" style={{ color: colors.secondary }}>
-            Próximos Eventos
+            {t("events.upcomingTitle")}
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {upcomingEvents.map((event, index) => (
@@ -100,13 +99,13 @@ const Events = () => {
               >
                 <Card className="p-6" style={{ backgroundColor: colors.cardBg }}>
                   <h3 className="text-xl font-semibold mb-2" style={{ color: colors.primary }}>
-                    {event.title}
+                    {t(event.titleKey)}
                   </h3>
                   <p className="text-sm mb-2" style={{ color: colors.accent }}>
                     {new Date(event.date).toLocaleDateString()} at {event.time}
                   </p>
                   <p className="mb-2" style={{ color: colors.text }}>
-                    {event.description}
+                    {t(event.descKey)}
                   </p>
                   <p className="text-sm mb-4" style={{ color: colors.textLight }}>
                     {event.location}
@@ -119,9 +118,9 @@ const Events = () => {
                       color: colors.secondary,
                       backgroundColor: colors.cardBg
                     }}
-                    onClick={() => window.location.href = `/events/${event.title.toLowerCase().replace(/\s+/g, '-')}`}
+                    onClick={() => window.location.href = `/events/${t(event.titleKey).toLowerCase().replace(/\s+/g, '-')}`}
                   >
-                    More Info
+                    {t("events.moreInfo")}
                   </Button>
                 </Card>
               </motion.div>
@@ -132,7 +131,7 @@ const Events = () => {
         {/* Past Events Gallery */}
         <section>
           <h2 className="text-3xl font-serif mb-8" style={{ color: colors.secondary }}>
-            Galeria
+            {t("events.galleryTitle")}
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {pastEvents.map((event, index) => (
