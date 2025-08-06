@@ -35,7 +35,7 @@ const Events = () => {
 
   const pastEvents = [
     {
-      title: "Spring Concert 2024",
+      titleKey: "events.spring.title",
       date: "2024-03-20",
       image: "https://images.unsplash.com/photo-1501612780327-45045538702b?w=800&auto=format",
       gallery: [
@@ -45,7 +45,7 @@ const Events = () => {
       ]
     },
     {
-      title: "Guitar Workshop",
+      titleKey: "events.guitar.title",
       date: "2024-02-15",
       image: "https://images.unsplash.com/photo-1525201548942-d8732f6617a0?w=800&auto=format",
       gallery: [
@@ -55,7 +55,7 @@ const Events = () => {
       ]
     },
     {
-      title: "Winter Recital",
+      titleKey: "events.winter.title",
       date: "2024-01-10",
       image: "https://images.unsplash.com/photo-1511735111819-9a3f7709049c?w=800&auto=format",
       gallery: [
@@ -153,7 +153,7 @@ const Events = () => {
                       <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                         <div>
                           <h3 className="text-white text-xl font-semibold">
-                            {event.title}
+                            {t(event.titleKey)}
                           </h3>
                           <p className="text-white text-sm">
                             {new Date(event.date).toLocaleDateString()}
@@ -169,7 +169,7 @@ const Events = () => {
                       <img
                         key={imageIndex}
                         src={image}
-                        alt={`${event.title} photo ${imageIndex + 1}`}
+                        alt={`${t(event.titleKey)} photo ${imageIndex + 1}`}
                         className="w-full h-48 object-cover rounded-lg"
                       />
                     ))}

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 import { useLanguage } from "@/lib/language-context";
+import { useThemeColors } from "@/lib/theme-colors";
 
 const About = () => {
   const { t } = useLanguage();

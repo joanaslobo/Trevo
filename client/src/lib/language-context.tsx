@@ -100,6 +100,12 @@ const translations: Record<Language, Record<string, string>> = {
     "events.spring.title": "Concerto de Primavera 2024",
     "events.guitar.title": "Workshop de Guitarra",
     "events.winter.title": "Recital de Inverno",
+    "events.upcoming.session.title": "Sessão de Jam Aberta",
+    "events.upcoming.session.description": "Junta-te a nós para uma noite de improvisação e exploração musical num ambiente descontraído.",
+    "events.upcoming.showcase.title": "Showcase de Alunos",
+    "events.upcoming.showcase.description": "Os nossos alunos apresentam o seu progresso numa performance pública especial.",
+    "events.upcoming.workshop.title": "Workshop: Música Tradicional Irlandesa",
+    "events.upcoming.workshop.description": "Aprende sobre as tradições e instrumentos únicos da música irlandesa com Luke Carey.",
 
     // Home page
     "home.title": "Trevo Colectivo",
@@ -274,6 +280,12 @@ const translations: Record<Language, Record<string, string>> = {
       "events.spring.title": "Spring Concert 2024",
       "events.guitar.title": "Guitar Workshop",
       "events.winter.title": "Winter Recital",
+      "events.upcoming.session.title": "Open Jam Session",
+      "events.upcoming.session.description": "Join us for a night of improvisation and musical exploration in a relaxed atmosphere.",
+      "events.upcoming.showcase.title": "Student Showcase",
+      "events.upcoming.showcase.description": "Our students present their progress in a special public performance.",
+      "events.upcoming.workshop.title": "Workshop: Traditional Irish Music",
+      "events.upcoming.workshop.description": "Learn about the unique traditions and instruments of Irish music with Luke Carey.",
       
 
       // Home page
