@@ -23,6 +23,7 @@ const translations: Record<Language, Record<string, string>> = {
   pt: {
     // Teachers page
     "teachers.title": "A Equipa",
+    "teachers.subtitle": "Conhece a nossa equipa",
     "teachers.instruments": "Instrumentos",
     "teachers.location": "Local",
     "teachers.luke.name": "Luke Carey",
@@ -31,10 +32,6 @@ const translations: Record<Language, Record<string, string>> = {
     "teachers.luke.bio2": "Originalmente de Dublin, Irlanda, estudou Música e Literatura Inglesa na Trinity College Dublin, explorando teoria, composição, e tecnologia de música. Para além do seu percurso académico, desenvolveu  experiência na prática de música fora da sala de aula, participando em varias bandas e projectos, festivais de música, e até escreveu um musical.",
     "teachers.luke.bio3": "Chegou a Portugal em 2021, onde tem dado aulas particulares a alunos de qualquer idade, nacionalidade e cultura. É fluente em Português e Inglês",
     "teachers.luke.location": "Porto",
-    "teachers.joao.name": "João Guimarães",
-    "teachers.joao.instruments": "Saxophone",
-    "teachers.joao.bio": "João specializes in saxophone, bringing years of experience in both classical and jazz.",
-    "teachers.joao.location": "Porto",
     "teachers.francisco.name": "Francisco Beirão",
     "teachers.francisco.instruments": "Bateria",
     "teachers.francisco.bio": "Francisco Beirão (\"El Killo\", 1981, Aveiro, Portugal), professor de Música desde 2004 em diversas escolas e instituições de intervenção social, em particular com um longo trabalho realizado no projecto educativo da Qualificar para Incluir.",
@@ -48,19 +45,50 @@ const translations: Record<Language, Record<string, string>> = {
     "teachers.jorge.location": "Porto e Aveiro",
     "teachers.eurico.name": "Eurico",
     "teachers.eurico.instruments": "Guitar",
-    "teachers.eurico.bio": "Eurico is a passionate guitarist with a strong background in both traditional and contemporary styles.",
+    "teachers.eurico.bio": "Iniciou os estudos de música na OMA (Oficina de Música de Aveiro), em 2001, nas      disciplinas de formação musical, harmonia e prática de instrumento (viola baixo) com o professor António Ferro e Edamir Costa. Mais tarde ingressou na escola de jazz do Porto, formação de 3 anos com os professores João André e Alberto Jorge. Terminado os 3 anos continuou em aulas com o professor Alberto Jorge que era a principal referência e motivação para o desenvolver do instrumento.",
+    "teachers.eurico.bio2": "Membro ou participação em vários projetos musicais (como Turn Off, Fadomorse, Souq,      Moonshiners, Paul da Silva, Le Bruit, Victor Hugo, Delta Blues, Só Vicente, Coro Etnográfico das Barrocas, entre outros) com sessões em estúdio e performances ao vivo passando por alguns sítios emblemáticos como Casa da Música, Coliseu do Porto, Aula Magna e pelos mais diversos festivais nacionais e internacionais.",
+    "teachers.eurico.bio3": "Professor nas escolas de música de São Bernardo, musica.com e enxame de letras.",
     "teachers.eurico.location": "Porto",
-      
+    
+    "teachers.gabriel.name": "Gabriel Simões",
+      "teachers.gabriel.instruments": "Saxofone",
+      "teachers.gabriel.bio": "Gabriel Simões Neves nasceu a 01 de janeiro de 1990 em Amora, concelho do Seixal.         Em 2010 ingressou no Curso Profissional de Instrumentista de Jazz, com o instrumento saxofone. Neste período teve aulas com os professores Carl Minnemann, Demian Cabaud (Combo), João Martins, José Pedro Coelho e Rui Teixeira (saxofone). Frequentou várias formações em contexto de trabalho na área do Jazz com músicos como Voro Garcia, Jesus Santandreu, Toni Belenguer, entre outros. ",
+      "teachers.gabriel.bio2": "Durante o seu percurso como saxofonista colaborou, em concertos, Azeitonas, Hérman José, Jacinta, João Martins Quarteto, José Cid, Rui Veloso, Moonshiners, Siricaia, Vitorino, Orquestra de Jazz do Porto, Hugo Carvalhais, entre outros. Já atuou em variadas salas e festivais do país, entre os quais, Teatro São Luíz, Casa da Música, Teatro Circo, Teatro da Trindade, Meo Sudoeste e Reverence Valada. ",
+      "teachers.gabriel.bio3":"Em 2017, juntamente com os músicos Jorge Loura e João Martins criou a banda Troll’s Toy com a qual já editou três discos. Atualmente também é membro da banda Souq. ",
+
+      "teachers.gabriel.location": "Porto",
+
+    "teachers.rui.name": "Rui Pedro Martelo",
+      "teachers.rui.instruments": "Baixo",
+      "teachers.rui.bio": "Rui Pedro Martelo é um músico Português nascido a 29 de Abril de 1988 em Castelo de Paiva.         Iniciou se no mundo da música em 2004, começando por estudar baixo eléctrico na escola de Jazz do Porto.         Entre 2008 e 2011 frequentou o curso de Produção e Tecnologias da Música na Escola Superior de Música e Artes do Espectáculo no Porto.",
+      "teachers.rui.bio2": "Desde então inicia a sua carreira no mundo música tendo desenvolvido trabalho na area do som ao vivo, produção musical e como contrabaixista e baixista. Colaborou ao vivo e em estúdio com bandas e artistas como Vespa, Elias, Pterossauros, Mesa, Filipe Pinto, Barrako27, Puro L entre outros.",
+      "teachers.rui.bio3":" Actualmente integra as bandas CobraFuma, Greengo, Kyrpto, O Bom O Mau e O Azevedo, Santa Muerte e Três Tristes Tigres",
+
+      "teachers.rui.location": "Porto",
+
+     "teachers.loura.name": "Jorge Loura",
+      "teachers.loura.instruments": "Guitarra",
+      "teachers.loura.bio": "Jorge Loura é guitarrista, autor e professor de música, com carreira desde 1994. Integra atualmente os Souq, 47 de Fevereiro, Troll’s Toy, Taxi, Retimbrar e Ricardo Azevedo, atuando em palcos nacionais e internacionais.",
+      "teachers.loura.bio2": "Colaborou com Zen, Mesa, Black Company e Mikkel Solnado, entre muitos outros. Em 2018, a Arte Sonora destacou-o como um dos 10 guitarristas portugueses mais influentes da década.",
+      "teachers.loura.bio3":"Finaliza o Mestrado em Performance em Jazz na Universidade de Aveiro.",
+      "teachers.loura.location": "Aveiro",
+    
+    
     // Navigation
     "nav.home": "Home",
     "nav.about": "Sobre Nós",
     "nav.teachers": "Equipa",
     "nav.programs": "Programas",
-    "nav.methodology": "Métodos",
+    "nav.methodology": "Metodologia",
     "nav.fees": "Fees",
     "nav.contact": "Contactos",
-    "nav.events": "Eventos",
+    "nav.events": "Eventos e Galeria",
     "nav.joinUs": "Junta-te",
+
+    //Events
+    "events.title": "Eventos",
+    "events.upcoming": "Próximos Eventos",
+    "events.gallery": "Galeria",
 
     // Home page
     "home.title": "Trevo Colectivo",
@@ -144,16 +172,16 @@ const translations: Record<Language, Record<string, string>> = {
       "Schedule subject to seasonal changes. Please check with our reception for the most up-to-date information.",
 
     // Contact page
-    "contact.title": "Contact Us",
+    "contact.title": "Contactos",
     "contact.subtitle":
-      "Reach out to join our COOLlectivo or get more information about our programs.",
+      "Entra em contacto connosco para te juntares ao COOLlectivo ou para obteres mais informações sobre os nossos programas.",
     "contact.form.title": "Send Us a Message",
-    "contact.form.name": "Your Name",
-    "contact.form.email": "Email Address",
+    "contact.form.name": "Nome",
+    "contact.form.email": "Email",
     "contact.form.subject": "Subject",
-    "contact.form.phone": "Phone Number",
-    "contact.form.message": "Your Message",
-    "contact.form.send": "Send Message",
+    "contact.form.phone": "Número de telemovel",
+    "contact.form.message": "Comentários",
+    "contact.form.send": "Enviar",
     "contact.form.sending": "Sending...",
     "contact.find.title": "Find Us",
     "contact.find.address": "Address",
@@ -163,97 +191,155 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.connect.title": "Connect With Us",
   },
   en: {
-    // Teachers page
-    "teachers.title": "Conhece os Nossos Professores",
-    "teachers.instrument.strings": "Cordas",
-    "teachers.instrument.guitar": "Guitarra",
-    "teachers.instrument.voice": "Voz",
-    "teachers.instrument.percussion": "Percussão",
-    "teachers.bio.luke":
-      "Luke Carey é um multi-instrumentista, que toca principalmente o piano, a guitarra, o ukulele, o baixo, e a bateria. \nOriginalmente de Dublin, Irlanda, ele estudou Música e Literatura Inglesa na Trinity College Dublin, explorando a teoria, composição, e tecnologia de música. Para além do seu percurso académico, também desenvolveu bastante experiência na prática de música fora da sala de aula, participando em varias bandas e projectos, festivais de música, e até escreveu um musical. \n Chegou a Portugal em 2021, onde tem dado aulas particulares a alunos de qualquer idade, nacionalidade e cultura.",
-    "teachers.bio.chico":
-      "Francisco Beirão (\"El Killo\", 1981, Aveiro, Portugal), professor de Música desde 2004 em diversas escolas e instituições de intervenção social, em particular com um longo trabalho realizado no projecto educativo da Qualificar para Incluir. \n A viver no Porto desde 1999, onde já cheguei de baquetas na mão, dividi o meu tempo entre a conclusão de uma licenciatura em Sociologia, muitas garagens e escolas de música em diferentes países, onde aprofundei uma relação umbilical com a bateria e aprendi outros idiomas. \n Adepto fervoroso de Música em geral e de Rock em particular, iniciei o meu percurso profissional em 2005 com Funkyard, tendo comandado nos anos seguintes as secções rítmicas de TOURO, Mi Ku Bô, Teia e integrado projectos como Retimbrar e Papercutz, assim como outros de inclusão social no serviço educativo da Casa da Música, em várias orquestras comunitárias, etc \n Membro fundador, baterista e vocalista de 47 de Fevereiro, toco também com Ghosts of Port Royal e sou membro da equipa de We Tum Tum em diferentes espectáculos.",
-    "teachers.bio.joao":
-      "Bla bla bla bla. Bla bla. Bla bla bla bla. Bla bla. Bla bla bla bla. Bla bla. Bla bla bla bla. Bla bla.",
-    "teachers.bio.luke":
-      "Bla bla bla bla. Bla bla. Bla bla bla bla. Bla bla. Bla bla bla bla. Bla bla. Bla bla bla bla. Bla bla.",
+      // Teachers page
+      "teachers.title": "The Team",
+      "teachers.subtitle": "Meet our team",
+      "teachers.instruments": "Instruments",
+      "teachers.location": "Location",
+      "teachers.luke.name": "Luke Carey",
+      "teachers.luke.instruments": "Piano, Guitar, Ukulele, Music Production",
+      "teachers.luke.bio": "Luke Carey is a multi-instrumentalist who mainly plays piano, guitar, ukulele, bass, and drums.",
+      "teachers.luke.bio2": "Originally from Dublin, Ireland, he studied Music and English Literature at Trinity College Dublin, exploring theory, composition, and music technology. Alongside his academic background, he developed experience in music practice outside the classroom, participating in several bands and projects, music festivals, and even wrote a musical.",
+      "teachers.luke.bio3": "He arrived in Portugal in 2021, where he has been giving private lessons to students of all ages, nationalities, and cultures. He is fluent in Portuguese and English.",
+      "teachers.luke.location": "Porto",
+      "teachers.francisco.name": "Francisco Beirão",
+      "teachers.francisco.instruments": "Drums",
+      "teachers.francisco.bio": "Francisco Beirão (\"El Killo\", 1981, Aveiro, Portugal), music teacher since 2004 in various schools and social intervention institutions, particularly with a long-standing contribution to the educational project 'Qualificar para Incluir'.",
+      "teachers.francisco.bio2": "Living in Porto since 1999, where I arrived with drumsticks in hand, I divided my time between completing a degree in Sociology, many garages, and music schools in different countries, where I deepened an umbilical relationship with the drums and learned other languages.",
+      "teachers.francisco.bio3": "A fervent fan of music in general and rock in particular, I started my professional career in 2005 with Funkyard and in the following years led the rhythm sections of TOURO, Mi Ku Bô, Teia and participated in projects like Retimbrar and Papercutz, as well as others focused on social inclusion within the educational service of Casa da Música, in various community orchestras, etc. Founding member, drummer, and vocalist of 47 de Fevereiro, I also play with Ghosts of Port Royal and am part of the We Tum Tum team in different shows.",
+      "teachers.francisco.location": "Porto",
+      "teachers.jorge.name": "Jorge Loura",
+      "teachers.jorge.instruments": "Guitar",
+      "teachers.jorge.bio": "Jorge brings expertise in guitar across multiple genres.",
+      "teachers.jorge.location": "Porto and Aveiro",
+      "teachers.eurico.name": "Eurico",
+      "teachers.eurico.instruments": "Guitar",
+      "teachers.eurico.bio": "He began his music studies at OMA (Oficina de Música de Aveiro) in 2001 in music theory, harmony, and instrument practice (bass guitar) with professors António Ferro and Edamir Costa. Later, he joined the jazz school of Porto, a 3-year course with professors João André and Alberto Jorge. After completing the 3 years, he continued lessons with professor Alberto Jorge, who was his main reference and motivation for developing the instrument.",
+      "teachers.eurico.bio2": "Member or participant in various musical projects (such as Turn Off, Fadomorse, Souq, Moonshiners, Paul da Silva, Le Bruit, Victor Hugo, Delta Blues, Só Vicente, Coro Etnográfico das Barrocas, among others), with studio sessions and live performances at iconic venues such as Casa da Música, Coliseu do Porto, Aula Magna, and various national and international festivals.",
+      "teachers.eurico.bio3": "Teacher at the music schools of São Bernardo, musica.com, and Enxame de Letras.",
+      "teachers.eurico.location": "Porto",
+      "teachers.gabriel.name": "Gabriel Simões",
+      "teachers.gabriel.instruments": "Saxophone",
+      "teachers.gabriel.bio": "Gabriel Simões Neves was born on January 1st, 1990 in Amora, municipality of Seixal. In 2010, he joined the Professional Jazz Instrumentalist Course, with the saxophone as his instrument. During this period, he had classes with professors Carl Minnemann, Demian Cabaud (Combo), João Martins, José Pedro Coelho, and Rui Teixeira (saxophone). He attended various work-based training sessions in jazz with musicians such as Voro Garcia, Jesus Santandreu, Toni Belenguer, among others.",
+      "teachers.gabriel.bio2": "Throughout his career as a saxophonist, he has collaborated in concerts with Azeitonas, Hérman José, Jacinta, João Martins Quartet, José Cid, Rui Veloso, Moonshiners, Siricaia, Vitorino, Orquestra de Jazz do Porto, Hugo Carvalhais, among others. He has performed in several venues and festivals across the country, including Teatro São Luíz, Casa da Música, Teatro Circo, Teatro da Trindade, MEO Sudoeste, and Reverence Valada.",
+      "teachers.gabriel.bio3": "In 2017, together with musicians Jorge Loura and João Martins, he created the band Troll’s Toy, with which he has released three albums. He is currently also a member of the band Souq.",
+      "teachers.gabriel.location": "Porto",
+      "teachers.rui.name": "Rui Pedro Martelo",
+      "teachers.rui.instruments": "Bass",
+      "teachers.rui.bio": "Rui Pedro Martelo is a Portuguese musician born on April 29, 1988 in Castelo de Paiva. He entered the world of music in 2004, starting to study electric bass at the Porto Jazz School. Between 2008 and 2011, he attended the course in Music Production and Technologies at the School of Music and Performing Arts in Porto.",
+      "teachers.rui.bio2": "Since then, he began his career in the music world, having developed work in live sound, music production, and as a double bassist and bassist. He has collaborated live and in studio with bands and artists such as Vespa, Elias, Pterossauros, Mesa, Filipe Pinto, Barrako27, Puro L, among others.",
+      "teachers.rui.bio3": "He currently plays in the bands CobraFuma, Greengo, Krypto, O Bom O Mau e O Azevedo, Santa Muerte, and Três Tristes Tigres.",
+      "teachers.rui.location": "Porto",
+      "teachers.loura.name": "Jorge Loura",
+      "teachers.loura.instruments": "Guitar",
+      "teachers.loura.bio": "Jorge Loura is a guitarist, songwriter, and music teacher, with a career since 1994. He is currently part of Souq, 47 de Fevereiro, Troll’s Toy, Taxi, Retimbrar, and Ricardo Azevedo, performing on national and international stages.",
+      "teachers.loura.bio2": "He has collaborated with Zen, Mesa, Black Company, and Mikkel Solnado, among many others. In 2018, Arte Sonora named him one of the 10 most influential Portuguese guitarists of the decade.",
+      "teachers.loura.bio3": "He is finishing his Master's degree in Jazz Performance at the University of Aveiro.",
+      "teachers.loura.location": "Aveiro",
 
-    // Navigation
-    "nav.home": "Início",
-    "nav.about": "Sobre",
-    "nav.teachers": "Professores",
-    "nav.programs": "Programas",
-    "nav.fees": "Preços",
-    "nav.contact": "Contacto",
-    "nav.joinUs": "Junta-te!",
+      // Navigation
+      "nav.home": "Home",
+      "nav.about": "About Us",
+      "nav.teachers": "Team",
+      "nav.programs": "Programs",
+      "nav.methodology": "Methodology",
+      "nav.fees": "Fees",
+      "nav.contact": "Contact",
+      "nav.events": "Events and Gallery",
+      "nav.joinUs": "Join Us",
 
-    // Home page
-    "home.title": "Trevo – Onde a Música Cresce",
-    "home.subtitle":
-      "Uma escola de música & coletivo no coração do Porto, reunindo tradições musicais irlandesas e portuguesas.",
-    "home.cta.join": "Junta-te ao COOLlectivo",
-    "home.cta.explore": "Explorar Programas",
+      // Events
+      "events.title": "Events",
+      "events.upcoming": "Upcoming Events",
+      "events.gallery": "Gallery",
 
-    // About page
-    "about.title": "Sobre o Trevo",
-    "about.fusion.title": "Bla bla bla bla. Bla bla. Bla bla bla bla. Bla bla. Bla bla bla bla.",
-    "about.fusion.p1":
-      "Bla bla bla bla. Bla bla. Bla bla bla bla. Bla bla. Bla bla bla bla. Bla bla bla bla. Bla bla. Bla bla bla bla. Bla bla. Bla bla bla bla.",
-    "about.fusion.p2":
-      "Bla bla bla bla. Bla bla. Bla bla bla bla. Bla bla. Bla bla bla bla.Bla bla bla bla. Bla bla. Bla bla bla bla. Bla bla. Bla bla bla bla.",
-    "about.collective.title": "COOLlectivo – Mais do que uma escola",
-    "about.collective.p1":
-      'COOLlectivo é a nossa comunidade criativa - uma fusão divertida de "cool", "lectivo", e "colectivo". Não estamos apenas a ensinar música; estamos a construir uma família de criadores que se inspiram e apoiam mutuamente.',
-    "about.collective.p2":
-      "Bla bla bla bla. Bla bla. Bla bla bla bla. Bla bla. Bla bla bla bla.Bla bla bla bla. Bla bla. Bla bla bla bla. Bla bla. Bla bla bla bla.",
-    "about.card.irish": "Raízes Irlandesas",
-    "about.card.irish.desc":
-      "Música celta tradicional encontrando estilos portugueses contemporâneos",
-    "about.card.portuguese": "Estilo Português",
-    "about.card.portuguese.desc":
-      "Bla bla bla bla. Bla bla. Bla bla bla bla. Bla bla. Bla bla bla bla.",
-    "about.card.team": "A Equipa",
-    "about.card.team.desc":
-      "Bla bla bla bla. Bla bla. Bla bla bla bla. Bla bla. Bla bla bla bla.",
-    "about.card.community": "Comunidade",
-    "about.card.community.desc":
-      "Bla bla bla bla. Bla bla. Bla bla bla bla. Bla bla. Bla bla bla bla.",
+      // Home page
+      "home.title": "Trevo Colectivo",
+      "home.subtitle": "Trevo Coolectivo is a collaborative music teaching network connecting students and teachers from Porto, Ovar, and Ílhavo through shared learning, creativity, and a passion for music.",
+      "home.cta.join": "Join the COOLlective!",
+      "home.cta.explore": "About us",
 
-    // Programs page
-    "programs.title": "Os Nossos Programas",
-    "programs.subtitle":
-      "Bla bla bla bla. Bla bla. Bla bla bla bla. Bla bla. Bla bla bla bla..",
+      // About page
+      "about.title": "About Trevo",
+      "about.fusion.title": "About the COOLlective",
+      "about.fusion.p1": "Trevo Colectivo was born from the union of four musicians who, although having played and worked together in bands, were teaching individually. They felt they could offer more together – and thus, this cooperative teaching network between Porto, Ovar, and Ílhavo was formed.",
+      "about.fusion.p2": "We combine years of experience in music with a shared methodology, offering students more than just lessons: we foster connection among students of various instruments, creativity, sharing, and a true collective spirit.",
+      "about.collective.title": "COOLlective",
+      "about.collective.p1": "We believe music education should be accessible and inspiring. That’s why we offer the first class at half price – so anyone can experience the energy of our collective.",
+      "about.collective.p2": "We aim to spark in our students a passion for music in all its forms, not only through individual or group lessons, but also by encouraging interest in collecting physical music, books about artists and bands, posters, merchandise, and other music lover memorabilia.",
+      "about.card.instrument": "Instruments",
+      "about.card.instrument.desc": "Helping students master an instrument, both technically and sonically, while understanding how it functions within a group and across different musical styles.",
+      "about.card.sharing": "Bringing Students Together",
+      "about.card.sharing.desc": "Encouraging skills-sharing, reducing the isolation of individual study, and helping students overcome fears and doubts in the learning process.",
+      "about.card.collective": "Strengthening Collaborations",
+      "about.card.collective.desc": "Helping students believe in the power of the collective, where individual strengths are amplified and weaknesses are supported by the group.",
+      "about.card.creativity": "Fostering Creativity and Autonomy",
+      "about.card.creativity.desc": "Encouraging exploration, mixing, and experimentation, ensuring students gain the tools to develop their musical journey independently.",
+      "about.card.passion": "Fueling Passion",
+      "about.card.passion.desc": "Awakening the love for music through practice, theory, and discovery of artists and musical works.",
 
-    // Fees page
-    "fees.title": "Preços",
-    "fees.subtitle":
-      "Bla bla bla bla. Bla bla. Bla bla bla bla. Bla bla. Bla bla bla bla.",
-    "fees.schedule": "Horário de Aulas",
-    "fees.schedule.day": "Dia",
-    "fees.schedule.morning": "Manhã",
-    "fees.schedule.afternoon": "Tarde",
-    "fees.schedule.evening": "Noite",
-    "fees.schedule.note":
-      "Horário sujeito a alterações sazonais. Por favor, consulte a nossa receção para a informação mais atualizada.",
+      // Programs page
+      "programs.title": "Methodology",
+      "programs.subtitle": "At Trevo Coolectivo, our methodology focuses on fun, collaboration, and personalization, ensuring every student learns in an engaging and tailored way.",
+      "programs.methodology.title": "Our Pillars",
+      "programs.methodology.customPlan": "Personalized Plan",
+      "programs.methodology.customPlan.desc": "Each student co-creates their study plan with the teacher, setting goals that can include playing for fun, performing on stage, pursuing a career, or preparing for music curriculum exams (e.g. Rockschool).",
+      "programs.methodology.exploration": "Instrument Exploration",
+      "programs.methodology.exploration.desc": "All students participate in two yearly lessons with a different instrument (e.g., a guitarist tries drums) to broaden horizons and gain versatility.",
+      "programs.methodology.collaborative": "Collaborative Practice",
+      "programs.methodology.collaborative.desc": "Combo classes bring together students of various instruments to form bands, culminating in recordings of original songs or covers at the end of the year, shared with the community. We also host regular events like open jam sessions where students and local musicians play together.",
+      "programs.methodology.discovery": "Musical Discovery",
+      "programs.methodology.discovery.desc": "We recommend weekly works and musical artists, as well as theory books, music history, and biographies, encouraging physical music collection.",
+      "programs.methodology.production": "Production Basics",
+      "programs.methodology.production.desc": "We teach the basics of recording and editing using tools like GarageBand and Reaper, integrated into combo classes and the music production course.",
+      "programs.methodology.monitoring": "Regular Monitoring",
+      "programs.methodology.monitoring.desc": "We provide quarterly reports with the student’s progress, clear goals, and personalized tips.",
 
-    // Contact page
-    "contact.title": "Contacta-nos",
-    "contact.subtitle":
-      "Entra em contacto para te juntares ao nosso COOLlectivo ou obter mais informações sobre os nossos programas.",
-    "contact.form.title": "Envia-nos uma Mensagem",
-    "contact.form.name": "O Teu Nome",
-    "contact.form.email": "Endereço de Email",
-    "contact.form.subject": "Assunto",
-    "contact.form.message": "A Tua Mensagem",
-    "contact.form.send": "Enviar Mensagem",
-    "contact.form.sending": "A enviar...",
-    "contact.find.title": "Encontra-nos",
-    "contact.find.address": "Morada",
-    "contact.find.email": "Email",
-    "contact.find.phone": "Telefone",
-    "contact.find.hours": "Horário",
-    "contact.connect.title": "Conecta-te Connosco",
-  },
+      "programs.disciplines.title": "Subjects and Teaching Staff",
+      "programs.disciplines.desc": "Our team is made up of experienced musicians with diverse backgrounds, bringing energy and inspiration to the lessons.",
+
+      "programs.locations.title": "Locations",
+      "programs.locations.desc": "Lessons take place in cozy spaces along the Porto – Ovar – Ílhavo axis, with expansion plans.",
+      "programs.locations.porto": "Porto: CC Stop",
+      "programs.locations.ilhavo": "Ílhavo: Coming Soon",
+      "programs.locations.ovar": "Ovar: Coming Soon",
+
+      "programs.benefits.title": "Benefits",
+      "programs.benefits.individual": "One-hour individual classes with make-up lessons for justified absences",
+      "programs.benefits.materials": "Free materials including sheet music, theory guides, and personalized playlists",
+      "programs.benefits.club": "Participation in the collectors’ club with regular meetings to trade and discuss physical music, books, and memorabilia",
+
+      "programs.vision.title": "Future Vision",
+      "programs.vision.desc": "Trevo Coolectivo aspires to be a meeting point for music lovers, uniting creativity, community, and energy.",
+
+      // Fees page
+      "fees.title": "Fees & Schedule",
+      "fees.subtitle": "Transparent pricing and flexible scheduling to fit your lifestyle and musical journey.",
+      "fees.schedule": "Class Schedule",
+      "fees.schedule.day": "Day",
+      "fees.schedule.morning": "Morning",
+      "fees.schedule.afternoon": "Afternoon",
+      "fees.schedule.evening": "Evening",
+      "fees.schedule.note": "Schedule subject to seasonal changes. Please check with our reception for the most up-to-date information.",
+
+      // Contact page
+      "contact.title": "Contact",
+      "contact.subtitle": "Get in touch to join the COOLlective or to learn more about our programs.",
+      "contact.form.title": "Send Us a Message",
+      "contact.form.name": "Name",
+      "contact.form.email": "Email",
+      "contact.form.subject": "Subject",
+      "contact.form.phone": "Phone Number",
+      "contact.form.message": "Comments",
+      "contact.form.send": "Send",
+      "contact.form.sending": "Sending...",
+      "contact.find.title": "Find Us",
+      "contact.find.address": "Address",
+      "contact.find.email": "Email",
+      "contact.find.phone": "Phone",
+      "contact.find.hours": "Hours",
+      "contact.connect.title": "Connect With Us"
+    },
 };
 
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({

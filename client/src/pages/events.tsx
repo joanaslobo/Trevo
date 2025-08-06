@@ -70,15 +70,21 @@ const Events = () => {
   return (
     <div className="min-h-screen py-24" style={{ background: colors.bgGradientFrom }}>
       <div className="container mx-auto px-4">
-        <motion.h1
+        <motion.div 
+          className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-4xl md:text-5xl font-serif text-center mb-12"
-          style={{ color: colors.primary }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8 }}
         >
-          Eventos
-        </motion.h1>
-
+          <h2 className="font-serif text-3xl md:text-4xl font-bold" style={{ color: colors.primary }}>
+            {t("events.title")}
+          </h2>
+          <div className="w-20 h-1 mx-auto mt-4 mb-6" style={{ backgroundColor: colors.secondary }}></div>
+          <p className="text-lg max-w-2xl mx-auto" style={{ color: colors.text }}>
+            {t("events.upcoming")}
+          </p>
+        </motion.div>
         {/* Upcoming Events */}
         <section className="mb-20">
           <h2 className="text-3xl font-serif mb-8" style={{ color: colors.secondary }}>

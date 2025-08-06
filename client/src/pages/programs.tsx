@@ -32,6 +32,7 @@ const Programs = () => {
           <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4" style={{ color: colors.primary }}>
             {t("programs.title")}
           </h2>
+          <div className="w-20 h-1 mx-auto mt-4 mb-6" style={{ backgroundColor: colors.secondary }}></div>
           <p className="text-lg max-w-2xl mx-auto" style={{ color: colors.text }}>
             {t("programs.subtitle")}
           </p>

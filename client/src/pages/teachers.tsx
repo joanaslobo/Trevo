@@ -8,6 +8,9 @@ import lukeImg from '@/assets/images/teachers/luke.jpeg';
 import jorgeImg from '@/assets/images/teachers/jorge.jpg';
 import euricoImg from '@/assets/images/teachers/eurico.jpg';
 import joaoImg from '@/assets/images/teachers/joao.jpg';
+import ruiImg from '@/assets/images/teachers/rui.jpg'
+import gabrielImg from '@/assets/images/teachers/gabriel.jpg'
+
 
 const TeachersPage = () => {
   const { t } = useLanguage();
@@ -23,7 +26,7 @@ const TeachersPage = () => {
       image: lukeImg
     },
     {
-      key: 'jorge',
+      key: 'loura',
       image: jorgeImg
     },
     {
@@ -31,23 +34,33 @@ const TeachersPage = () => {
       image: euricoImg
     },
     {
-      key: 'joao',
-      image: joaoImg
-    }
+      key: 'rui',
+      image: ruiImg
+    },
+    {
+      key: 'gabriel',
+      image: gabrielImg
+    },
   ];
 
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="h-24"></div>
-      <motion.h1
-        className="text-4xl md:text-5xl font-serif text-center mb-12"
-        variants={fadeIn(0.2)}
-        initial="hidden"
-        animate="visible"
+      <motion.div 
+        className="text-center mb-16"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8 }}
       >
-        {t("teachers.title")}
-      </motion.h1>
-
+        <h2 className="font-serif text-3xl md:text-4xl font-bold" style={{ color: colors.primary }}>
+          {t("teachers.title")}
+        </h2>
+        <div className="w-20 h-1 mx-auto mt-4 mb-6" style={{ backgroundColor: colors.secondary }}></div>
+        <p className="text-lg max-w-2xl mx-auto" style={{ color: colors.text }}>
+          {t("teachers.subtitle")}
+        </p>
+      </motion.div>
       <div className="space-y-8">
         {teachers.map((teacher, index) => (
           <motion.div
