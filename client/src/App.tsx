@@ -1,7 +1,6 @@
 import { Route, Switch } from "wouter";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
-import Home from "@/pages/home";
 import Home2 from "@/pages/home2";
 import About from "@/pages/about";
 import Programs from "@/pages/programs";
@@ -195,7 +194,7 @@ function AppContent() {
       <Header />
       <main className="flex-grow theme-text">
         <Switch>
-          <Route path="/" component={Home} />
+          <Route path="/" component={Home2} />
           <Route path="/home2" component={Home2} />
           <Route path="/teachers" component={TeachersPage} />
           <Route path="/programs" component={Programs} />
