@@ -206,6 +206,20 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.find.phone": "Phone",
     "contact.find.hours": "Hours",
     "contact.connect.title": "Connect With Us",
+
+    // Footer
+    "footer.tagline": "Onde a tradição irlandesa encontra a paixão portuguesa no coração do Porto.",
+    "footer.quickLinks": "Links Rápidos",
+    "footer.programs": "Programas",
+    "footer.programs.private": "Aulas Particulares",
+    "footer.programs.group": "Aulas de Grupo", 
+    "footer.programs.workshops": "Workshops",
+    "footer.programs.combo": "Aulas de Combo",
+    "footer.programs.openDays": "Dias Abertos",
+    "footer.contact": "Contacto",
+    "footer.newsletter.title": "Junta-te à Nossa Newsletter",
+    "footer.newsletter.placeholder": "O teu endereço de email",
+    "footer.copyright": "Trevo Music School & COOLlectivo. Todos os direitos reservados.",
   },
   en: {
       // Teachers page
@@ -373,7 +387,21 @@ const translations: Record<Language, Record<string, string>> = {
       "contact.find.email": "Email",
       "contact.find.phone": "Phone",
       "contact.find.hours": "Hours",
-      "contact.connect.title": "Connect With Us"
+      "contact.connect.title": "Connect With Us",
+
+      // Footer
+      "footer.tagline": "Where Irish tradition meets Portuguese passion in the heart of Porto.",
+      "footer.quickLinks": "Quick Links",
+      "footer.programs": "Programs",
+      "footer.programs.private": "Private Lessons",
+      "footer.programs.group": "Group Classes",
+      "footer.programs.workshops": "Workshops", 
+      "footer.programs.combo": "Combo Classes",
+      "footer.programs.openDays": "Open Days",
+      "footer.contact": "Contact",
+      "footer.newsletter.title": "Join Our Newsletter",
+      "footer.newsletter.placeholder": "Your email address",
+      "footer.copyright": "Trevo Music School & COOLlectivo. All rights reserved.",
     },
 };
 
