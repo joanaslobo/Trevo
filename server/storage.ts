@@ -1,7 +1,7 @@
-import { 
+import {
   users, type User, type InsertUser,
   contactMessages, type ContactMessage, type InsertContactMessage,
-  newsletterSubscriptions, type NewsletterSubscription, type InsertNewsletterSubscription 
+  newsletterSubscriptions, type NewsletterSubscription, type InsertNewsletterSubscription
 } from "@shared/schema";
 
 export interface IStorage {
@@ -48,11 +48,20 @@ export class MemStorage implements IStorage {
     return user;
   }
 
-  async createContactMessage(insertMessage: InsertContactMessage): Promise<ContactMessage> {
-    const id = this.contactMessageCurrentId++;
-    const message: ContactMessage = { ...insertMessage, id };
-    this.contactMessages.set(id, message);
-    return message;
+  async createContactMessage(message: InsertContactMessage): Promise<ContactMessage> {
+    const newMessage: ContactMessage = {
+      id: this.contactMessageCurrentId++,
+      name: message.name,
+      age: message.age,
+      classType: message.classType,
+      instrument: message.instrument,
+      location: message.location,
+      phone: message.phone,
+      email: message.email,
+      comments: message.comments,
+    };
+    this.contactMessages.set(newMessage.id, newMessage);
+    return newMessage;
   }
 
   async subscribeToNewsletter(insertSubscription: InsertNewsletterSubscription): Promise<NewsletterSubscription> {

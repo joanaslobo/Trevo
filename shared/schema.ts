@@ -11,9 +11,13 @@ export const users = pgTable("users", {
 export const contactMessages = pgTable("contact_messages", {
   id: serial("id").primaryKey(),
   name: text("name").notNull(),
+  age: text("age").notNull(),
+  classType: text("class_type").notNull(),
+  instrument: text("instrument").notNull(),
+  location: text("location").notNull(),
+  phone: text("phone").notNull(),
   email: text("email").notNull(),
-  subject: text("subject").notNull(),
-  message: text("message").notNull(),
+  comments: text("comments"),
 });
 
 export const newsletterSubscriptions = pgTable("newsletter_subscriptions", {
