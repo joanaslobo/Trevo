@@ -9,7 +9,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useMutation } from '@tanstack/react-query';
-import { apiRequest } from '@/lib/queryClient';
+
 import { useToast } from '@/hooks/use-toast';
 import { useThemeColors } from '@/lib/theme-colors';
 import { useLanguage } from '@/lib/language-context';
@@ -48,14 +48,20 @@ const Contact = () => {
 
   const contactMutation = useMutation({
     mutationFn: async (values: FormValues) => {
-      const response = await apiRequest('/api/contact', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(values),
       });
-      return response;
+      
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({ message: 'Network error' }));
+        throw new Error(errorData.message || 'Failed to send message');
+      }
+      
+      return response.json();
     },
     onSuccess: () => {
       toast({
