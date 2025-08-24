@@ -57,11 +57,10 @@ const Header = () => {
                 <RotatingText
                   words={[
                     "lectivo",
-                    "luke",
-                    "louro",
-                    "ecoes",
-                    "journey",
-                    "laborate",
+                      "laboração",
+                      "eções",
+                      "laborate",
+                      "ections",
                   ]}
                   interval={2500}
                   className="inline-block font-handwritten"
