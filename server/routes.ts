@@ -45,10 +45,12 @@ Comments: ${result.data.comments || 'None'}
 Submitted at: ${new Date().toLocaleString()}
         `;
 
+        const emailCounter = storage.getNextEmailCounter();
+        
         await transporter.sendMail({
           from: process.env.SMTP_USER,
           to: process.env.EMAIL_TO || process.env.SMTP_USER,
-          subject: 'New Contact Form Submission - Trevo Coolectivo',
+          subject: `New Contact Form Submission #${emailCounter} - Trevo Coolectivo`,
           text: emailContent,
         });
       } catch (emailError) {

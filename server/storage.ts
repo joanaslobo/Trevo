@@ -12,6 +12,7 @@ export interface IStorage {
   subscribeToNewsletter(subscription: InsertNewsletterSubscription): Promise<NewsletterSubscription>;
   getAllContactMessages(): Promise<ContactMessage[]>;
   getAllNewsletterSubscriptions(): Promise<NewsletterSubscription[]>;
+  getNextEmailCounter(): number;
 }
 
 export class MemStorage implements IStorage {
@@ -21,6 +22,7 @@ export class MemStorage implements IStorage {
   userCurrentId: number;
   contactMessageCurrentId: number;
   newsletterSubscriptionCurrentId: number;
+  private emailCounter: number;
 
   constructor() {
     this.users = new Map();
@@ -29,6 +31,11 @@ export class MemStorage implements IStorage {
     this.userCurrentId = 1;
     this.contactMessageCurrentId = 1;
     this.newsletterSubscriptionCurrentId = 1;
+    this.emailCounter = 1;
+  }
+
+  getNextEmailCounter(): number {
+    return this.emailCounter++;
   }
 
   async getUser(id: number): Promise<User | undefined> {
