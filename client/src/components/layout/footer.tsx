@@ -62,7 +62,7 @@ const Footer = () => {
             </Link>
            
             <div className="flex gap-3">
-              {['instagram', 'facebook-f', 'youtube', 'spotify'].map((platform) => (
+              {['instagram', 'spotify'].map((platform) => (
                 <a
                   key={platform}
                   href="#"
@@ -81,9 +81,8 @@ const Footer = () => {
             <ul className="space-y-2">
               {[
                 { href: "/", textKey: "nav.home" },
-                { href: "/about", textKey: "nav.about" },
-                { href: "/programs", textKey: "nav.programs" },
-                { href: "/fees", textKey: "nav.fees" },
+                { href: "/teachers", textKey: "nav.teachers" },
+                { href: "/programs", textKey: "nav.methodology" },
                 { href: "/contact", textKey: "nav.contact" },
               ].map((link) => (
                 <li key={link.href}>
@@ -99,35 +98,14 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div>
-            <h3 className="font-serif text-lg font-semibold mb-4">{t("footer.programs")}</h3>
-            <ul className="space-y-2">
-              {[
-                "footer.programs.private",
-                "footer.programs.group", 
-                "footer.programs.workshops",
-                "footer.programs.combo",
-                "footer.programs.openDays",
-              ].map((programKey) => (
-                <li key={programKey}>
-                  <Link
-                    href="/programs"
-                    style={{ color: colors.footerText }}
-                    className="hover:text-white transition duration-300"
-                  >
-                    {t(programKey)}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+      
 
           <div>
             <h3 className="font-serif text-lg font-semibold mb-4">{t("footer.contact")}</h3>
             <ul className="space-y-2">
               {[
                 { icon: "map-marker-alt", text: "Porto, Portugal" },
-                { icon: "envelope", text: "info@trevomusic.pt", href: "mailto:info@trevomusic.pt" },
+                { icon: "envelope", text: "trevocoolectivo@gmail.com", href: "mailto:trevocoolectivo@gmail.com" },
                 { icon: "phone", text: "Call Us" },
               ].map((item) => (
                 <li key={item.icon} className="flex items-center gap-2">

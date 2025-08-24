@@ -5,9 +5,8 @@ import { useThemeColors } from "@/lib/theme-colors";
 // Import teacher images
 import franciscoImg from '@/assets/images/teachers/francisco.jpeg';
 import lukeImg from '@/assets/images/teachers/luke.jpeg';
-import jorgeImg from '@/assets/images/teachers/jorge.jpg';
+import jorgeImg from '@/assets/images/teachers/loura.jpeg';
 import euricoImg from '@/assets/images/teachers/eurico.jpg';
-import joaoImg from '@/assets/images/teachers/joao.jpg';
 import ruiImg from '@/assets/images/teachers/rui.jpg'
 import gabrielImg from '@/assets/images/teachers/gabriel.jpg'
 

@@ -132,9 +132,9 @@ const Contact = () => {
                       name="age"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel style={{ color: colors.text }}>Idade</FormLabel>
+                          <FormLabel style={{ color: colors.text }}>{t("contact.form.age")}</FormLabel>
                           <FormControl>
-                            <Input type="number" placeholder="Idade" {...field} style={{ backgroundColor: colors.inputBg, color: colors.inputText, borderColor: colors.inputBorder }} />
+                            <Input type="number" placeholder={t("contact.form.age")} {...field} style={{ backgroundColor: colors.inputBg, color: colors.inputText, borderColor: colors.inputBorder }} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -146,11 +146,11 @@ const Contact = () => {
                       name="classType"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel style={{ color: colors.text }}>Tipo de Aula</FormLabel>
+                          <FormLabel style={{ color: colors.text }}>{t("contact.form.classtypeheader")}</FormLabel>
                           <Select onValueChange={field.onChange} defaultValue={field.value}>
                             <FormControl>
                               <SelectTrigger style={{ backgroundColor: colors.inputBg, color: colors.inputText, borderColor: colors.inputBorder }}>
-                                <SelectValue placeholder="Seleciona o tipo de aula" />
+                                <SelectValue placeholder={t("contact.form.classtype")} />
                               </SelectTrigger>
                             </FormControl>
                             <SelectContent>
@@ -169,18 +169,19 @@ const Contact = () => {
                       name="instrument"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel style={{ color: colors.text }}>Instrumento</FormLabel>
+                          <FormLabel style={{ color: colors.text }}>{t("contact.form.instrumentheader")}</FormLabel>
                           <Select onValueChange={field.onChange} defaultValue={field.value}>
                             <FormControl>
                               <SelectTrigger style={{ backgroundColor: colors.inputBg, color: colors.inputText, borderColor: colors.inputBorder }}>
-                                <SelectValue placeholder="Seleciona o teu instrumento" />
+                                <SelectValue placeholder={t("contact.form.instrument")}/>
                               </SelectTrigger>
                             </FormControl>
                             <SelectContent>
-                              <SelectItem value="guitar">Guitarra</SelectItem>
-                              <SelectItem value="piano">Piano</SelectItem>
-                              <SelectItem value="drums">Bateria</SelectItem>
-                              <SelectItem value="other">Other</SelectItem>
+                              <SelectItem value="Guitar">{t("contact.instrument.guitar")}</SelectItem>
+                              <SelectItem value="Piano">{t("contact.instrument.piano")}</SelectItem>
+                              <SelectItem value="Drums">{t("contact.instrument.drums")}</SelectItem>
+                              <SelectItem value="Saxophone">{t("contact.instrument.sax")}</SelectItem>
+                              <SelectItem value="ther">{t("contact.instrument.other")}</SelectItem>
                             </SelectContent>
                           </Select>
                           <FormMessage />
@@ -193,17 +194,17 @@ const Contact = () => {
                       name="location"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel style={{ color: colors.text }}>Local</FormLabel>
+                          <FormLabel style={{ color: colors.text }}>{t("contact.form.locationheader")}</FormLabel>
                           <Select onValueChange={field.onChange} defaultValue={field.value}>
                             <FormControl>
                               <SelectTrigger style={{ backgroundColor: colors.inputBg, color: colors.inputText, borderColor: colors.inputBorder }}>
-                                <SelectValue placeholder="Seleciona onde queres praticar" />
+                                <SelectValue placeholder={t("contact.form.location")} />
                               </SelectTrigger>
                             </FormControl>
                             <SelectContent>
-                              <SelectItem value="porto">Porto</SelectItem>
-                              <SelectItem value="ovar">Ovar</SelectItem>
-                              <SelectItem value="ilhavo">Ílhavo</SelectItem>
+                              <SelectItem value="Porto">Porto</SelectItem>
+                              <SelectItem value="Ovar">Ovar</SelectItem>
+                              <SelectItem value="Ílhavo">Ílhavo</SelectItem>
                             </SelectContent>
                           </Select>
                           <FormMessage />

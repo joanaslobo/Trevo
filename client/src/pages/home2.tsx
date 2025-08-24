@@ -70,13 +70,7 @@ const Home2 = () => {
       iconColor: colors.primary,
       textColor: colors.secondary,
     },
-    {
-      icon: "fas fa-heart",
-      titleKey: "about.card.passion",
-      descKey: "about.card.passion.desc",
-      iconColor: colors.primary,
-      textColor: colors.primaryBtnHover,
-    },
+   
   ];
 
   return (

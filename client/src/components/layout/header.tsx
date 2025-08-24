@@ -99,13 +99,13 @@ const Header = () => {
               currentPath={location}
               onClick={closeMenu}
             />
-            <NavLink
+            {/*<NavLink
               href="/events"
               label={t("nav.events")}
               currentPath={location}
               onClick={closeMenu}
-            />
-          </nav>
+            />*/}
+          </nav> 
 
           {/* Language Switcher, Theme Toggle and CTA Button */}
           <div className="hidden md:flex items-center gap-4">
@@ -159,11 +159,10 @@ const Header = () => {
                   <RotatingText
                     words={[
                       "lectivo",
-                      "luke",
-                      "louro",
-                      "ecoes",
-                      "journey",
+                      "laboração",
+                      "eções",
                       "laborate",
+                      "ections",
                     ]}
                     interval={2500}
                     className="inline-block font-handwritten"
