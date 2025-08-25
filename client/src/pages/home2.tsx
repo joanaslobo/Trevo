@@ -122,7 +122,8 @@ const Home2 = () => {
             className="relative z-10"
           >
             
-            
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-24 sm:pt-28 lg:pt-32"></div>
+
             <h1
               className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight relative text-white drop-shadow-lg"
             >
