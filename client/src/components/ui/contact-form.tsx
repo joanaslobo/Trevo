@@ -8,6 +8,9 @@ export const ContactForm = () => {
   const { t } = useLanguage();
   const [submitting, setSubmitting] = useState(false);
 
+  // Replace with your actual Google Form URL and entry IDs
+  const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse";
+  
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
@@ -16,30 +19,31 @@ export const ContactForm = () => {
     const data = Object.fromEntries(formData.entries());
 
     try {
-      const formUrl = `https://docs.google.com/forms/d/e/1FAIpQLSfO0yLMfP1fU8wjLywi27VRs0ppPBbOTAV0irIvzmXbcziNRg/`;
-      const params = new URLSearchParams({
-        'entry.123': data.name as string,
-        'entry.456': data.age as string,
-        'entry.789': data.classType as string,
-        'entry.012': data.instrument as string,
-        'entry.345': data.phone as string,
-        'entry.678': data.email as string,
-        'entry.901': data.comments as string,
+      // Create form data for Google Forms
+      const googleFormData = new FormData();
+      
+      // Replace these entry IDs with your actual Google Form field IDs
+      googleFormData.append('entry.YOUR_NAME_FIELD_ID', data.name as string);
+      googleFormData.append('entry.YOUR_AGE_FIELD_ID', data.age as string);
+      googleFormData.append('entry.YOUR_CLASS_TYPE_FIELD_ID', data.classType as string);
+      googleFormData.append('entry.YOUR_INSTRUMENT_FIELD_ID', data.instrument as string);
+      googleFormData.append('entry.YOUR_PHONE_FIELD_ID', data.phone as string);
+      googleFormData.append('entry.YOUR_EMAIL_FIELD_ID', data.email as string);
+      googleFormData.append('entry.YOUR_COMMENTS_FIELD_ID', data.comments as string);
+
+      // Submit to Google Form
+      await fetch(GOOGLE_FORM_URL, {
+        method: 'POST',
+        mode: 'no-cors', // Required for Google Forms
+        body: googleFormData,
       });
 
-      // For static deployment, you would need to integrate with a service like:
-      // - Netlify Forms
-      // - Formspree
-      // - EmailJS
-      // This is a placeholder for now
-      console.log('Form data:', Object.fromEntries(formData.entries()));
-
-      // Simulate successful submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
-
-      alert('Form submitted successfully!');
+      // Since no-cors mode doesn't return response data, we assume success
+      alert('Form submitted successfully! We will get back to you soon.');
       (e.target as HTMLFormElement).reset();
+      
     } catch (error) {
+      console.error('Error submitting form:', error);
       alert('Error submitting form. Please try again.');
     } finally {
       setSubmitting(false);

@@ -46,22 +46,33 @@ const Contact = () => {
     },
   });
 
+  // Replace with your actual Google Form URL and entry IDs
+  const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse";
+
   const contactMutation = useMutation({
     mutationFn: async (values: FormValues) => {
-      const response = await fetch('/api/contact', {
+      // Create form data for Google Forms
+      const googleFormData = new FormData();
+      
+      // Replace these entry IDs with your actual Google Form field IDs
+      googleFormData.append('entry.YOUR_NAME_FIELD_ID', values.name);
+      googleFormData.append('entry.YOUR_AGE_FIELD_ID', values.age);
+      googleFormData.append('entry.YOUR_CLASS_TYPE_FIELD_ID', values.classType);
+      googleFormData.append('entry.YOUR_INSTRUMENT_FIELD_ID', values.instrument);
+      googleFormData.append('entry.YOUR_LOCATION_FIELD_ID', values.location);
+      googleFormData.append('entry.YOUR_PHONE_FIELD_ID', values.phone);
+      googleFormData.append('entry.YOUR_EMAIL_FIELD_ID', values.email);
+      googleFormData.append('entry.YOUR_COMMENTS_FIELD_ID', values.comments || '');
+
+      // Submit to Google Form
+      await fetch(GOOGLE_FORM_URL, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(values),
+        mode: 'no-cors', // Required for Google Forms
+        body: googleFormData,
       });
-      
-      if (!response.ok) {
-        const errorData = await response.json().catch(() => ({ message: 'Network error' }));
-        throw new Error(errorData.message || 'Failed to send message');
-      }
-      
-      return response.json();
+
+      // Since no-cors mode doesn't return response data, we assume success
+      return { success: true };
     },
     onSuccess: () => {
       toast({
@@ -73,7 +84,7 @@ const Contact = () => {
     onError: (error: any) => {
       toast({
         title: "Message failed to send",
-        description: error?.message || "Please try again later.",
+        description: "Please try again later.",
         variant: "destructive",
       });
     }
