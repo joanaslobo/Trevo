@@ -51,30 +51,48 @@ const Contact = () => {
 
   const contactMutation = useMutation({
     mutationFn: async (values: FormValues) => {
-      // Create URL-encoded form data for Google Forms
-      const params = new URLSearchParams();
-      
-      // Replace these entry IDs with your actual Google Form field IDs
-      params.append('entry.1365495256', values.name);
-      params.append('entry.295087306', values.age);
-      params.append('entry.1834234693', values.classType);
-      params.append('entry.1172508630', values.instrument);
-      params.append('entry.1866162783', values.location);
-      params.append('entry.1106228860', values.phone);
-      params.append('entry.1078550884', values.email);
-      params.append('entry.361222995', values.comments || '');
+      // Create a hidden iframe for form submission
+      const iframe = document.createElement('iframe');
+      iframe.name = 'hidden_iframe';
+      iframe.style.display = 'none';
+      document.body.appendChild(iframe);
 
-      // Submit to Google Form
-      await fetch(GOOGLE_FORM_URL, {
-        method: 'POST',
-        mode: 'no-cors', // Required for Google Forms
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: params.toString(),
+      // Create a form element
+      const form = document.createElement('form');
+      form.method = 'POST';
+      form.action = GOOGLE_FORM_URL;
+      form.target = 'hidden_iframe';
+
+      // Add form fields
+      const fields = [
+        { name: 'entry.1365495256', value: values.name },
+        { name: 'entry.295087306', value: values.age },
+        { name: 'entry.1834234693', value: values.classType },
+        { name: 'entry.1172508630', value: values.instrument },
+        { name: 'entry.1866162783', value: values.location },
+        { name: 'entry.1106228860', value: values.phone },
+        { name: 'entry.1078550884', value: values.email },
+        { name: 'entry.361222995', value: values.comments || '' }
+      ];
+
+      fields.forEach(field => {
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = field.name;
+        input.value = field.value;
+        form.appendChild(input);
       });
 
-      // Since no-cors mode doesn't return response data, we assume success
+      // Submit the form
+      document.body.appendChild(form);
+      form.submit();
+
+      // Clean up
+      setTimeout(() => {
+        document.body.removeChild(form);
+        document.body.removeChild(iframe);
+      }, 1000);
+
       return { success: true };
     },
     onSuccess: () => {
