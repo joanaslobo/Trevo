@@ -55,7 +55,7 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="relative pt-32 pb-20 md:pt-40 lg:pt-48 md:pb-40 overflow-hidden"
+      className="relative pt-40 pb-20 md:pt-44 lg:pt-48 md:pb-40 overflow-hidden"
       style={{
         background: `linear-gradient(to bottom, ${colors.bgGradientFrom}, ${colors.bgGradientTo})`,
       }}
@@ -122,14 +122,14 @@ const Home = () => {
             </motion.div>
 
             <h1
-              className={`font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight relative`}
+              className={`font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight relative`}
               style={{ color: colors.primary }}
             >
               <span style={{ color: colors.secondary }}>&ndash;</span>{" "}
               {t("home.title")}
             </h1>
             <p
-              className="mt-4 md:mt-6 text-base sm:text-lg md:text-xl font-medium px-2 md:px-0"
+              className="mt-4 md:mt-6 text-lg md:text-xl font-medium px-2 md:px-0"
               style={{ color: colors.text }}
             >
               {t("home.subtitle")}
