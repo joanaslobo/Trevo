@@ -14,11 +14,28 @@ export const ThemeProvider: React.FC<{children: ReactNode}> = ({ children }) => 
   // Initialize theme from localStorage or default to 'rock'
   const [themeMode, setThemeMode] = useState<ThemeMode>(() => {
     if (typeof window === 'undefined') return 'rock';
-    const savedTheme = localStorage.getItem('theme') as ThemeMode;
-    return savedTheme ? savedTheme : 'rock'; // Default to rock if no saved preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light' || savedTheme === 'rock') {
+      return savedTheme as ThemeMode;
+    }
+    return 'rock'; // Default to rock for new users
   });
 
   const isRockMode = themeMode === 'rock';
+
+  // Apply theme immediately on mount
+  useEffect(() => {
+    const html = document.documentElement;
+    if (themeMode === 'rock') {
+      html.classList.add('rock-mode');
+      html.classList.remove('light-mode');
+      document.body.style.backgroundColor = '#121212';
+    } else {
+      html.classList.add('light-mode');
+      html.classList.remove('rock-mode');
+      document.body.style.backgroundColor = '#F7F3E3';
+    }
+  }, []); // Run once on mount
 
   // Update the theme attribute on the document element when themeMode changes
   useEffect(() => {
