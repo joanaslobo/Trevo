@@ -19,24 +19,27 @@ export const ContactForm = () => {
     const data = Object.fromEntries(formData.entries());
 
     try {
-      // Create form data for Google Forms
-      const googleFormData = new FormData();
+      // Create URL-encoded form data for Google Forms
+      const params = new URLSearchParams();
       
       // Replace these entry IDs with your actual Google Form field IDs
-      googleFormData.append('entry.1365495256', data.name as string);
-      googleFormData.append('entry.295087306', data.age as string);
-      googleFormData.append('entry.1834234693', data.classType as string);
-      googleFormData.append('entry.1172508630', data.instrument as string);
-      googleFormData.append('entry.1866162783', data.location as string);
-      googleFormData.append('entry.1106228860', data.phone as string);
-      googleFormData.append('entry.1078550884', data.email as string);
-      googleFormData.append('entry.361222995', data.comments as string);
+      params.append('entry.1365495256', data.name as string);
+      params.append('entry.295087306', data.age as string);
+      params.append('entry.1834234693', data.classType as string);
+      params.append('entry.1172508630', data.instrument as string);
+      params.append('entry.1866162783', data.location as string);
+      params.append('entry.1106228860', data.phone as string);
+      params.append('entry.1078550884', data.email as string);
+      params.append('entry.361222995', data.comments as string || '');
 
       // Submit to Google Form
       await fetch(GOOGLE_FORM_URL, {
         method: 'POST',
         mode: 'no-cors', // Required for Google Forms
-        body: googleFormData,
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: params.toString(),
       });
 
       // Since no-cors mode doesn't return response data, we assume success
