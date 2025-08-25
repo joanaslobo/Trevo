@@ -64,7 +64,7 @@ const Header = () => {
                 className="text-lg sm:text-xl font-bold"
                 style={{ color: colors.primary }}
               >
-                <RotatingText />
+                <RotatingText words={["Trevo", "Coolectivo"]} interval={3000} />
               </div>
             </div>
           </Link>
