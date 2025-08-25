@@ -11,11 +11,11 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider: React.FC<{children: ReactNode}> = ({ children }) => {
-  // Initialize theme from localStorage or default to 'light'
+  // Initialize theme from localStorage or default to 'rock'
   const [themeMode, setThemeMode] = useState<ThemeMode>(() => {
-    if (typeof window === 'undefined') return 'light';
+    if (typeof window === 'undefined') return 'rock';
     const savedTheme = localStorage.getItem('theme') as ThemeMode;
-    return (savedTheme === 'rock') ? 'rock' : 'light';
+    return savedTheme ? savedTheme : 'rock'; // Default to rock if no saved preference
   });
 
   const isRockMode = themeMode === 'rock';
