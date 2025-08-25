@@ -9,7 +9,7 @@ export const ContactForm = () => {
   const [submitting, setSubmitting] = useState(false);
 
   // Replace with your actual Google Form URL and entry IDs
-  const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse";
+  const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLScGE5BbWzLA_pfPaQq-e3PIw1kQfiWBWFG3dAy875v6-skauQ/viewform?usp=dialog";
   
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -23,13 +23,14 @@ export const ContactForm = () => {
       const googleFormData = new FormData();
       
       // Replace these entry IDs with your actual Google Form field IDs
-      googleFormData.append('entry.YOUR_NAME_FIELD_ID', data.name as string);
-      googleFormData.append('entry.YOUR_AGE_FIELD_ID', data.age as string);
-      googleFormData.append('entry.YOUR_CLASS_TYPE_FIELD_ID', data.classType as string);
-      googleFormData.append('entry.YOUR_INSTRUMENT_FIELD_ID', data.instrument as string);
-      googleFormData.append('entry.YOUR_PHONE_FIELD_ID', data.phone as string);
-      googleFormData.append('entry.YOUR_EMAIL_FIELD_ID', data.email as string);
-      googleFormData.append('entry.YOUR_COMMENTS_FIELD_ID', data.comments as string);
+      googleFormData.append('entry.1365495256', data.name as string);
+      googleFormData.append('entry.295087306', data.age as string);
+      googleFormData.append('entry.1834234693', data.classType as string);
+      googleFormData.append('entry.1172508630', data.instrument as string);
+      googleFormData.append('entry.1866162783', data.location as string);
+      googleFormData.append('entry.1106228860', data.phone as string);
+      googleFormData.append('entry.1078550884', data.email as string);
+      googleFormData.append('entry.361222995', data.comments as string);
 
       // Submit to Google Form
       await fetch(GOOGLE_FORM_URL, {
@@ -84,11 +85,25 @@ export const ContactForm = () => {
           </SelectTrigger>
           <SelectContent>
             <SelectItem value="guitar">Guitar</SelectItem>
-            <SelectItem value="violin">Violin</SelectItem>
+            <SelectItem value="bass">Bass</SelectItem>
             <SelectItem value="piano">Piano</SelectItem>
             <SelectItem value="drums">Drums</SelectItem>
-            <SelectItem value="voice">Voice</SelectItem>
+            <SelectItem value="saxophone">Saxophone</SelectItem>
+            <SelectItem value="ukelele">Ukelele</SelectItem>
             <SelectItem value="other">Other</SelectItem>
+          </SelectContent>
+        </Select>
+      </div>
+      <div>
+        <label className="block mb-2 font-medium">Instrument</label>
+        <Select name="location">
+          <SelectTrigger className="w-full">
+            <SelectValue placeholder="Select location" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="porto">Porto</SelectItem>
+            <SelectItem value="ovar">Ovar</SelectItem>
+            <SelectItem value="ilhavo">Ílhavo</SelectItem>
           </SelectContent>
         </Select>
       </div>
