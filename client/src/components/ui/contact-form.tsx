@@ -65,47 +65,36 @@ export const ContactForm = () => {
 
       <div>
         <label className="block mb-2 font-medium">Type of Class</label>
-        <Select name="classType">
-          <SelectTrigger className="w-full">
-            <SelectValue placeholder="Select class type" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="individual">Individual</SelectItem>
-            <SelectItem value="group">Group</SelectItem>
-            <SelectItem value="workshop">Workshop</SelectItem>
-          </SelectContent>
-        </Select>
+        <select name="classType" required className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <option value="">Select class type</option>
+          <option value="individual">Individual</option>
+          <option value="group">Group</option>
+          <option value="workshop">Workshop</option>
+        </select>
       </div>
 
       <div>
         <label className="block mb-2 font-medium">Instrument</label>
-        <Select name="instrument">
-          <SelectTrigger className="w-full">
-            <SelectValue placeholder="Select instrument" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="guitar">Guitar</SelectItem>
-            <SelectItem value="bass">Bass</SelectItem>
-            <SelectItem value="piano">Piano</SelectItem>
-            <SelectItem value="drums">Drums</SelectItem>
-            <SelectItem value="saxophone">Saxophone</SelectItem>
-            <SelectItem value="ukelele">Ukelele</SelectItem>
-            <SelectItem value="other">Other</SelectItem>
-          </SelectContent>
-        </Select>
+        <select name="instrument" required className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <option value="">Select instrument</option>
+          <option value="guitar">Guitar</option>
+          <option value="bass">Bass</option>
+          <option value="piano">Piano</option>
+          <option value="drums">Drums</option>
+          <option value="saxophone">Saxophone</option>
+          <option value="ukelele">Ukelele</option>
+          <option value="other">Other</option>
+        </select>
       </div>
+      
       <div>
-        <label className="block mb-2 font-medium">Instrument</label>
-        <Select name="location">
-          <SelectTrigger className="w-full">
-            <SelectValue placeholder="Select location" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="porto">Porto</SelectItem>
-            <SelectItem value="ovar">Ovar</SelectItem>
-            <SelectItem value="ilhavo">Ílhavo</SelectItem>
-          </SelectContent>
-        </Select>
+        <label className="block mb-2 font-medium">Location</label>
+        <select name="location" required className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <option value="">Select location</option>
+          <option value="porto">Porto</option>
+          <option value="ovar">Ovar</option>
+          <option value="ilhavo">Ílhavo</option>
+        </select>
       </div>
 
       <div>
