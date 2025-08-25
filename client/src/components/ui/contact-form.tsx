@@ -19,27 +19,24 @@ export const ContactForm = () => {
     const data = Object.fromEntries(formData.entries());
 
     try {
-      // Create URL-encoded form data for Google Forms
-      const params = new URLSearchParams();
+      // Create form data for Google Forms
+      const googleFormData = new FormData();
       
       // Replace these entry IDs with your actual Google Form field IDs
-      params.append('entry.1365495256', data.name as string);
-      params.append('entry.295087306', data.age as string);
-      params.append('entry.1834234693', data.classType as string);
-      params.append('entry.1172508630', data.instrument as string);
-      params.append('entry.1866162783', data.location as string);
-      params.append('entry.1106228860', data.phone as string);
-      params.append('entry.1078550884', data.email as string);
-      params.append('entry.361222995', data.comments as string || '');
+      googleFormData.append('entry.1365495256', data.name as string);
+      googleFormData.append('entry.295087306', data.age as string);
+      googleFormData.append('entry.1834234693', data.classType as string);
+      googleFormData.append('entry.1172508630', data.instrument as string);
+      googleFormData.append('entry.1866162783', data.location as string);
+      googleFormData.append('entry.1106228860', data.phone as string);
+      googleFormData.append('entry.1078550884', data.email as string);
+      googleFormData.append('entry.361222995', data.comments as string);
 
       // Submit to Google Form
       await fetch(GOOGLE_FORM_URL, {
         method: 'POST',
         mode: 'no-cors', // Required for Google Forms
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: params.toString(),
+        body: googleFormData,
       });
 
       // Since no-cors mode doesn't return response data, we assume success
@@ -68,36 +65,47 @@ export const ContactForm = () => {
 
       <div>
         <label className="block mb-2 font-medium">Type of Class</label>
-        <select name="classType" required className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
-          <option value="">Select class type</option>
-          <option value="individual">Individual</option>
-          <option value="group">Group</option>
-          <option value="workshop">Workshop</option>
-        </select>
+        <Select name="classType">
+          <SelectTrigger className="w-full">
+            <SelectValue placeholder="Select class type" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="individual">Individual</SelectItem>
+            <SelectItem value="group">Group</SelectItem>
+            <SelectItem value="workshop">Workshop</SelectItem>
+          </SelectContent>
+        </Select>
       </div>
 
       <div>
         <label className="block mb-2 font-medium">Instrument</label>
-        <select name="instrument" required className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
-          <option value="">Select instrument</option>
-          <option value="guitar">Guitar</option>
-          <option value="bass">Bass</option>
-          <option value="piano">Piano</option>
-          <option value="drums">Drums</option>
-          <option value="saxophone">Saxophone</option>
-          <option value="ukelele">Ukelele</option>
-          <option value="other">Other</option>
-        </select>
+        <Select name="instrument">
+          <SelectTrigger className="w-full">
+            <SelectValue placeholder="Select instrument" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="guitar">Guitar</SelectItem>
+            <SelectItem value="bass">Bass</SelectItem>
+            <SelectItem value="piano">Piano</SelectItem>
+            <SelectItem value="drums">Drums</SelectItem>
+            <SelectItem value="saxophone">Saxophone</SelectItem>
+            <SelectItem value="ukelele">Ukelele</SelectItem>
+            <SelectItem value="other">Other</SelectItem>
+          </SelectContent>
+        </Select>
       </div>
-      
       <div>
-        <label className="block mb-2 font-medium">Location</label>
-        <select name="location" required className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
-          <option value="">Select location</option>
-          <option value="porto">Porto</option>
-          <option value="ovar">Ovar</option>
-          <option value="ilhavo">Ílhavo</option>
-        </select>
+        <label className="block mb-2 font-medium">Instrument</label>
+        <Select name="location">
+          <SelectTrigger className="w-full">
+            <SelectValue placeholder="Select location" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="porto">Porto</SelectItem>
+            <SelectItem value="ovar">Ovar</SelectItem>
+            <SelectItem value="ilhavo">Ílhavo</SelectItem>
+          </SelectContent>
+        </Select>
       </div>
 
       <div>
