@@ -216,6 +216,9 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.instrument.drums": "Bateria",
     "contact.instrument.sax": "Saxofone",
     "contact.instrument.other": "Outro",
+    "contact.instrument.bass": "Baixo",
+    "contact.instrument.ukelele": "Ukulele",
+    
 
     // Footer
     "footer.tagline": "Onde a tradição irlandesa encontra a paixão portuguesa no coração do Porto.",
@@ -409,7 +412,10 @@ const translations: Record<Language, Record<string, string>> = {
       "contact.instrument.piano": "Piano",  
       "contact.instrument.drums": "Drums",
       "contact.instrument.sax": "Saxophone",
+      "contact.instrument.bass": "Bass",
+      "contact.instrument.ukelele": "Ukulele",
       "contact.instrument.other": "Other",
+    
       
         
 

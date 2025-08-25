@@ -189,10 +189,12 @@ const Contact = () => {
                             </FormControl>
                             <SelectContent>
                               <SelectItem value="Guitar">{t("contact.instrument.guitar")}</SelectItem>
+                              <SelectItem value="Bass">{t("contact.instrument.bass")}</SelectItem>
                               <SelectItem value="Piano">{t("contact.instrument.piano")}</SelectItem>
                               <SelectItem value="Drums">{t("contact.instrument.drums")}</SelectItem>
                               <SelectItem value="Saxophone">{t("contact.instrument.sax")}</SelectItem>
-                              <SelectItem value="ther">{t("contact.instrument.other")}</SelectItem>
+                              <SelectItem value="Ukelele">{t("contact.instrument.ukulele")}</SelectItem>
+                              <SelectItem value="other">{t("contact.instrument.other")}</SelectItem>
                             </SelectContent>
                           </Select>
                           <FormMessage />
