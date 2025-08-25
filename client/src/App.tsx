@@ -11,7 +11,7 @@ import Events from "@/pages/events";
 import NotFound from "@/pages/not-found";
 import { LanguageProvider } from "@/lib/language-context";
 import { ThemeProvider, useTheme } from "@/lib/theme-context";
-import React, { useState } from 'react';
+import React from 'react';
 
 // Define ContactForm component
 const ContactForm = () => {
