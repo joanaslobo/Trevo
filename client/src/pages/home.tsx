@@ -90,17 +90,17 @@ const Home = () => {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center min-h-[50vh] md:min-h-[60vh]">
           {/* Left Side Content */}
           <motion.div
             variants={fadeIn(0)}
             initial="hidden"
             animate={inView ? "visible" : "visible"}
             ref={ref}
-            className="relative z-10"
+            className="relative z-10 text-center md:text-left"
           >
             <motion.div
-              className="absolute -top-12 -left-8 text-8xl opacity-20 rotate-12 font-handwritten"
+              className="absolute -top-12 -left-8 text-8xl opacity-20 rotate-12 font-handwritten hidden md:block"
               style={{ color: colors.accent }}
               animate={{ rotate: [12, 15, 12], scale: [1, 1.05, 1] }}
               transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
@@ -108,7 +108,7 @@ const Home = () => {
               Peace
             </motion.div>
             <motion.div
-              className="absolute top-20 -right-10 text-7xl opacity-20 -rotate-6 font-handwritten"
+              className="absolute top-20 -right-10 text-7xl opacity-20 -rotate-6 font-handwritten hidden md:block"
               style={{ color: colors.secondary }}
               animate={{ rotate: [-6, -8, -6], scale: [1, 1.05, 1] }}
               transition={{
@@ -122,19 +122,19 @@ const Home = () => {
             </motion.div>
 
             <h1
-              className={`font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight relative`}
+              className={`font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight relative`}
               style={{ color: colors.primary }}
             >
               <span style={{ color: colors.secondary }}>&ndash;</span>{" "}
               {t("home.title")}
             </h1>
             <p
-              className="mt-6 text-lg md:text-xl font-medium"
+              className="mt-4 md:mt-6 text-base sm:text-lg md:text-xl font-medium px-2 md:px-0"
               style={{ color: colors.text }}
             >
               {t("home.subtitle")}
             </p>
-            <div className="mt-8 flex flex-wrap gap-4">
+            <div className="mt-6 md:mt-8 flex flex-col sm:flex-row justify-center md:justify-start gap-4">
               <Link
                 href="/contact"
                 className="text-white px-8 py-3 rounded-full font-bold transition duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1 flex items-center group"
@@ -366,7 +366,9 @@ const Home = () => {
           transition={{ duration: 0.8 }}
           ref={ref}
         >
-
+          <h2 className="font-serif text-3xl md:text-4xl font-semibold" style={{ color: colors.primary }}>
+            {t("about.title")}
+          </h2>
           <div
             className="w-20 h-1 mx-auto mt-4"
             style={{ backgroundColor: colors.secondary }}
@@ -405,12 +407,11 @@ const Home = () => {
             </div>
           </motion.div>
 
-            <div className="grid md:grid-cols-2 gap-6 pb-24 [grid-auto-flow:row dense]">
-
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 pb-16 sm:pb-24 px-4 sm:px-0">
               {cards.map((card, index) => (
                 <motion.div
                   key={card.titleKey}
-                  className="rounded-xl p-6 shadow-md"
+                  className="rounded-xl p-4 sm:p-6 shadow-md"
                   style={{ backgroundColor: colors.bgGradientFrom }}
                   initial={{ opacity: 0, rotate: 0 }}
                   whileInView={{ opacity: 1 }}
@@ -418,10 +419,10 @@ const Home = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   whileHover={{ rotate: 2 }}
                 >
-                  <div className="text-3xl mb-4" style={{ color: card.iconColor }}>
+                  <div className="text-2xl sm:text-3xl mb-3 sm:mb-4" style={{ color: card.iconColor }}>
                     <i className={card.icon}></i>
                   </div>
-                  <h4 className="font-serif text-xl font-medium mb-2" style={{ color: card.textColor }}>
+                  <h4 className="font-serif text-lg sm:text-xl font-medium mb-2" style={{ color: card.textColor }}>
                     {t(card.titleKey)}
                   </h4>
                   <p className="text-sm" style={{ color: colors.textLight }}>
