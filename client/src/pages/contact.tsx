@@ -51,24 +51,27 @@ const Contact = () => {
 
   const contactMutation = useMutation({
     mutationFn: async (values: FormValues) => {
-      // Create form data for Google Forms
-      const googleFormData = new FormData();
+      // Create URL-encoded form data for Google Forms
+      const params = new URLSearchParams();
       
       // Replace these entry IDs with your actual Google Form field IDs
-      googleFormData.append('entry.1365495256', values.name);
-      googleFormData.append('entry.295087306', values.age);
-      googleFormData.append('entry.1834234693', values.classType);
-      googleFormData.append('entry.1172508630', values.instrument);
-      googleFormData.append('entry.1866162783', values.location);
-      googleFormData.append('entry.1106228860', values.phone);
-      googleFormData.append('entry.1078550884', values.email);
-      googleFormData.append('entry.361222995', values.comments || '');
+      params.append('entry.1365495256', values.name);
+      params.append('entry.295087306', values.age);
+      params.append('entry.1834234693', values.classType);
+      params.append('entry.1172508630', values.instrument);
+      params.append('entry.1866162783', values.location);
+      params.append('entry.1106228860', values.phone);
+      params.append('entry.1078550884', values.email);
+      params.append('entry.361222995', values.comments || '');
 
       // Submit to Google Form
       await fetch(GOOGLE_FORM_URL, {
         method: 'POST',
         mode: 'no-cors', // Required for Google Forms
-        body: googleFormData,
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: params.toString(),
       });
 
       // Since no-cors mode doesn't return response data, we assume success
