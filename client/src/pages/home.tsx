@@ -55,7 +55,7 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="relative pt-24 pb-20 md:pt-32 md:pb-40 overflow-hidden"
+      className="relative pt-32 pb-20 md:pt-40 lg:pt-48 md:pb-40 overflow-hidden"
       style={{
         background: `linear-gradient(to bottom, ${colors.bgGradientFrom}, ${colors.bgGradientTo})`,
       }}
