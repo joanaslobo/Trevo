@@ -206,13 +206,13 @@ const Header = () => {
                 onClick={closeMenu}
                 mobile
               />
-              <NavLink
+              {/*<NavLink
                 href="/events"
-                label={t("nav.contact")}
+                label={t("nav.events")}
                 currentPath={location}
                 onClick={closeMenu}
                 mobile
-              />
+              />*/}
               <div className="mt-4 flex gap-3 items-center">
                 <LanguageSwitcher />
                 <ThemeToggle />
