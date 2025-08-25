@@ -190,6 +190,7 @@ const Header = () => {
                 label={t("nav.teachers")}
                 currentPath={location}
                 onClick={closeMenu}
+                mobile
               />
               <NavLink
                 href="/programs"
