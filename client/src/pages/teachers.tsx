@@ -70,7 +70,39 @@ const TeachersPage = () => {
             className="rounded-lg shadow-lg overflow-hidden"
             style={{ backgroundColor: colors.cardBg }}
           >
-            <div className="grid md:grid-cols-2 gap-6">
+            {/* Mobile Layout - Always description first, then photo */}
+            <div className="md:hidden">
+              <div className="p-6">
+                <h2 className="text-2xl font-serif font-semibold mb-4" style={{ color: colors.primary }}>
+                  {t(`teachers.${teacher.key}.name`)}
+                </h2>
+                <p className="mb-3" style={{ color: colors.secondary }}>
+                  <strong>{t("teachers.instruments")}:</strong> {t(`teachers.${teacher.key}.instruments`)}
+                </p>
+                <p className="mb-4" style={{ color: colors.text }}>
+                  {t(`teachers.${teacher.key}.bio`)}
+                </p>
+                <p className="mb-4" style={{ color: colors.text }}>
+                  {t(`teachers.${teacher.key}.bio2`)}
+                </p>
+                <p className="mb-4" style={{ color: colors.text }}>
+                  {t(`teachers.${teacher.key}.bio3`)}
+                </p>
+                <p style={{ color: colors.text }}>
+                  <strong>{t("teachers.location")}:</strong> {t(`teachers.${teacher.key}.location`)}
+                </p>
+              </div>
+              <div className="w-full h-[300px] overflow-hidden flex justify-center items-center px-6 pb-6">
+                <img
+                  src={teacher.image}
+                  alt={t(`teachers.${teacher.key}.name`)}
+                  className="object-cover h-full w-full max-w-[250px] rounded-lg"
+                />
+              </div>
+            </div>
+
+            {/* Desktop Layout - Alternating layout preserved */}
+            <div className="hidden md:grid md:grid-cols-2 gap-6">
               {index % 2 === 0 ? (
                 <>
                   <div className="p-6 flex flex-col justify-center">
@@ -101,7 +133,6 @@ const TeachersPage = () => {
                       className="object-cover h-full"
                     />
                   </div>
-
                 </>
               ) : (
                 <>
