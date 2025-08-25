@@ -89,7 +89,7 @@ export const ContactForm = () => {
             <SelectItem value="piano">Piano</SelectItem>
             <SelectItem value="drums">Drums</SelectItem>
             <SelectItem value="saxophone">Saxophone</SelectItem>
-            <SelectItem value="ukulele">Ukulele</SelectItem>
+            <SelectItem value="ukelele">Ukelele</SelectItem>
             <SelectItem value="other">Other</SelectItem>
           </SelectContent>
         </Select>
