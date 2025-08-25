@@ -14,24 +14,29 @@ const RotatingText: React.FC<RotatingTextProps> = ({
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovering, setIsHovering] = useState(false);
-  
+
+  // Safety check: ensure words array exists and has content
+  if (!words || !Array.isArray(words) || words.length === 0) {
+    return <span className={className}>Loading...</span>;
+  }
+
   useEffect(() => {
     // Only rotate the text if not being hovered
     if (isHovering) return;
-    
+
     const timer = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % words.length);
     }, interval);
-    
+
     return () => clearInterval(timer);
   }, [words, interval, isHovering]);
-  
+
   // On hover, pause the rotation
   const handleMouseEnter = () => setIsHovering(true);
-  
+
   // When hover ends, resume rotation
   const handleMouseLeave = () => setIsHovering(false);
-  
+
   // Manually cycle to next word when clicked
   const handleClick = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % words.length);
@@ -69,7 +74,7 @@ const RotatingText: React.FC<RotatingTextProps> = ({
           }}
           className="inline-block"
         >
-          {words[currentIndex]}
+          {words[currentIndex] || ''}
         </motion.span>
       </AnimatePresence>
     </span>
