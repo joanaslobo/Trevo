@@ -47,7 +47,7 @@ const Contact = () => {
   });
 
   // Replace with your actual Google Form URL and entry IDs
-  const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLScGE5BbWzLA_pfPaQq-e3PIw1kQfiWBWFG3dAy875v6-skauQ/viewform?usp=dialog";
+  const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLScGE5BbWzLA_pfPaQq-e3PIw1kQfiWBWFG3dAy875v6-skauQ/formResponse";
 
   const contactMutation = useMutation({
     mutationFn: async (values: FormValues) => {
