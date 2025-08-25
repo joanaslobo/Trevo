@@ -47,7 +47,7 @@ const Contact = () => {
   });
 
   // Replace with your actual Google Form URL and entry IDs
-  const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse";
+  const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLScGE5BbWzLA_pfPaQq-e3PIw1kQfiWBWFG3dAy875v6-skauQ/viewform?usp=dialog";
 
   const contactMutation = useMutation({
     mutationFn: async (values: FormValues) => {
@@ -55,14 +55,14 @@ const Contact = () => {
       const googleFormData = new FormData();
       
       // Replace these entry IDs with your actual Google Form field IDs
-      googleFormData.append('entry.YOUR_NAME_FIELD_ID', values.name);
-      googleFormData.append('entry.YOUR_AGE_FIELD_ID', values.age);
-      googleFormData.append('entry.YOUR_CLASS_TYPE_FIELD_ID', values.classType);
-      googleFormData.append('entry.YOUR_INSTRUMENT_FIELD_ID', values.instrument);
-      googleFormData.append('entry.YOUR_LOCATION_FIELD_ID', values.location);
-      googleFormData.append('entry.YOUR_PHONE_FIELD_ID', values.phone);
-      googleFormData.append('entry.YOUR_EMAIL_FIELD_ID', values.email);
-      googleFormData.append('entry.YOUR_COMMENTS_FIELD_ID', values.comments || '');
+      googleFormData.append('entry.1365495256', values.name);
+      googleFormData.append('entry.295087306', values.age);
+      googleFormData.append('entry.1834234693', values.classType);
+      googleFormData.append('entry.1172508630', values.instrument);
+      googleFormData.append('entry.1866162783', values.location);
+      googleFormData.append('entry.1106228860', values.phone);
+      googleFormData.append('entry.1078550884', values.email);
+      googleFormData.append('entry.361222995', values.comments || '');
 
       // Submit to Google Form
       await fetch(GOOGLE_FORM_URL, {
