@@ -2,8 +2,11 @@ import { useState } from "react";
 import { Input } from "./input";
 import { Textarea } from "./textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./select";
+import { useLanguage } from "@/lib/language-context";
 
 export const ContactForm = () => {
+  const { t } = useLanguage();
+  const [submitted, setSubmitted] = useState(false);
   const [formValues, setFormValues] = useState({
     name: "",
     age: "",
@@ -24,6 +27,7 @@ export const ContactForm = () => {
       action="https://docs.google.com/forms/d/e/1FAIpQLScGE5BbWzLA_pfPaQq-e3PIw1kQfiWBWFG3dAy875v6-skauQ/formResponse"
       method="POST"
       target="hidden_iframe"
+      onSubmit={() => setSubmitted(true)} 
       className="space-y-6"
     >
       {/* Real inputs with Google Form entry IDs */}
@@ -37,7 +41,7 @@ export const ContactForm = () => {
       <input type="hidden" name="entry.361222995" value={formValues.comments} />
 
       <div>
-        <label className="block mb-2 font-medium">Name</label>
+        <label className="block mb-2 font-medium">{t("contact.form.name")}</label>
         <Input
           name="visible-name"
           required
@@ -48,7 +52,7 @@ export const ContactForm = () => {
       </div>
 
       <div>
-        <label className="block mb-2 font-medium">Age</label>
+        <label className="block mb-2 font-medium">{t("contact.form.age")}</label>
         <Input
           name="visible-age"
           type="number"
@@ -60,10 +64,10 @@ export const ContactForm = () => {
       </div>
 
       <div>
-        <label className="block mb-2 font-medium">Type of Class</label>
+        <label className="block mb-2 font-medium">{t("contact.form.classtypeheader")}</label>
         <Select value={formValues.classType} onValueChange={val => handleChange("classType", val)}>
           <SelectTrigger className="w-full bg-black text-white">
-            <SelectValue placeholder="Select class type" />
+            <SelectValue placeholder={t("contact.form.classtype")} />
           </SelectTrigger>
           <SelectContent>
             <SelectItem value="Individual">Individual</SelectItem>
@@ -74,28 +78,28 @@ export const ContactForm = () => {
       </div>
 
       <div>
-        <label className="block mb-2 font-medium">Instrument</label>
+        <label className="block mb-2 font-medium">{t("contact.form.instrumentheader")}</label>
         <Select value={formValues.instrument} onValueChange={val => handleChange("instrument", val)}>
           <SelectTrigger className="w-full bg-black text-white">
-            <SelectValue placeholder="Select instrument" />
+            <SelectValue placeholder={t("contact.form.instrument")} />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="Guitar">Guitar</SelectItem>
-            <SelectItem value="Bass">Bass</SelectItem>
-            <SelectItem value="Piano">Piano</SelectItem>
-            <SelectItem value="Drums">Drums</SelectItem>
-            <SelectItem value="Saxophone">Saxophone</SelectItem>
-            <SelectItem value="Ukelele">Ukelele</SelectItem>
-            <SelectItem value="Other">Other</SelectItem>
+            <SelectItem value="Guitar">{t("contact.instrument.guitar")}</SelectItem>
+            <SelectItem value="Bass">{t("contact.instrument.bass")}</SelectItem>
+            <SelectItem value="Piano">{t("contact.instrument.piano")}</SelectItem>
+            <SelectItem value="Drums">{t("contact.instrument.drums")}</SelectItem>
+            <SelectItem value="Saxophone">{t("contact.instrument.sax")}</SelectItem>
+            <SelectItem value="Ukelele">{t("contact.instrument.ukulele")}</SelectItem>
+            <SelectItem value="Other">{t("contact.instrument.other")}</SelectItem>
           </SelectContent>
         </Select>
       </div>
 
       <div>
-        <label className="block mb-2 font-medium">Location</label>
+        <label className="block mb-2 font-medium">{t("contact.form.location")}</label>
         <Select value={formValues.location} onValueChange={val => handleChange("location", val)}>
           <SelectTrigger className="w-full bg-black text-white">
-            <SelectValue placeholder="Select location" />
+            <SelectValue placeholder={t("contact.form.location")}/>
           </SelectTrigger>
           <SelectContent>
             <SelectItem value="Porto">Porto</SelectItem>
@@ -106,7 +110,7 @@ export const ContactForm = () => {
       </div>
 
       <div>
-        <label className="block mb-2 font-medium">Phone Number</label>
+        <label className="block mb-2 font-medium">{t("contact.form.phone")}</label>
         <Input
           name="visible-phone"
           type="tel"
@@ -130,7 +134,7 @@ export const ContactForm = () => {
       </div>
 
       <div>
-        <label className="block mb-2 font-medium">Comments</label>
+        <label className="block mb-2 font-medium">{t("contact.form.comments")}</label>
         <Textarea
           name="visible-comments"
           rows={4}
@@ -146,7 +150,15 @@ export const ContactForm = () => {
       >
         Submit
       </button>
-      <iframe name="hidden_iframe" onLoad={() => alert("Submitted!")} style={{display: "none"}} />
+      <iframe
+        name="hidden_iframe"
+        style={{ display: "none" }}
+        onLoad={() => {
+          if (submitted) { alert("Submitted!");
+            setSubmitted(false); // reset
+          }
+        }}
+      />
 
 
       

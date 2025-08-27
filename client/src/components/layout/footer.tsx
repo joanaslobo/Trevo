@@ -6,6 +6,7 @@ import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
 import { useThemeColors } from "@/lib/theme-colors";
 import { useLanguage } from "@/lib/language-context";
+import trevo from '@/assets/images/teachers/trevo.png';
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -51,7 +52,7 @@ const Footer = () => {
           <div>
             <Link href="/" className="flex items-center gap-2 mb-4">
               <div className="scale-75">
-                <CloverIcon white />
+                <img src={trevo} alt="Trevo Coolectivo Logo" className="w-16 h-16" />
               </div>
               <div>
                 <h3 className="font-serif font-bold text-xl">Trevo</h3>
@@ -62,18 +63,24 @@ const Footer = () => {
             </Link>
            
             <div className="flex gap-3">
-              {['instagram', 'spotify'].map((platform) => (
+              {[
+                { name: "instagram", url: "https://www.instagram.com/trevocoolectivo/?igsh=MTdra29lcTd1cWNsNA%3D%3D" },
+                { name: "spotify", url: "https://open.spotify.com/artist/yourid" },
+              ].map((platform) => (
                 <a
-                  key={platform}
-                  href="#"
+                  key={platform.name}
+                  href={platform.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   style={{ color: colors.text }}
                   className="hover:text-accent transition duration-300"
-                  aria-label={platform}
+                  aria-label={platform.name}
                 >
-                  <i className={`fab fa-${platform} text-xl`}></i>
+                  <i className={`fab fa-${platform.name} text-xl`}></i>
                 </a>
               ))}
             </div>
+
           </div>
 
           <div>

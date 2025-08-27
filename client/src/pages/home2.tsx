@@ -182,33 +182,34 @@ const Home2 = () => {
           </motion.div>
 
           {/* Right Side Visual - Simplified for overlay */}
-            <motion.div
-              variants={fadeIn(0.1)}
-              initial="hidden"
-              animate={inView ? "visible" : "hidden"}
-              className="relative flex justify-center items-center"
-            >
-              <motion.img
-                src={logo}
-                alt="Trevo Coolectivo Logo"
-                className="w-1/2 md:w-1/3 lg:w-2/4"
-                animate={{ 
-                  rotate: [0, 360], 
-                  scale: [1, 1.05, 1] 
-                }}
-                transition={{
-                  rotate: {
-                    duration: 20,
-                    repeat: Infinity,
-                    ease: "linear",
-                  },
-                  scale: {
-                    duration: 4,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  },
-                }}
-              />
+          <motion.div
+            variants={fadeIn(0.1)}
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            className="relative flex justify-center items-center"
+          >
+            <motion.img
+              src={logo}
+              alt="Trevo Coolectivo Logo"
+              className="w-3/4 sm:w-2/3 md:w-1/2 lg:w-1/2 xl:w-2/4 max-w-xs md:max-w-md lg:max-w-lg"
+              animate={{
+                rotate: [0, 360],
+                scale: [1, 1.05, 1],
+              }}
+              transition={{
+                rotate: {
+                  duration: 20,
+                  repeat: Infinity,
+                  ease: "linear",
+                },
+                scale: {
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                },
+              }}
+            />
+
            
  
            

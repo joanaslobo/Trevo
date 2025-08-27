@@ -208,13 +208,13 @@ const Header = () => {
                 onClick={closeMenu}
                 mobile
               />
-              <NavLink
+              {/*<NavLink
                 href="/events"
                 label={t("nav.contact")}
                 currentPath={location}
                 onClick={closeMenu}
                 mobile
-              />
+              />*/}
               <div className="mt-4 flex gap-3 items-center">
                 <LanguageSwitcher />
                 <ThemeToggle />
@@ -224,7 +224,7 @@ const Header = () => {
                 href="/contact"
                 className={`theme-button-primary
                   text-white px-5 py-3 rounded-full font-medium transition duration-300 shadow-md hover:shadow-lg text-center mt-4`}
-                style={{color: colors.primaryBtnBg}}
+                style={{color: colors.text}}
                 onClick={closeMenu}
               >
                 {t("nav.joinUs")}

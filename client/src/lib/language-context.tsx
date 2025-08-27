@@ -259,6 +259,7 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.instrument.other": "Outro",
     "contact.instrument.bass": "Baixo",
     "contact.instrument.ukulele": "Ukulele",
+    "contact.form.reply":"Preenche o form e entraremos em contacto o mais cedo possivel",
 
     // Footer
     "footer.tagline":
@@ -506,7 +507,7 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.instrument.bass": "Bass",
     "contact.instrument.ukulele": "Ukulele",
     "contact.instrument.other": "Other",
-
+    "contact.form.reply":"Fill out the form below and we’ll get back to you as soon as possible.",
     // Footer
     "footer.tagline":
       "Where Irish tradition meets Portuguese passion in the heart of Porto.",
