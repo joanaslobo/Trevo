@@ -7,8 +7,10 @@ import franciscoImg from '@/assets/images/teachers/francisco.jpeg';
 import lukeImg from '@/assets/images/teachers/luke.jpeg';
 import jorgeImg from '@/assets/images/teachers/loura.jpeg';
 import euricoImg from '@/assets/images/teachers/eurico.jpg';
-import ruiImg from '@/assets/images/teachers/rui.jpg'
-import gabrielImg from '@/assets/images/teachers/gabriel.jpg'
+import ruiImg from '@/assets/images/teachers/rui.jpg';
+import gabrielImg from '@/assets/images/teachers/gabriel.jpg';
+import joanaImg from '@/assets/images/teachers/joana.jpg';
+
 
 
 const TeachersPage = () => {
@@ -31,6 +33,10 @@ const TeachersPage = () => {
     {
       key: 'eurico',
       image: euricoImg
+    }, 
+    {
+      key: 'joana',
+      image: joanaImg
     },
     {
       key: 'rui',
@@ -40,6 +46,7 @@ const TeachersPage = () => {
       key: 'gabriel',
       image: gabrielImg
     },
+   
   ];
 
   return (
@@ -96,7 +103,7 @@ const TeachersPage = () => {
                 <img
                   src={teacher.image}
                   alt={t(`teachers.${teacher.key}.name`)}
-                  className="object-cover h-full w-full max-w-[250px] rounded-lg"
+                  className="object-cover object-top h-full w-full max-w-[250px] rounded-lg"
                 />
               </div>
             </div>

@@ -6,7 +6,7 @@ import React, {
   ReactNode,
 } from "react";
 
-type Language = "en" | "pt";
+type Language = "pt" | "en";
 
 interface LanguageContextType {
   language: Language;
@@ -92,7 +92,13 @@ const translations: Record<Language, Record<string, string>> = {
     "teachers.loura.bio3":
       "Finaliza o Mestrado em Performance em Jazz na Universidade de Aveiro.",
     "teachers.loura.location": "Ovar, Ílhavo",
-
+    "teachers.joana.name": "Joana Leite Castro",
+    "teachers.joana.instruments": "Piano, Voz, Diversão Musical",
+    "teachers.joana.bio":
+      "Natural de Arrifana, Joana Leite Castro iniciou os estudos em piano e canto, tendo concluído o curso de canto clássico no Conservatório de Música do Porto na classe de Cecília Fontes. Licenciou-se em Formação Musical pela Esmae em 2007 e concluiu o Mestrado em Ensino de Música na Universidade de Aveiro em 2013.",
+    "teachers.joana.bio2": "Atualmente lecciona as disciplinas de Formação Musical e Classe de Conjunto na Escola de Música da Póvoa de Varzim e na Academia de música de Vilar de Paraíso, sendo também formadora na Casa da Música nos projetos “Coro Infantil Casa da Música” e “Escolas a Cantar”.",
+    "teachers.joana.bio3": "Desde cedo que o seu percurso musical passa pela voz, mais especificamente pela música coral, como formadora, coralista e como maestrina. É membro base do grupo vocal Canto Nono e do Ensemble Provinciano, como cantora e acordeonista, trabalhando junto das comunidades tradicionais. Em parceria com o NEFUP e outros grupos locais, têm construído espetáculos onde a música tradicional se mistura com a erudita, trazendo uma nova visão da mesma. Também na área da música tradicional tem trabalhado nos últimos anos com Cardo Roxo na formação pedagógica e coral.",
+    "teachers.joana.location": "Porto",
     // Navigation
     "nav.home": "Home",
     "nav.about": "Sobre Nós",
@@ -343,6 +349,14 @@ const translations: Record<Language, Record<string, string>> = {
     "teachers.loura.bio3":
       "He is finishing his Master's degree in Jazz Performance at the University of Aveiro.",
     "teachers.loura.location": "Ovar, Ílhavo",
+    "teachers.joana.name": "Joana Leite Castro",
+    "teachers.joana.instruments": "Piano, Voice, Music Fun",
+    "teachers.joana.bio": "Born in Arrifana, Joana Leite Castro began her studies in piano and singing, completing the classical singing course at the Porto Conservatory of Music in the class of Cecília Fontes. She graduated in Music Training at ESMAE in 2007 and completed a Master’s in Music Teaching at the University of Aveiro in 2013.",
+    "teachers.joana.bio2": "She currently teaches Music Training and Ensemble Class at the Póvoa de Varzim Music School and at the Vilar de Paraíso Music Academy, and is also a trainer at Casa da Música in the projects 'Coro Infantil Casa da Música' and 'Escolas a Cantar'.",
+    "teachers.joana.bio3": "From early on, her musical path has revolved around the voice, more specifically choral music, as a trainer, chorister, and conductor. She is a core member of the vocal group Canto Nono and the Ensemble Provinciano, as a singer and accordionist, working with traditional communities. In partnership with NEFUP and other local groups, she has created performances where traditional and classical music intertwine, offering a new perspective. In the field of traditional music, she has also worked in recent years with Cardo Roxo in pedagogical and choral training.",
+    "teachers.joana.location": "Porto",
+
+    
 
     // Navigation
     "nav.home": "Home",
@@ -532,10 +546,10 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({
     // Try to get language from localStorage with safely check
     try {
       const savedLanguage = localStorage.getItem("language");
-      return savedLanguage === "pt" ? "pt" : "en"; // Default to 'en' if not saved or invalid
+      return savedLanguage === "en" ? "en" : "pt"; // Default to 'en' if not saved or invalid
     } catch (error) {
       // In case localStorage is not available (e.g., in SSR or when cookies are disabled)
-      return "en";
+      return "pt";
     }
   });
 
