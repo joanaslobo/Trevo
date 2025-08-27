@@ -8,6 +8,7 @@ import { useLanguage } from "@/lib/language-context";
 import { useTheme } from "@/lib/theme-context";
 import RotatingText from "@/components/ui/rotating-text";
 import { useThemeColors } from "@/lib/theme-colors"
+import trevo from '@/assets/images/teachers/trevo.png';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,7 +42,8 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <CloverIcon white={isRockMode} />
+            <img src={trevo} alt="Trevo Coolectivo Logo" className="w-16 h-16" />
+            {/** <CloverIcon white={isRockMode} />*/}
             <div>
               <h1
                 className={`font-serif font-bold text-2xl theme-text-primary`}
