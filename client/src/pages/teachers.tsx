@@ -9,7 +9,7 @@ import jorgeImg from '@/assets/images/teachers/loura.jpeg';
 import euricoImg from '@/assets/images/teachers/eurico.jpg';
 import ruiImg from '@/assets/images/teachers/rui.jpg';
 import gabrielImg from '@/assets/images/teachers/gabriel.jpg';
-import joanaImg from '@/assets/images/teachers/joana.jpg';
+import joanaImg from '@/assets/images/teachers/joana2.jpg';
 
 
 
