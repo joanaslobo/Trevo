@@ -74,7 +74,7 @@ const Programs = () => {
           </h3>
           <p className="mb-6" style={{ color: colors.textLight }}>{t("programs.locations.desc")}</p>
           <div className="grid sm:grid-cols-3 gap-4">
-            {['porto', 'ilhavo', 'ovar'].map((location) => (
+            {['porto', 'ilhavo'].map((location) => (
               <div key={location} style={{ backgroundColor: colors.bgColor }} className="p-4 rounded-lg">
                 <p className="font-medium" style={{ color: colors.text }}>
                   {t(`programs.locations.${location}`)}
