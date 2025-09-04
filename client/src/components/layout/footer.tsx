@@ -112,9 +112,9 @@ const Footer = () => {
             <ul className="space-y-2">
               {[
                 { icon: "map-marker-alt", text: "Porto, Portugal" },
+                { icon: "map-marker-alt", text: "Ílhavo, Portugal" },
                 { icon: "envelope", text: "trevocoolectivo@gmail.com", href: "mailto:trevocoolectivo@gmail.com" },
-                { icon: "phone", text: "Call Us" },
-              ].map((item) => (
+                ].map((item) => (
                 <li key={item.icon} className="flex items-center gap-2">
                   <i style={{ color: colors.accent }} className={`fas fa-${item.icon}`}></i>
                   {item.href ? (

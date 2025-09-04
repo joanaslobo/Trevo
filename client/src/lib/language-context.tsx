@@ -156,7 +156,7 @@ const translations: Record<Language, Record<string, string>> = {
     "about.collective.p1":
       "Acreditamos que o ensino da música deve ser acessível e inspirador. É por isso que oferecemos a primeira aula a metade do preço - para que qualquer pessoa possa experimentar a energia do nosso coletivo.",
     "about.collective.p2":
-      "Pretendemos fazer crescer nos nossos alunos o entusiasmo pela música em todas as suas formas, não só através da aprendizagem de um instrumento em aulas individuais ou em grupo, mas também incentivando o gosto pela discussão e coleção de música em formato físico: livros sobre artistas e bandas, posters, merchandise e outros artigos para os amantes da música. Oferecemos descontos e vantagens nos nossos parceiros: Louie Louie, Porto Calling, e Treble.",
+      "Pretendemos fazer crescer nos nossos alunos o entusiasmo pela música em todas as suas formas, não só através da aprendizagem de um instrumento em aulas individuais ou em grupo, mas também incentivando o gosto pela discussão e coleção de música em formato físico: livros sobre artistas e bandas, posters, merchandise e outros artigos para os amantes da música. Oferecemos descontos e vantagens nos nossos parceiros: Louie Louie, Porto Calling e Treble Store.",
     "about.card.instrument": "Instrumentos",
     "about.card.instrument.desc":
       "Ajudar os alunos a dominar um instrumento, tanto na parte técnica como no som, compreendendo como funciona em grupo e conjuntos de diferentes estilos musicais.",
@@ -189,7 +189,7 @@ const translations: Record<Language, Record<string, string>> = {
       "As aulas de combo juntam alunos de vários instrumentos para formar bandas, com gravações de músicas originais ou covers no final do ano, partilhadas com a comunidade. Oferecemos aulas de Diversão Musical, onde os alunos podem ganhar bases musicais através de atividades divertidas num ambiente informal e descontraido.",
     "programs.methodology.discovery": "Descoberta Musical",
     "programs.methodology.discovery.desc":
-      "Recomendamos semanalmente obras e artistas musicais, bem como livros de teoria, história da música e biografias, incentivando a colecção de música em formato físico. Oferecemos a todos os membros do Coolectivo descontos e vantagens nos nossos parceiros: Louie Louie, Porto Calling, e Treble.",
+      "Recomendamos semanalmente obras e artistas musicais, bem como livros de teoria, história da música e biografias, incentivando a colecção de música em formato físico. Oferecemos a todos os membros do Coolectivo descontos e vantagens nos nossos parceiros: Louie Louie, Porto Calling e Treble Store.",
     "programs.methodology.production": "Noções de Produção",
     "programs.methodology.production.desc":
       "Ensinamos os princípios básicos de gravação e edição com ferramentas como o GarageBand e o Reaper, integrados nas aulas de combo e no curso de produção musical.",
@@ -415,7 +415,7 @@ const translations: Record<Language, Record<string, string>> = {
     "about.collective.p1":
       "We believe music education should be accessible and inspiring. That’s why we offer the first class at half price – so anyone can experience the energy of our collective.",
     "about.collective.p2":
-      "We aim to inspire our students with passion for music in all its forms, not only through individual or group lessons, but also by encouraging interest in musical discussion and collecting physical music: books about artists and bands, posters, merchandise, and other music-lover memorabilia. We offer our members discounts and advantages with our partners: Louie Louie, Porto Calling, and Treble.",
+      "We aim to inspire our students with passion for music in all its forms, not only through individual or group lessons, but also by encouraging interest in musical discussion and collecting physical music: books about artists and bands, posters, merchandise, and other music-lover memorabilia. We offer our members discounts and advantages with our partners: Louie Louie, Porto Calling and Treble Store.",
     "about.card.instrument": "Instruments",
     "about.card.instrument.desc":
       "Helping students master an instrument, both technically and sonically, while also understanding its function within a group and across different musical styles.",
@@ -445,7 +445,7 @@ const translations: Record<Language, Record<string, string>> = {
       "Combo classes bring together students of various instruments to form bands, culminating in recordings of original songs or covers at the end of the year, shared with the community. We also offer play-based music lessons, in which students learn the musical foundations through playful activities in an informal and relaxed environment.",
     "programs.methodology.discovery": "Musical Discovery",
     "programs.methodology.discovery.desc":
-      "We recommend weekly works and musical artists, as well as theory books, music history, and biographies, encouraging physical music collection. We offer all of our members discounts and advantages with our partners: Louie Louie, Porto Calling, and Treble.",
+      "We recommend weekly works and musical artists, as well as theory books, music history, and biographies, encouraging physical music collection. We offer all of our members discounts and advantages with our partners: Louie Louie, Porto Calling and Treble Store.",
     "programs.methodology.production": "Production Basics",
     "programs.methodology.production.desc":
       "We teach the basics of recording and editing using tools like GarageBand and Reaper, integrated into combo classes and the music production course.",

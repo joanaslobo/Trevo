@@ -7,8 +7,8 @@ import ThemeToggle from "@/components/ui/theme-toggle";
 import { useLanguage } from "@/lib/language-context";
 import { useTheme } from "@/lib/theme-context";
 import RotatingText from "@/components/ui/rotating-text";
-import { useThemeColors } from "@/lib/theme-colors"
-import trevo from '@/assets/images/teachers/trevo.png';
+import { useThemeColors } from "@/lib/theme-colors";
+import trevo from "@/assets/images/teachers/trevo.png";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,10 +30,10 @@ const Header = () => {
   const closeMenu = () => setIsOpen(false);
 
   const colors = useThemeColors();
-  
+
   const headerClasses = `fixed w-full bg-opacity-95 shadow-md theme-header transition-all duration-300 z-50`;
   const headerStyle = {
-    backgroundColor: colors.cardBg
+    backgroundColor: colors.cardBg,
   };
 
   return (
@@ -42,7 +42,11 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <img src={trevo} alt="Trevo Coolectivo Logo" className="w-16 h-16" />
+            <img
+              src={trevo}
+              alt="Trevo Coolectivo Logo"
+              className="w-16 h-16"
+            />
             {/** <CloverIcon white={isRockMode} />*/}
             <div>
               <h1
@@ -58,11 +62,11 @@ const Header = () => {
                 <span className="inline-block font-handwritten">COOL</span>
                 <RotatingText
                   words={[
-                    "lectivo",
-                      "laboração",
-                      "eções",
-                      "laborate",
-                      "ections",
+                    "ectivo",
+                    "aboração",
+                    "eções",
+                    "aborate",
+                    "ections",
                   ]}
                   interval={2500}
                   className="inline-block font-handwritten"
@@ -93,7 +97,6 @@ const Header = () => {
               onClick={closeMenu}
             />
 
-      
             <NavLink
               href="/contact"
               label={t("nav.contact")}
@@ -106,7 +109,7 @@ const Header = () => {
               currentPath={location}
               onClick={closeMenu}
             />*/}
-          </nav> 
+          </nav>
 
           {/* Language Switcher, Theme Toggle and CTA Button */}
           <div className="hidden md:flex items-center gap-4">
@@ -115,7 +118,10 @@ const Header = () => {
             <Link
               href="/contact"
               className={`px-5 py-2 rounded-full font-medium transition duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1`}
-              style={{color: colors.primary, backgroundColor: colors.primaryBtnBg}}
+              style={{
+                color: colors.primary,
+                backgroundColor: colors.primaryBtnBg,
+              }}
             >
               {t("nav.joinUs")}
             </Link>
@@ -138,7 +144,7 @@ const Header = () => {
         {isOpen && (
           <motion.div
             className={`fixed top-0 right-0 h-full w-3/4 theme-bg-gradient shadow-lg z-50 p-6 md:hidden`}
-            style={{color: colors.primary}}
+            style={{ color: colors.primary }}
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
@@ -224,7 +230,7 @@ const Header = () => {
                 href="/contact"
                 className={`theme-button-primary
                   text-white px-5 py-3 rounded-full font-medium transition duration-300 shadow-md hover:shadow-lg text-center mt-4`}
-                style={{color: colors.text}}
+                style={{ color: colors.text }}
                 onClick={closeMenu}
               >
                 {t("nav.joinUs")}
