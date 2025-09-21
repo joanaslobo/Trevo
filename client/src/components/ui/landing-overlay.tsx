@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { useLanguage } from "@/lib/language-context";
+import logo from "@/assets/images/teachers/logo.png";
 
 interface Props {
   onComplete: () => void;
@@ -27,7 +28,7 @@ export const LandingOverlay = ({ onComplete }: Props) => {
         transition={{ duration: 1 }}
         className="text-center"
       >
-        <img src="/logo.png" alt="Logo" className="w-32 h-32 mx-auto mb-4" />
+        <img src={logo} alt="Logo" className="w-32 h-32 mx-auto mb-4" />
         <h1 className="text-4xl font-serif font-extrabold text-white !text-white !font-extrabold mb-8">
           Trevo
         </h1>
