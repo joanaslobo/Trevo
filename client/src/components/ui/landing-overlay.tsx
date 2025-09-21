@@ -28,13 +28,32 @@ export const LandingOverlay = ({ onComplete }: Props) => {
         transition={{ duration: 1 }}
         className="text-center"
       >
-        <img src={logo} alt="Logo" className="w-32 h-32 mx-auto mb-4" />
-        <h1 className="text-4xl font-serif font-extrabold text-white !text-white !font-extrabold mb-8">
-          Trevo
-        </h1>
+        <motion.img
+          src={logo}
+          alt="Trevo Coolectivo Logo"
+          className="w-3/4 sm:w-2/3 md:w-1/2 lg:w-1/2 xl:w-2/4 max-w-xs md:max-w-md lg:max-w-lg mx-auto"
+          animate={{
+            rotate: [0, 360],
+            scale: [1, 1.05, 1],
+          }}
+          transition={{
+            rotate: {
+              duration: 20,
+              repeat: Infinity,
+              ease: "linear",
+            },
+            scale: {
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut",
+            },
+          }}
+        />
+        
         <div className="space-y-4">
+          <p></p>
           <p className="text-white font-bold !text-white !font-bold mb-6">
-            Choose your language / Escolha seu idioma
+            Choose your language / Escolhe a tua língua
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.button
