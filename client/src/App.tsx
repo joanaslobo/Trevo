@@ -11,10 +11,20 @@ import Events from "@/pages/events";
 import NotFound from "@/pages/not-found";
 import { LanguageProvider } from "@/lib/language-context";
 import { ThemeProvider, useTheme } from "@/lib/theme-context";
-import React from "react";
+import { LandingOverlay } from "@/components/ui/landing-overlay";
+import React, { useState } from "react";
 
 function AppContent() {
   const { isRockMode } = useTheme();
+  const [showLandingOverlay, setShowLandingOverlay] = useState(true);
+
+  const handleLandingComplete = () => {
+    setShowLandingOverlay(false);
+  };
+
+  if (showLandingOverlay) {
+    return <LandingOverlay onComplete={handleLandingComplete} />;
+  }
 
   return (
     <div

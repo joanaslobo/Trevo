@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { useLanguage } from "@/lib/language-context";
 
 interface Props {
   onComplete: () => void;
@@ -7,8 +8,10 @@ interface Props {
 
 export const LandingOverlay = ({ onComplete }: Props) => {
   const [clicked, setClicked] = useState(false);
+  const { setLanguage } = useLanguage();
 
-  const handleClick = () => {
+  const handleLanguageSelect = (lang: 'en' | 'pt') => {
+    setLanguage(lang);
     setClicked(true);
     setTimeout(onComplete, 1000);
   };
@@ -17,8 +20,7 @@ export const LandingOverlay = ({ onComplete }: Props) => {
     <motion.div
       initial={{ opacity: 1 }}
       animate={clicked ? { opacity: 0 } : {}}
-      onClick={handleClick}
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black cursor-pointer"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black"
     >
       <motion.div
         animate={clicked ? { scale: 0, rotate: 360 } : {}}
@@ -26,12 +28,32 @@ export const LandingOverlay = ({ onComplete }: Props) => {
         className="text-center"
       >
         <img src="/logo.png" alt="Logo" className="w-32 h-32 mx-auto mb-4" />
-        <h1 className="text-4xl font-serif font-extrabold text-white !text-white !font-extrabold">
+        <h1 className="text-4xl font-serif font-extrabold text-white !text-white !font-extrabold mb-8">
           Trevo
         </h1>
-        <p className="mt-4 text-white font-bold !text-white !font-bold">
-          Click anywhere to enter
-        </p>
+        <div className="space-y-4">
+          <p className="text-white font-bold !text-white !font-bold mb-6">
+            Choose your language / Escolha seu idioma
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => handleLanguageSelect('en')}
+              className="bg-[#ff005c] hover:bg-[#e6004f] text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 min-w-[150px]"
+            >
+              English
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => handleLanguageSelect('pt')}
+              className="bg-[#00c3ff] hover:bg-[#00a8d6] text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 min-w-[150px]"
+            >
+              Português
+            </motion.button>
+          </div>
+        </div>
       </motion.div>
     </motion.div>
   );
