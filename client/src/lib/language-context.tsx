@@ -61,10 +61,10 @@ const translations: Record<Language, Record<string, string>> = {
       "Professor nas escolas de música de São Bernardo, musica.com e enxame de letras.",
     "teachers.eurico.location": "Ílhavo",
 
-    "teachers.gabriel.name": "Gabriel Simões",
+    "teachers.gabriel.name": "Gabriel Neves",
     "teachers.gabriel.instruments": "Saxofone",
     "teachers.gabriel.bio":
-      "Gabriel Simões Neves nasceu a 01 de janeiro de 1990 em Amora, concelho do Seixal.         Em 2010 ingressou no Curso Profissional de Instrumentista de Jazz, com o instrumento saxofone. Neste período teve aulas com os professores Carl Minnemann, Demian Cabaud (Combo), João Martins, José Pedro Coelho e Rui Teixeira (saxofone). Frequentou várias formações em contexto de trabalho na área do Jazz com músicos como Voro Garcia, Jesus Santandreu, Toni Belenguer, entre outros. ",
+      "Gabriel Neves nasceu a 01 de janeiro de 1990 em Amora, concelho do Seixal.         Em 2010 ingressou no Curso Profissional de Instrumentista de Jazz, com o instrumento saxofone. Neste período teve aulas com os professores Carl Minnemann, Demian Cabaud (Combo), João Martins, José Pedro Coelho e Rui Teixeira (saxofone). Frequentou várias formações em contexto de trabalho na área do Jazz com músicos como Voro Garcia, Jesus Santandreu, Toni Belenguer, entre outros. ",
     "teachers.gabriel.bio2":
       "Durante o seu percurso como saxofonista colaborou, em concertos, Azeitonas, Hérman José, Jacinta, João Martins Quarteto, José Cid, Rui Veloso, Moonshiners, Siricaia, Vitorino, Orquestra de Jazz do Porto, Hugo Carvalhais, entre outros. Já atuou em variadas salas e festivais do país, entre os quais, Teatro São Luíz, Casa da Música, Teatro Circo, Teatro da Trindade, Meo Sudoeste e Reverence Valada. ",
     "teachers.gabriel.bio3":
@@ -322,10 +322,10 @@ const translations: Record<Language, Record<string, string>> = {
     "teachers.eurico.bio3":
       "Teacher at the music schools of São Bernardo, musica.com, and Enxame de Letras.",
     "teachers.eurico.location": "Ílhavo",
-    "teachers.gabriel.name": "Gabriel Simões",
+    "teachers.gabriel.name": "Gabriel Neves",
     "teachers.gabriel.instruments": "Saxophone",
     "teachers.gabriel.bio":
-      "Gabriel Simões Neves was born on January 1st, 1990 in Amora, municipality of Seixal. In 2010, he joined the Professional Jazz Instrumentalist Course, with the saxophone as his instrument. During this period, he had classes with professors Carl Minnemann, Demian Cabaud (Combo), João Martins, José Pedro Coelho, and Rui Teixeira (saxophone). He attended various work-based training sessions in jazz with musicians such as Voro Garcia, Jesus Santandreu, Toni Belenguer, among others.",
+      "Gabriel Neves was born on January 1st, 1990 in Amora, municipality of Seixal. In 2010, he joined the Professional Jazz Instrumentalist Course, with the saxophone as his instrument. During this period, he had classes with professors Carl Minnemann, Demian Cabaud (Combo), João Martins, José Pedro Coelho, and Rui Teixeira (saxophone). He attended various work-based training sessions in jazz with musicians such as Voro Garcia, Jesus Santandreu, Toni Belenguer, among others.",
     "teachers.gabriel.bio2":
       "Throughout his career as a saxophonist, he has collaborated in concerts with Azeitonas, Hérman José, Jacinta, João Martins Quartet, José Cid, Rui Veloso, Moonshiners, Siricaia, Vitorino, Orquestra de Jazz do Porto, Hugo Carvalhais, among others. He has performed in several venues and festivals across the country, including Teatro São Luíz, Casa da Música, Teatro Circo, Teatro da Trindade, MEO Sudoeste, and Reverence Valada.",
     "teachers.gabriel.bio3":

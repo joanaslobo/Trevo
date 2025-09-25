@@ -53,24 +53,24 @@ export const LandingOverlay = ({ onComplete }: Props) => {
         <div className="space-y-4">
           <p></p>
           <p className="text-white font-bold !text-white !font-bold mb-6">
-            Choose your language / Escolhe a tua língua
+            Idioma / Language
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => handleLanguageSelect('en')}
-              className="bg-[#ff005c] hover:bg-[#e6004f] text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 min-w-[150px]"
+              onClick={() => handleLanguageSelect('pt')}
+              className="bg-[#B80000] hover:bg-[#00a8d6] text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 min-w-[150px]"
             >
-              English
+              Português
             </motion.button>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => handleLanguageSelect('pt')}
-              className="bg-[#00c3ff] hover:bg-[#00a8d6] text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 min-w-[150px]"
+              onClick={() => handleLanguageSelect('en')}
+              className="bg-[#008F00] hover:bg-[#e6004f] text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 min-w-[150px]"
             >
-              Português
+              English 
             </motion.button>
           </div>
         </div>
